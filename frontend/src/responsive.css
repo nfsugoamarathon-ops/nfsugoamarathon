@@ -1,0 +1,686 @@
+/* =============================================================================
+   NFSU GOA MARATHON — PREMIUM RESPONSIVE STYLES
+   Breakpoints: 320–375 | 376–480 | 481–600 | 601–768 | 769–1023 | 1024+ (untouched)
+   STRICT RULE: Desktop styles (1024px and above) are 100% preserved.
+   All overrides apply strictly within media queries below 1024px.
+   ============================================================================= */
+
+/* ---------------------------------------------------------------------------
+   1. GLOBAL MOBILE SAFETY & TOUCH STANDARDS (Below 1024px)
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Prevent any media or elements from causing page-level horizontal overflow */
+  img,
+  video,
+  svg,
+  canvas {
+    max-width: 100%;
+  }
+
+  /* Default height to auto only when no explicit height class is set */
+  img:not([class*="h-"]),
+  video:not([class*="h-"]) {
+    height: auto;
+  }
+
+  /* Accessible touch targets for interactive elements */
+  button,
+  [role="button"],
+  a,
+  input,
+  select,
+  textarea {
+    touch-action: manipulation;
+  }
+
+  /* Hide default scrollbars on horizontally scrollable containers */
+  .scrollbar-none,
+  .overflow-x-auto {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar,
+  .overflow-x-auto::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   2. NAVBAR & TOP MARQUEE (Below 1024px)
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  /* Marquee banner spacing */
+  .animate-top-marquee {
+    gap: 0;
+  }
+
+  /* Mobile navigation drawer styling */
+  .mobile-nav-drawer {
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobile-nav-drawer a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Small mobile (320px–375px) Navbar adjustments */
+@media (max-width: 375px) {
+  header .max-w-6xl {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  /* Keep brand compact so register button fits */
+  header a.group img {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   3. HERO SECTION REIMAGINED (Below 1024px)
+   Eliminates the empty void, showcases the sunrise photo, highlights countdown
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  /* Dynamic viewport height on mobile that accommodates content naturally */
+  .hero-section {
+    min-height: 100svh;
+    height: auto;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+  }
+
+  /* Hero Content Container: proportional breathing room */
+  .hero-section .relative.z-10.flex-1 {
+    padding-top: 5.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  /* Mobile countdown cards: frosted glass */
+  .hero-section .countdown-card {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
+
+/* Tablet: 601px–768px */
+@media (min-width: 601px) and (max-width: 768px) {
+  .hero-section h1 span:first-child {
+    font-size: 3.5rem;
+    line-height: 0.92;
+  }
+
+  .hero-section h1 span:last-child {
+    font-size: 2.75rem;
+  }
+}
+
+/* Large Mobile: 481px–600px */
+@media (min-width: 481px) and (max-width: 600px) {
+  .hero-section h1 span:first-child {
+    font-size: 3rem;
+    line-height: 0.92;
+  }
+
+  .hero-section h1 span:last-child {
+    font-size: 2.35rem;
+  }
+}
+
+/* Standard Mobile: 376px–480px */
+@media (min-width: 376px) and (max-width: 480px) {
+  .hero-section h1 span:first-child {
+    font-size: 2.65rem;
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+  }
+
+  .hero-section h1 span:last-child {
+    font-size: 2.15rem;
+  }
+}
+
+/* Small Mobile: 320px–375px */
+@media (max-width: 375px) {
+  .hero-section h1 span:first-child {
+    font-size: 2.25rem;
+    line-height: 0.92;
+    letter-spacing: -0.025em;
+  }
+
+  .hero-section h1 span:last-child {
+    font-size: 1.8rem;
+  }
+
+  /* Countdown digit cards size for 320–375px */
+  .hero-section .countdown-card {
+    width: 52px !important;
+    height: 64px !important;
+    border-radius: 0.75rem;
+  }
+
+  .hero-section .countdown-card span:first-child {
+    font-size: 1.45rem !important;
+  }
+
+  .hero-section .countdown-card span:last-child {
+    font-size: 7.5px !important;
+    letter-spacing: 0.12em;
+  }
+}
+
+/* Extra small safety (<=320px) */
+@media (max-width: 320px) {
+  .hero-section h1 span:nth-child(2) {
+    font-size: 2rem;
+  }
+
+  .hero-section h1 span:nth-child(3) {
+    font-size: 1.6rem;
+  }
+
+  .hero-section .bg-\[\#0b182e\]\/75 {
+    width: 46px !important;
+    height: 56px !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   4. EVENT FACTS STRIP (Below 1024px)
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .fact-card {
+    padding: 1.15rem 0.85rem;
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .fact-card.col-span-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #DADBCF;
+  }
+
+  .fact-card span.text-base {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fact-card {
+    padding: 0.9rem 0.65rem;
+  }
+
+  .fact-card span.text-base {
+    font-size: 0.85rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   5. ABOUT SECTION (Below 1024px)
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  .about-visual {
+    overflow: visible;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #about {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  #about h2 {
+    font-size: 2.25rem;
+    line-height: 1.15;
+  }
+
+  /* Pillars grid: 2 columns on tablet */
+  .about-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 3.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #about {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  #about h2 {
+    font-size: 2rem;
+  }
+
+  /* Pillars grid: 1 column on mobile */
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
+    margin-top: 2.75rem;
+  }
+
+  /* Crest badge on photo */
+  .about-visual .rounded-full.p-1\.5 {
+    bottom: -0.75rem;
+    left: 0.75rem;
+  }
+}
+
+@media (max-width: 375px) {
+  #about h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   6. CATEGORIES SECTION (Below 1024px)
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  #categories {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #categories h2 {
+    font-size: 2.25rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .category-card .p-7 {
+    padding: 1.35rem 1.15rem;
+  }
+
+  .category-card button {
+    min-height: 46px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  #categories h2 {
+    font-size: 1.85rem;
+  }
+
+  .category-card .p-7 {
+    padding: 1rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   7. SCHEDULE SECTION (Below 1024px)
+   --------------------------------------------------------------------------- */
+
+/* Mobile touch swipe styling for timeline */
+@media (max-width: 767px) {
+  #schedule {
+    min-height: auto;
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #schedule h2 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  /* Allow cards container to scroll horizontally via touch */
+  #schedule .overflow-x-auto {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+}
+
+@media (max-width: 480px) {
+  #schedule h2 {
+    font-size: 1.35rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   8. ROUTE SECTION (Below 1024px)
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #route {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  #route h2 {
+    font-size: 2.25rem;
+  }
+
+  #route .grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  #route h2 {
+    font-size: 1.85rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   9. SPONSORS SECTION (Below 1024px)
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  #sponsors {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  /* Organizer lockup card */
+  .sponsors-organizer-card {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #sponsors h2 {
+    font-size: 1.85rem;
+  }
+
+  .sponsors-organizer-card {
+    padding: 1.25rem 0.875rem;
+  }
+}
+
+@media (max-width: 375px) {
+  #sponsors .grid.grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   10. REGISTRATION FORM (Below 1024px)
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #register {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  #register h2 {
+    font-size: 2.25rem;
+  }
+
+  #register .grid {
+    gap: 1rem;
+  }
+
+  #register nav[aria-label="Registration steps"] {
+    gap: 0.375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #register h2 {
+    font-size: 1.85rem;
+  }
+
+  /* Compact form controls */
+  #register input,
+  #register select,
+  #register textarea {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   11. FAQS SECTION (Below 1024px)
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #faqs {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    overflow: hidden;
+  }
+
+  #faqs h2 {
+    font-size: 2.25rem;
+  }
+
+  #faqs .grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 1.25rem;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Horizontal category selector on mobile */
+  #faqs nav[aria-label="FAQ categories"] {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 0.5rem;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #faqs nav[aria-label="FAQ categories"]::-webkit-scrollbar {
+    display: none;
+  }
+
+  #faqs nav[aria-label="FAQ categories"] button {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  #faqs .bg-white.border {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 375px) {
+  #faqs h2 {
+    font-size: 1.85rem;
+  }
+
+  #faqs .bg-white.border {
+    padding: 1rem 0.875rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   12. CONTACT SECTION (Below 1024px)
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #contact {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  #contact h2 {
+    font-size: 2.25rem;
+    line-height: 1.15;
+  }
+
+  #contact .grid {
+    gap: 2.5rem;
+  }
+
+  #contact .bg-white.rounded-2xl {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+@media (max-width: 375px) {
+  #contact h2 {
+    font-size: 1.85rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   13. CINEMATIC FOOTER (Below 1024px)
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  .cinematic-footer-wrapper {
+    overflow: hidden;
+  }
+
+  .cinematic-footer-wrapper h2 {
+    font-size: clamp(1.85rem, 5vw, 3.25rem);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-giant-bg-text {
+    font-size: 28vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .cinematic-footer-wrapper .footer-giant-bg-text {
+    font-size: 32vw;
+  }
+
+  .cinematic-footer-wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .cinematic-footer-wrapper .footer-glass-pill {
+    font-size: 0.8125rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .cinematic-footer-wrapper .footer-giant-bg-text {
+    font-size: 36vw;
+  }
+
+  .cinematic-footer-wrapper h2 {
+    font-size: 1.65rem;
+  }
+
+  /* Main actions stack vertically on phones */
+  .cinematic-footer-wrapper .flex.flex-wrap.justify-center.gap-3 {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .cinematic-footer-wrapper .flex.flex-wrap.justify-center.gap-3 > * {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Bottom bar stacks */
+  .cinematic-footer-wrapper .relative.z-20 {
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .cinematic-footer-wrapper h2 {
+    font-size: 1.45rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   14. DASHBOARDS (Admin & Participant) (Below 1024px)
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  .admin-dashboard,
+  .participant-dashboard {
+    overflow-x: hidden;
+  }
+
+  /* Tables horizontal scroll */
+  .admin-dashboard table,
+  .participant-dashboard table {
+    min-width: 650px;
+  }
+
+  /* Dashboard navigation tabs */
+  .admin-tabs,
+  .participant-tabs {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    gap: 0.5rem;
+  }
+
+  .admin-tabs button,
+  .participant-tabs button {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard main,
+  .participant-dashboard main {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 1.25rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   15. PRINT COMPLIANCE
+   --------------------------------------------------------------------------- */
+
+@media print {
+  header,
+  .animate-top-marquee,
+  .hero-section,
+  #schedule,
+  #sponsors,
+  #contact,
+  .cinematic-footer-wrapper {
+    display: none !important;
+  }
+}

@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@theme {
+  --color-night: #111A17;
+  --color-paper: #FFFCEB;
+  --color-ink: #191A17;
+  --color-muted: #686D66;
+  --color-race-blue: #1749D1;
+  --color-dawn-lilac: #EBD3F5;
+  --color-marigold: #FFC36A;
+  --color-line: #DADBCF;
+  --color-lime-ribbon: #78E000;
+
+  --font-sans: 'Inter', 'Noto Sans', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Utility: hide scrollbar while keeping scroll functionality ─── */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes top-marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-top-marquee {
+  display: flex;
+  width: max-content;
+  animation: top-marquee 40s linear infinite;
+}
+
+.animate-top-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Hero Section Animations ─── */
+
+@keyframes hero-fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-glow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes hero-float {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes hero-scrollDot {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.animate-hero-fadeUp {
+  animation: hero-fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-hero-glow {
+  animation: hero-glow 6s ease-in-out infinite;
+}
+
+.animate-hero-float {
+  animation: hero-float 6s ease-in-out infinite;
+}
+
+@keyframes hero-wave-sway {
+  0%, 100% {
+    transform: translateY(0px) scaleX(1.01);
+  }
+  50% {
+    transform: translateY(-6px) scaleX(1.03);
+  }
+}
+
+@keyframes hero-wave-glow {
+  0%, 100% {
+    opacity: 0.72;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-hero-scrollDot {
+  animation: hero-scrollDot 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-hero-wave {
+  animation: hero-wave-sway 7s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.animate-hero-wave-slow {
+  animation: hero-wave-sway 10s ease-in-out infinite reverse;
+  transform-origin: center bottom;
+}
+
+.animate-hero-wave-glow {
+  animation: hero-wave-glow 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

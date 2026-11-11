@@ -1,0 +1,123 @@
+Event Name: ADAMYA DHĀVANAM
+website: nfsugoamarathon.in
+Event Date: 6th December, 2026
+Reporting time 5:30 AM
+Starting 6:30 AM
+Venue: near NFSU Girls Hostel
+Route map we don't disclose as of now. That's what they have told
+Contact information: Abhay : +918788629231
+Logo: docs/marathon logo.png
+
+Module 1. Public website
+Home page.
+About the marathon.
+Event details.
+Marathon categories.
+Registration.
+Route map.
+Sponsors and partners.
+FAQs.
+Contact us.
+Terms and conditions.
+
+Module 2. Participant dashboard
+Participants should be able to:
+Create an account and log in.
+Register for a marathon.
+Select a running category.
+Complete online payment.
+View registration status.
+Download registration confirmation.
+Update permitted personal details.
+Download participation certificates.
+
+Module 3. Admin dashboard
+The administrator should have access to:
+Total registrations.
+Category-wise registrations.
+Payment statistics.
+Participant management.
+Event management.
+T-shirt inventory.
+Volunteer management.
+Sponsor management.
+Certificate generation.
+Export reports in Excel/PDF.
+
+Module 4. Payment integration
+For an Indian marathon, I recommend:
+Razorpay.
+UPI.
+Debit/Credit Cards.
+Net Banking.
+Payment confirmation.
+Refund management.
+GST invoice, if applicable.
+
+========================================================================================================
+
+Registration Process
+1. Selects category: 3Km/6Km/ 10Km 
+2. Fills full form: Name, DOB, Gender, WhatsApp No, Email, Emergency Contact, Blood Group, T-Shirt Size, Medical Condition
+3. Uploads ID Proof (Aadhaar / College ID) if age < 18
+4. Pays registration fee online - UPI / Card / Net Banking
+5. Gets confirmation SMS + Email with Registration ID within 5 minutes
+6. If payment deducted but no confirmation, wait 30 mins and check email. If still not received, contact support on WhatsApp with payment screenshot
+
+Bib Collection
+1. Bib collection on 4th and 5th Dec, 4 PM - 8 PM at Ponda - venue to be announced in group
+2. Bring Registration ID + ID Proof
+3. Bib cannot be collected by another person without authorization letter + copy of ID
+4. No bib distribution on race morning after 6 AM
+
+Race Day - 06-Dec 2026
+1. Reporting: 5:00- 5:30AM 
+2. Warm-up: 6:00 AM
+3. Flag-off: 6: 30AM (10K), 6:45 AM (6Km), 6:50 AM (3Km)
+4. Cut-off time: 2 hours for all categories 
+5. Water stations every 2 KM, Medical desk at Start/Finish + every 3 KM
+6. Results will be published on website within 24 hours
+
+* Eligibility
+- 3K: Age 60+ and under 14
+- 6K: 15-35 and 36-59
+- 10K: 15-35 and 36-59
+- Age proof will be verified at bib collection
+
+Registration Fee & Refund
+- Registration fee is non-refundable and non-transferable
+- If event is cancelled due to weather / government order / force majeure, fee will be carried forward to next edition, no cash refund
+- Duplicate payment will be refunded within 7-10 working days after verification
+
+Health & Medical Declaration
+- By registering, you confirm you are physically fit to participate
+- Participants with heart disease, asthma, BP, diabetes must consult doctor before registering and inform organizers
+- Organizers are not responsible for any pre-existing medical condition
+- Organizers reserve right to stop any participant if medical team finds them unfit during race
+
+Liability Waiver
+- Participation is at your own risk
+- Organizers, sponsors, volunteers will not be liable for any injury, loss, or death during or after the event, except in case of proven negligence
+- Participants agree to follow instructions of marshals, police and medical team
+
+Code of Conduct
+- No littering on route. Use dustbins at water stations
+- No cheating, short-cutting route, or using vehicle. Disqualification if found
+- Bib must be worn visibly on chest at all times. No bib = No timing / medal
+- Misbehaviour with volunteers / staff will lead to immediate disqualification
+
+Photography & Data
+- By registering, you agree that photos / videos taken during event can be used by organizers for promotion on social media / website
+- Your personal data will only be used for event communication and will not be shared with third parties
+
+Changes
+-  By clicking "I Agree" and completing payment, you accept all above Terms & Conditions
+
+========================================
+Technology Stack
+Frontend: React.js + Tailwind CSS
+Backend: Python + Django REST Framework
+Database: PostgreSQL
+Payment Gateway: Razorpay
+Background Tasks: Celery + Redis
+Deployment : VPS  Docker Images
