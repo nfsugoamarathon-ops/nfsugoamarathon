@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import EventFacts from './components/EventFacts';
@@ -72,6 +73,7 @@ export default function App() {
         heading="Dare to run. Run to dare."
         onOpenPortal={handleOpenPortal}
       />
+      <Analytics />
     </div>
   );
 }
