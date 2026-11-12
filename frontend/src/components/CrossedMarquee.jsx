@@ -1,5 +1,5 @@
 export default function CrossedMarquee() {
-  const lilacItems = [
+  const yellowItems = [
     '10 KM ELITE RUN',
     '6 KM CHALLENGE RUN',
     '3 KM FUN RUN',
@@ -26,16 +26,16 @@ export default function CrossedMarquee() {
       aria-label="Marathon Highlights Marquee"
     >
       <div className="relative w-full flex items-center justify-center min-h-[140px] sm:min-h-[160px] md:min-h-[175px]">
-        {/* ─── 1. Top Tilted Lilac Ribbon (Tilted ~+6deg, scrolls left) ─── */}
+        {/* ─── 1. Top Tilted Yellow Ribbon (Tilted ~+6deg, scrolls left) ─── */}
         <div
-          className="absolute w-[130%] sm:w-[120%] -ml-[15%] sm:-ml-[10%] rotate-[4.5deg] sm:rotate-[5.5deg] md:rotate-[6deg] z-0 shadow-md bg-[#EBD3F5] border-y border-[#191A17]/20 py-2 sm:py-2.5"
+          className="absolute w-[130%] sm:w-[120%] -ml-[15%] sm:-ml-[10%] rotate-[4.5deg] sm:rotate-[5.5deg] md:rotate-[6deg] z-0 shadow-md bg-[#FFC36A] border-y border-[#191A17]/25 py-2 sm:py-2.5"
           style={{ willChange: 'transform' }}
         >
           <div className="animate-top-marquee flex items-center whitespace-nowrap">
             {/* Repeated 3x for seamless infinite loop */}
             {[0, 1, 2].map((loopIdx) => (
               <div key={loopIdx} className="flex items-center shrink-0">
-                {lilacItems.map((text, i) => (
+                {yellowItems.map((text, i) => (
                   <span
                     key={`${loopIdx}-${i}`}
                     className="inline-flex items-center text-[#191A17] font-bold text-xs sm:text-sm tracking-[0.16em] uppercase mx-4 sm:mx-6 md:mx-8"
@@ -93,15 +93,13 @@ export default function CrossedMarquee() {
             </svg>
           </div>
 
-          {/* Static Center Soundwave / Athletic Glyph */}
-          <div className="relative z-10 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-[#FFFCEB] border border-[#111A17]/15 flex items-center justify-center shadow-inner">
-            <div className="flex items-center justify-center gap-[3px] text-[#1749D1]">
-              <span className="w-[3px] h-3 bg-[#111A17] rounded-full animate-pulse" />
-              <span className="w-[3px] h-5 bg-[#1749D1] rounded-full" />
-              <span className="w-[3.5px] h-7 bg-[#1749D1] rounded-full" />
-              <span className="w-[3px] h-5 bg-[#1749D1] rounded-full" />
-              <span className="w-[3px] h-3 bg-[#111A17] rounded-full animate-pulse" />
-            </div>
+          {/* Center Official NFSU Goa Marathon Logo */}
+          <div className="relative z-10 w-[64%] h-[64%] rounded-full bg-white border border-[#111A17]/25 flex items-center justify-center shadow-inner overflow-hidden">
+            <img
+              src="/marathon-logo-square.png"
+              alt="Adamya Dhavanam Logo"
+              className="w-full h-full object-cover object-center rounded-full scale-[1.04]"
+            />
           </div>
         </div>
       </div>
