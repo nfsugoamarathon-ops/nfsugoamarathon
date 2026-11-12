@@ -2,24 +2,34 @@ import { EVENT } from '../data/eventData';
 
 export default function Sponsors() {
   return (
-    <section id="sponsors" className="bg-[#FFFCEB] py-20 border-y border-[#DADBCF] scroll-mt-16" aria-labelledby="sponsors-heading">
+    <section id="sponsors" className="bg-[#FFFCEB] pt-8 sm:pt-10 pb-8 sm:pb-10 border-y border-[#DADBCF] scroll-mt-16" aria-labelledby="sponsors-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <p className="text-[#1749D1] text-xs font-semibold uppercase tracking-widest mb-4 text-center">Partners & Sponsors</p>
-        <h2 id="sponsors-heading" className="font-serif italic text-3xl sm:text-4xl text-[#191A17] text-center mb-4">
+        <p className="text-[#1749D1] text-xs font-semibold uppercase tracking-widest mb-3 text-center">Partners & Sponsors</p>
+        <h2 id="sponsors-heading" className="font-serif italic text-3xl sm:text-4xl text-[#191A17] text-center mb-3">
           Powering the run.
         </h2>
-        <p className="text-[#686D66] text-center text-sm mb-12 max-w-md mx-auto">
+        <p className="text-[#686D66] text-center text-sm mb-6 sm:mb-8 max-w-md mx-auto">
           Sponsors and partners will be announced here. If you are interested in partnering with Adamya Dhāvanam, contact us.
         </p>
 
-        {/* Placeholder slots */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+        {/* Placeholder slots (commented for now) */}
+        {/*
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6 sm:mb-8">
           {['Title Sponsor', 'Gold Partner', 'Silver Partner', 'Associate Partner'].map((tier) => (
             <div key={tier} className="border-2 border-dashed border-[#DADBCF] rounded-2xl p-6 flex flex-col items-center justify-center gap-2 aspect-video">
               <span className="text-[#DADBCF] text-3xl font-black">?</span>
               <span className="text-[#686D66] text-xs text-center">{tier}</span>
             </div>
           ))}
+        </div>
+        */}
+
+        {/* Coming soon badge */}
+        <div className="flex justify-center mb-6">
+          <div className="inline-flex items-center gap-2 bg-[#FFF7E6] border border-[#FFC36A]/60 rounded-full px-4 py-2 text-sm font-medium text-[#191A17] shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-[#FFC36A] animate-pulse" aria-hidden="true" />
+            Coming soon
+          </div>
         </div>
 
         {/* Sponsor interest CTA */}
@@ -35,7 +45,7 @@ export default function Sponsors() {
         </div>
 
         {/* Organizer — Conference-room institutional lockup */}
-        <div className="flex flex-col items-center gap-4 mt-10">
+        <div className="flex flex-col items-center gap-4 mt-6 sm:mt-8">
           <p className="text-[#686D66] text-xs font-semibold uppercase tracking-[0.2em]">Organised by</p>
 
           <div className="sponsors-organizer-card w-full max-w-4xl bg-white/90 backdrop-blur-sm border border-[#DADBCF] rounded-2xl px-5 py-6 sm:px-10 sm:py-8 shadow-[0_14px_40px_-16px_rgba(17,26,23,0.08)]">

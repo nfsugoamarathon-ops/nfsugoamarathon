@@ -45,12 +45,12 @@ export default function FAQs() {
   };
 
   return (
-    <section id="faqs" className="bg-[#FFFCEB] py-14 sm:py-20 md:py-24 scroll-mt-16 overflow-hidden" aria-labelledby="faqs-heading">
+    <section id="faqs" className="bg-[#FFFCEB] pt-8 sm:pt-10 md:pt-12 pb-6 sm:pb-8 scroll-mt-16 overflow-hidden" aria-labelledby="faqs-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Header */}
-        <div className="max-w-2xl mb-8 sm:mb-12">
-          <p className="text-[#1749D1] text-xs font-semibold uppercase tracking-widest mb-3 sm:mb-4">FAQs</p>
-          <h2 id="faqs-heading" className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-[#191A17] leading-tight mb-3 sm:mb-4">
+        <div className="max-w-2xl mb-5 sm:mb-6">
+          <p className="text-[#1749D1] text-xs font-semibold uppercase tracking-widest mb-2 sm:mb-3">FAQs</p>
+          <h2 id="faqs-heading" className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-[#191A17] leading-tight mb-2 sm:mb-3">
             Questions answered.
           </h2>
           <p className="text-[#686D66] text-sm sm:text-base">
@@ -99,7 +99,7 @@ export default function FAQs() {
         </div>
 
         {/* Still have questions? */}
-        <div className="mt-8 sm:mt-10 text-center">
+        <div className="mt-5 sm:mt-6 text-center">
           <p className="text-[#686D66] text-sm mb-3">Still have questions?</p>
           <a
             href="https://wa.me/918788629231"

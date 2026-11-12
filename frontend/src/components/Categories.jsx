@@ -168,18 +168,18 @@ export default function Categories() {
     <section
       ref={sectionRef}
       id="categories"
-      className="bg-[#FFFCEB] pt-4 sm:pt-8 pb-20 sm:pb-24 scroll-mt-16 overflow-hidden"
+      className="bg-[#FFFCEB] pt-4 sm:pt-6 pb-12 sm:pb-16 scroll-mt-16 overflow-hidden"
       aria-labelledby="categories-heading"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* Header */}
-        <div className="max-w-2xl mb-12">
-          <p className="categories-header-item text-[#1749D1] text-xs font-semibold uppercase tracking-widest mb-4">
+        <div className="max-w-2xl mb-8 sm:mb-10">
+          <p className="categories-header-item text-[#1749D1] text-xs font-semibold uppercase tracking-widest mb-3">
             Choose your race
           </p>
           <h2
             id="categories-heading"
-            className="categories-header-item font-serif italic text-4xl sm:text-5xl text-[#191A17] leading-tight mb-4"
+            className="categories-header-item font-serif italic text-4xl sm:text-5xl text-[#191A17] leading-tight mb-3"
           >
             Find your distance.
           </h2>
@@ -189,7 +189,7 @@ export default function Categories() {
         </div>
 
         {/* Scroll-scrubbed race track divider */}
-        <div className="relative h-[2px] w-full bg-[#DADBCF]/60 rounded-full mb-10 overflow-hidden" aria-hidden="true">
+        <div className="relative h-[2px] w-full bg-[#DADBCF]/60 rounded-full mb-8 overflow-hidden" aria-hidden="true">
           <div
             ref={trackLineRef}
             className="absolute inset-0 origin-left bg-gradient-to-r from-[#FFC36A] via-[#1749D1] to-[#9B59C8]"

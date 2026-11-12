@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Users, Sun, GraduationCap, Award, ChevronRight, Sparkles } from 'lucide-react';
+import { Users, Sun, GraduationCap, Award, ChevronRight } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -136,7 +136,7 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative bg-[#FFFCEB] py-20 sm:py-28 scroll-mt-16 overflow-hidden"
+      className="relative bg-[#FFFCEB] pt-12 sm:pt-16 pb-4 sm:pb-6 scroll-mt-16 overflow-hidden"
       aria-labelledby="about-heading"
     >
       {/* Subtle ambient background accent */}
@@ -274,7 +274,7 @@ export default function About() {
         </div>
 
         {/* ── 4 Event Pillars Grid ── */}
-        <div className="about-pillars-grid mt-20 sm:mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
+        <div className="about-pillars-grid mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
           {PILLARS.map((p) => {
             const Icon = p.icon;
             return (

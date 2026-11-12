@@ -250,8 +250,8 @@
 
 @media (max-width: 768px) {
   #about {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
   }
 
   #about h2 {
@@ -263,14 +263,14 @@
   .about-pillars-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin-top: 3.5rem;
+    margin-top: 2rem;
   }
 }
 
 @media (max-width: 600px) {
   #about {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1.25rem;
   }
 
   #about h2 {
@@ -281,7 +281,7 @@
   .about-pillars-grid {
     grid-template-columns: 1fr;
     gap: 0.875rem;
-    margin-top: 2.75rem;
+    margin-top: 1.5rem;
   }
 
   /* Crest badge on photo */
@@ -303,8 +303,8 @@
 
 @media (max-width: 1023px) {
   #categories {
-    padding-top: 1.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
   }
 }
 
@@ -376,8 +376,8 @@
 
 @media (max-width: 768px) {
   #route {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
   }
 
   #route h2 {
@@ -401,8 +401,8 @@
 
 @media (max-width: 1023px) {
   #sponsors {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
   }
 
   /* Organizer lockup card */
@@ -470,8 +470,8 @@
 
 @media (max-width: 768px) {
   #faqs {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 1.75rem;
+    padding-bottom: 1.5rem;
     overflow: hidden;
   }
 
@@ -534,8 +534,8 @@
 
 @media (max-width: 768px) {
   #contact {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
   }
 
   #contact h2 {

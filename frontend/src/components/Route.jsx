@@ -3,7 +3,7 @@ import { EVENT } from '../data/eventData';
 
 export default function Route() {
   return (
-    <section id="route" className="bg-[#FFFCEB] py-24 scroll-mt-16" aria-labelledby="route-heading">
+    <section id="route" className="bg-[#FFFCEB] pt-10 sm:pt-14 pb-6 sm:pb-8 scroll-mt-16" aria-labelledby="route-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
@@ -72,7 +72,7 @@ export default function Route() {
         </div>
 
         {/* Route facts */}
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
           {[
             { label: '3 KM', detail: 'Fun Run view route on map', sub: 'Flag-off: 6:50 AM' },
             { label: '6 KM', detail: 'Challenge Run view route on map', sub: 'Flag-off: 6:45 AM' },

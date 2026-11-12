@@ -23,7 +23,7 @@ export default function Contact() {
   }, [isModalOpen]);
 
   return (
-    <section id="contact" className="bg-[#111A17] py-20 sm:py-24 scroll-mt-16 text-white" aria-labelledby="contact-heading">
+    <section id="contact" className="bg-[#111A17] pt-10 sm:pt-12 md:pt-14 pb-14 sm:pb-18 scroll-mt-16 text-white" aria-labelledby="contact-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-start">
           {/* Left Column: Contact & Event Details */}

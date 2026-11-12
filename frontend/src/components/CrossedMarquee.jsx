@@ -22,10 +22,10 @@ export default function CrossedMarquee() {
 
   return (
     <section
-      className="relative w-full overflow-hidden bg-[#FFFCEB] pt-8 sm:pt-12 md:pt-14 pb-4 sm:pb-6 md:pb-8 select-none"
+      className="relative w-full overflow-hidden bg-[#FFFCEB] pt-2 sm:pt-3 pb-2 sm:pb-3 select-none"
       aria-label="Marathon Highlights Marquee"
     >
-      <div className="relative w-full flex items-center justify-center min-h-[170px] sm:min-h-[210px] md:min-h-[240px]">
+      <div className="relative w-full flex items-center justify-center min-h-[140px] sm:min-h-[160px] md:min-h-[175px]">
         {/* ─── 1. Top Tilted Lilac Ribbon (Tilted ~+6deg, scrolls left) ─── */}
         <div
           className="absolute w-[130%] sm:w-[120%] -ml-[15%] sm:-ml-[10%] rotate-[4.5deg] sm:rotate-[5.5deg] md:rotate-[6deg] z-0 shadow-md bg-[#EBD3F5] border-y border-[#191A17]/20 py-2 sm:py-2.5"

@@ -21,6 +21,13 @@ export const EVENT = {
     name: 'Abhay',
     phone: '+91 87886 29231',
     whatsapp: 'https://wa.me/918788629231',
+    email: 'info@nfsugoamarathon.in',
+  },
+  social: {
+    instagram: 'https://instagram.com/nfsugoamarathon',
+    linkedin: 'https://linkedin.com/school/nfsu',
+    youtube: 'https://youtube.com/@nfsu',
+    twitter: 'https://x.com/nfsu_official',
   },
   bibCollection: {
     dates: '4th & 5th December 2026',
