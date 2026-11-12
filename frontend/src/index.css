@@ -37,17 +37,41 @@ body {
 
 @keyframes top-marquee {
   0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-33.333%); }
 }
 
 .animate-top-marquee {
   display: flex;
   width: max-content;
-  animation: top-marquee 40s linear infinite;
+  animation: top-marquee 35s linear infinite;
 }
 
 .animate-top-marquee:hover {
   animation-play-state: paused;
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-33.333%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 35s linear infinite;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 22s linear infinite;
 }
 
 /* ─── Hero Section Animations ─── */

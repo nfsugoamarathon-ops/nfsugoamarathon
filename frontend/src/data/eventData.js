@@ -9,6 +9,9 @@ export const EVENT = {
   googleFormUrl: 'https://forms.gle/mJH5q4Rnm3N2k8Uv5',
   // Official Sponsorship Proposal PDF
   sponsorshipProposalPdf: '/sponsorship-proposal.pdf',
+  // Official Google My Maps course route
+  routeMapEmbedUrl: 'https://www.google.com/maps/d/embed?mid=1UtoKyhS5wSvuqg4CB5enqR6n07ZapQA',
+  routeMapViewerUrl: 'https://www.google.com/maps/d/viewer?mid=1UtoKyhS5wSvuqg4CB5enqR6n07ZapQA&usp=sharing',
   date: '6 December 2026',
   dateISO: '2026-12-06',
   reportingTime: '5:00 – 5:30 AM',
@@ -185,7 +188,7 @@ export const FAQS = [
       },
       {
         q: 'Is the route map available?',
-        a: 'The detailed route map has not yet been published by the organizers. It will be announced before the event.',
+        a: 'Yes! The official interactive course route map is available above on this page and can also be opened directly in Google Maps.',
       },
     ],
   },

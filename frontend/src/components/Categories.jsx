@@ -168,7 +168,7 @@ export default function Categories() {
     <section
       ref={sectionRef}
       id="categories"
-      className="bg-[#FFFCEB] py-24 scroll-mt-16 overflow-hidden"
+      className="bg-[#FFFCEB] pt-4 sm:pt-8 pb-20 sm:pb-24 scroll-mt-16 overflow-hidden"
       aria-labelledby="categories-heading"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">

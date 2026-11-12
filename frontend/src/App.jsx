@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import EventFacts from './components/EventFacts';
 import About from './components/About';
+import CrossedMarquee from './components/CrossedMarquee';
 import Categories from './components/Categories';
 import RegistrationForm from './components/RegistrationForm';
 import Schedule from './components/Schedule';
@@ -49,6 +50,7 @@ export default function App() {
         <Hero />
         <EventFacts />
         <About />
+        <CrossedMarquee />
         <Categories />
         {SHOW_BUILT_IN_REGISTRATION && (
           <RegistrationForm onOpenPortal={handleOpenPortal} />

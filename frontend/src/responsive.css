@@ -303,8 +303,8 @@
 
 @media (max-width: 1023px) {
   #categories {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
   }
 }
 

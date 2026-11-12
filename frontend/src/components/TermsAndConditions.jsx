@@ -51,11 +51,6 @@ export default function TermsAndConditions() {
               <li>Your personal data will only be used for event communication and will not be shared with third parties.</li>
             </ul>
           </div>
-
-          <div>
-            <h3 className="font-semibold text-[#191A17] text-base mb-2">Acceptance</h3>
-            <p>By clicking "I Agree" and completing payment, you accept all of the above Terms & Conditions.</p>
-          </div>
         </div>
       </div>
     </section>
