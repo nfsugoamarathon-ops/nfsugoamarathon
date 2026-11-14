@@ -11,11 +11,11 @@ if (typeof window !== 'undefined') {
 const COLOR_MAP = {
   marigold: {
     bg: 'bg-[#FFF7E6]',
-    border: 'border-[#FFC36A]',
-    badge: 'bg-[#FFC36A] text-[#191A17]',
-    btn: 'bg-[#FFC36A] hover:bg-[#f0b04f] text-[#191A17]',
-    ring: 'ring-[#FFC36A]',
-    dot: 'bg-[#FFC36A]',
+    border: 'border-[#e8e337]',
+    badge: 'bg-[#e8e337] text-[#191A17]',
+    btn: 'bg-[#e8e337] hover:bg-[#f0b04f] text-[#191A17]',
+    ring: 'ring-[#e8e337]',
+    dot: 'bg-[#e8e337]',
   },
   'race-blue': {
     bg: 'bg-[#EEF2FF]',
@@ -192,7 +192,7 @@ export default function Categories() {
         <div className="relative h-[2px] w-full bg-[#DADBCF]/60 rounded-full mb-8 overflow-hidden" aria-hidden="true">
           <div
             ref={trackLineRef}
-            className="absolute inset-0 origin-left bg-gradient-to-r from-[#FFC36A] via-[#1749D1] to-[#9B59C8]"
+            className="absolute inset-0 origin-left bg-gradient-to-r from-[#e8e337] via-[#1749D1] to-[#9B59C8]"
           />
         </div>
 

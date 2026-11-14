@@ -194,19 +194,19 @@ export default function Hero() {
           2. MOBILE & TABLET LAYOUT (<1024px)
           Exact match to user's uploaded reference mockup
           ─────────────────────────────────────────────────────────── */}
-      <div className="lg:hidden relative z-10 flex flex-col items-center justify-between w-full max-w-lg mx-auto px-5 pt-20 sm:pt-24 pb-6 min-h-screen text-center">
+      <div className="lg:hidden relative z-10 flex flex-col items-center justify-between w-full max-w-lg mx-auto px-5 pt-28 sm:pt-32 pb-6 min-h-screen text-center">
         
         {/* Top Group: Pill Badge + Sanskrit + Titles + Tagline + Facts + Buttons */}
         <div className="w-full flex flex-col items-center animate-hero-fadeUp">
           
           {/* Date & Venue Pill Badge */}
           <div className="inline-flex items-center gap-2 bg-white/[0.08] backdrop-blur-md border border-white/[0.15] rounded-full px-4 py-1.5 text-white/90 text-xs sm:text-sm font-medium tracking-wide shadow-md mb-4 sm:mb-5">
-            <span className="w-2 h-2 rounded-full bg-[#FFB800] shrink-0 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[#e8e337] shrink-0 animate-pulse" />
             <span>6 December 2026 · NFSU Goa Campus</span>
           </div>
 
           {/* Sanskrit Title */}
-          <span className="block font-serif italic text-[#FFC36A] text-xl sm:text-2xl mb-1 sm:mb-1.5 tracking-wide font-medium">
+          <span className="block font-serif italic text-[#e8e337] text-xl sm:text-2xl mb-1 sm:mb-1.5 tracking-wide font-medium">
             {EVENT.nameDevanagari}
           </span>
 
@@ -229,15 +229,15 @@ export default function Hero() {
           {/* Quick Facts Row */}
           <div className="flex items-center justify-center flex-wrap gap-x-4 sm:gap-x-5 gap-y-2 mb-6 sm:mb-7">
             <div className="flex items-center gap-1.5 text-white/70 text-xs sm:text-sm">
-              <Calendar size={13} className="text-[#FFC36A] shrink-0" />
+              <Calendar size={13} className="text-[#e8e337] shrink-0" />
               <span>{EVENT.date}</span>
             </div>
             <div className="flex items-center gap-1.5 text-white/70 text-xs sm:text-sm">
-              <MapPin size={13} className="text-[#FFC36A] shrink-0" />
+              <MapPin size={13} className="text-[#e8e337] shrink-0" />
               <span>NFSU Goa Campus</span>
             </div>
             <div className="flex items-center gap-1.5 text-white/70 text-xs sm:text-sm">
-              <Clock size={13} className="text-[#FFC36A] shrink-0" />
+              <Clock size={13} className="text-[#e8e337] shrink-0" />
               <span>Flag-off: 6:30 AM</span>
             </div>
           </div>
@@ -270,7 +270,7 @@ export default function Hero() {
 
         {/* Central Circular Crest over Scenic Runners Horizon */}
         <div className="relative my-3 sm:my-5 flex items-center justify-center animate-hero-fadeUp" style={{ animationDelay: '0.2s' }}>
-          <div className="absolute -inset-4 rounded-full bg-[#FFC36A]/15 blur-xl pointer-events-none" />
+          <div className="absolute -inset-4 rounded-full bg-[#e8e337]/15 blur-xl pointer-events-none" />
           <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full border-[3.5px] border-white shadow-[0_12px_40px_rgba(0,0,0,0.65)] overflow-hidden bg-white flex items-center justify-center">
             <img
               src="/marathon-logo-square.png"
@@ -351,8 +351,8 @@ export default function Hero() {
         <div className="animate-hero-fadeUp mb-4 flex items-center justify-between gap-3">
           <div className="inline-flex items-center gap-2 bg-white/[0.08] backdrop-blur-lg border border-white/[0.15] rounded-full px-3.5 py-1.5 text-white/90 text-xs font-medium tracking-wide shadow-md">
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-[#FFC36A] opacity-75 animate-ping" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FFC36A]" />
+              <span className="absolute inline-flex h-full w-full rounded-full bg-[#e8e337] opacity-75 animate-ping" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#e8e337]" />
             </span>
             6 December 2026 · NFSU Goa Campus
           </div>
@@ -366,7 +366,7 @@ export default function Hero() {
 
             {/* Title Block */}
             <h1 className="text-white leading-[0.88] mb-4">
-              <span className="block font-serif italic text-[#FFC36A] text-2xl mb-1.5 tracking-[0.03em]">
+              <span className="block font-serif italic text-[#e8e337] text-2xl mb-1.5 tracking-[0.03em]">
                 {EVENT.nameDevanagari}
               </span>
               <span className="block font-sans font-black text-7xl xl:text-[5.5rem] tracking-[-0.035em] uppercase leading-[0.9]">
@@ -392,7 +392,7 @@ export default function Hero() {
                 { icon: Clock, text: 'Flag-off: 6:30 AM' },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-center gap-1.5 text-white/55 text-sm">
-                  <Icon size={13} className="text-[#FFC36A]/80" />
+                  <Icon size={13} className="text-[#e8e337]/80" />
                   <span>{text}</span>
                 </div>
               ))}
@@ -430,7 +430,7 @@ export default function Hero() {
             <div className="relative">
               {/* Outer glow */}
               <div className="absolute -inset-6 rounded-full bg-[#1749D1]/[0.08] blur-3xl animate-hero-glow pointer-events-none" />
-              <div className="absolute -inset-4 rounded-full bg-[#FFC36A]/[0.05] blur-2xl animate-hero-glow pointer-events-none" style={{ animationDelay: '3s' }} />
+              <div className="absolute -inset-4 rounded-full bg-[#e8e337]/[0.05] blur-2xl animate-hero-glow pointer-events-none" style={{ animationDelay: '3s' }} />
 
               {/* Logo */}
               <div className="relative w-52 h-52 xl:w-64 xl:h-64 rounded-full overflow-hidden border-2 border-white/[0.12] shadow-[0_0_50px_rgba(23,73,209,0.2),0_0_80px_rgba(255,195,106,0.06)]">

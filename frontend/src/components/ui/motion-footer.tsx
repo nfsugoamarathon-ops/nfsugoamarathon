@@ -1,11 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "@/lib/utils";
 import { EVENT, openRegistration } from "../../data/eventData";
+import CreditsModal from "../CreditsModal";
 
 // Register ScrollTrigger safely for React
 if (typeof window !== "undefined") {
@@ -264,6 +265,7 @@ export function CinematicFooter({
   onOpenPortal,
   brandName = "NFSU Goa",
 }: CinematicFooterProps) {
+  const [isCreditsOpen, setIsCreditsOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const giantTextRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -493,13 +495,27 @@ export function CinematicFooter({
               © 2026 ADAMYA DHĀVANAM · NFSU GOA. ALL RIGHTS RESERVED.
             </div>
 
-            {/* "Made with Love" Badge */}
-            <div className="footer-glass-pill px-5 py-2.5 rounded-full flex items-center gap-2 order-1 md:order-2 cursor-default border-white/10">
-              <span className="text-white/60 text-[10px] md:text-xs font-bold uppercase tracking-widest">Organised with</span>
-              <span className="animate-footer-heartbeat text-sm md:text-base text-red-500">❤</span>
-              <span className="text-white/60 text-[10px] md:text-xs font-bold uppercase tracking-widest">by</span>
-              <span className="text-[#FFC36A] font-black text-xs md:text-sm tracking-normal ml-1 font-serif italic">NFSU Goa</span>
-            </div>
+            {/* "Made with Love" Badge - Click to open website credits dialog */}
+            <button
+              type="button"
+              onClick={() => setIsCreditsOpen(true)}
+              className="footer-glass-pill px-5 py-2.5 rounded-full flex items-center gap-2 order-1 md:order-2 cursor-pointer border-white/10 hover:border-[#FFC36A]/50 hover:bg-white/10 hover:scale-[1.03] active:scale-95 transition-all duration-300 group shadow-lg"
+              title="Click to view website creators & credits"
+              aria-label="View website creators and credits"
+            >
+              <span className="text-white/60 text-[10px] md:text-xs font-bold uppercase tracking-widest group-hover:text-white/90 transition-colors">
+                Organised with
+              </span>
+              <span className="animate-footer-heartbeat text-sm md:text-base text-red-500">
+                ❤
+              </span>
+              <span className="text-white/60 text-[10px] md:text-xs font-bold uppercase tracking-widest group-hover:text-white/90 transition-colors">
+                by
+              </span>
+              <span className="text-[#FFC36A] font-black text-xs md:text-sm tracking-normal ml-1 font-serif italic group-hover:underline decoration-[#FFC36A]/60">
+                NFSU Goa
+              </span>
+            </button>
 
             {/* Back to top */}
             <MagneticButton
@@ -515,6 +531,12 @@ export function CinematicFooter({
           </div>
         </footer>
       </div>
+
+      {/* Website Creators & Development Credits Dialog */}
+      <CreditsModal
+        isOpen={isCreditsOpen}
+        onClose={() => setIsCreditsOpen(false)}
+      />
     </>
   );
 }

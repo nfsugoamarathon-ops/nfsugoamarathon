@@ -28,7 +28,7 @@ const STATIONS = [
     badge: 'Expo',
     tags: ['Original ID Required', 'Official Race Bib', 'Official T-Shirt'],
     milestone: '0.0 KM',
-    accentColor: '#FFC36A',
+    accentColor: '#e8e337',
   },
   {
     id: 'reporting',
@@ -118,7 +118,7 @@ const STATIONS = [
     badge: 'Podium',
     tags: ['Finisher Medals', 'Hot Breakfast', 'Results in 24h'],
     milestone: 'FINISH',
-    accentColor: '#FFC36A',
+    accentColor: '#e8e337',
   },
 ];
 
@@ -334,12 +334,12 @@ export default function Schedule() {
 
         {/* Live Station Audio Announcement Balloon */}
         <div className="py-2.5 w-full max-w-full">
-          <div className="flex items-start sm:items-center gap-2.5 sm:gap-3 bg-[#191A17] text-white px-3.5 sm:px-4 py-2.5 rounded-2xl shadow-[3px_3px_0_#FFC36A] sm:shadow-[4px_4px_0_#FFC36A] w-full max-w-2xl min-w-0 transition-all duration-300">
-            <div className="w-7 h-7 rounded-lg bg-[#FFC36A] text-[#191A17] flex items-center justify-center shrink-0 font-bold mt-0.5 sm:mt-0">
+          <div className="flex items-start sm:items-center gap-2.5 sm:gap-3 bg-[#191A17] text-white px-3.5 sm:px-4 py-2.5 rounded-2xl shadow-[3px_3px_0_#e8e337] sm:shadow-[4px_4px_0_#e8e337] w-full max-w-2xl min-w-0 transition-all duration-300">
+            <div className="w-7 h-7 rounded-lg bg-[#e8e337] text-[#191A17] flex items-center justify-center shrink-0 font-bold mt-0.5 sm:mt-0">
               <Volume2 size={15} />
             </div>
             <div className="min-w-0 flex-1">
-              <span className="text-[10px] uppercase font-mono tracking-widest text-[#FFC36A] block font-bold leading-tight mb-1">
+              <span className="text-[10px] uppercase font-mono tracking-widest text-[#e8e337] block font-bold leading-tight mb-1">
                 NOW ANNOUNCING · {activeStation.code}
               </span>
               <p className="text-xs sm:text-sm font-medium text-white leading-snug break-words">
@@ -373,7 +373,7 @@ export default function Schedule() {
                   {/* Station Board - Scaler x Wispr Platform Signboard Aesthetic */}
                   <div className="relative mb-2 flex flex-col items-center">
                     {/* The Retro Indian Railway Station Board */}
-                    <div className="w-full bg-[#FFC36A] border-4 border-[#191A17] rounded-xl p-3 sm:p-4 shadow-[5px_5px_0_#191A17] text-center relative z-10">
+                    <div className="w-full bg-[#e8e337] border-4 border-[#191A17] rounded-xl p-3 sm:p-4 shadow-[5px_5px_0_#191A17] text-center relative z-10">
                       <span className="block font-serif italic text-xs font-semibold text-[#191A17]/80 tracking-wide mb-0.5">
                         {station.script}
                       </span>
@@ -411,7 +411,7 @@ export default function Schedule() {
                         <rect x="75" y="15" width="4" height="6" fill="#191A17" />
                         <rect x="85" y="15" width="4" height="6" fill="#191A17" />
                         <path d="M 120 40 Q 140 25 160 40 Q 180 25 200 40" />
-                        <circle cx="160" cy="18" r="7" fill="#FFC36A" />
+                        <circle cx="160" cy="18" r="7" fill="#e8e337" />
                       </svg>
                     </div>
                   </div>
@@ -507,7 +507,7 @@ export default function Schedule() {
             {/* Filled Progress Bar */}
             <div
               ref={scrubberFillRef}
-              className="absolute left-0 top-0 bottom-0 bg-[#FFC36A]/50 rounded-full transition-[width] duration-100 ease-out border-r-2 border-[#191A17]"
+              className="absolute left-0 top-0 bottom-0 bg-[#e8e337]/50 rounded-full transition-[width] duration-100 ease-out border-r-2 border-[#191A17]"
               style={{ width: `${scrollProgress * 100}%` }}
             />
 
@@ -533,9 +533,9 @@ export default function Schedule() {
               className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none transition-[left] duration-100 ease-out z-20"
               style={{ left: `${scrollProgress * 100}%` }}
             >
-              <div className="flex items-center gap-1 bg-[#191A17] text-white px-2 py-0.5 rounded-full border-2 border-[#FFC36A] shadow-[2px_2px_0_#000] text-xs font-black">
+              <div className="flex items-center gap-1 bg-[#191A17] text-white px-2 py-0.5 rounded-full border-2 border-[#e8e337] shadow-[2px_2px_0_#000] text-xs font-black">
                 <span className="text-xs">🏃🏻‍♂️‍➡️</span>
-                <span className="text-[9px] font-mono text-[#FFC36A] hidden sm:inline">
+                <span className="text-[9px] font-mono text-[#e8e337] hidden sm:inline">
                   {activeStation.milestone}
                 </span>
               </div>

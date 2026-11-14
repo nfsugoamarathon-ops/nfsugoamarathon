@@ -13,7 +13,6 @@ const NAV_LINKS = [
 
 const STRIP_ITEMS = [
   {
-    icon: '🏃',
     highlight: 'ADAMYA DHĀVANAM:',
     text: 'NFSU Goa Marathon · 6 Dec 2026',
   },
@@ -74,22 +73,35 @@ export default function Navbar({ onOpenPortal }) {
     <header
       ref={menuRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-[#111A17]/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        scrolled
+          ? 'bg-[#FFFCEB]/85 backdrop-blur-md border-b border-[#191A17]/10 shadow-xs'
+          : 'bg-transparent backdrop-blur-xs'
       }`}
     >
       {/* Dark & Gold Theme Marquee Ribbon (Matching Event Identity & Uploaded Reference) */}
-      <div className="w-full overflow-hidden bg-[#111A17] border-b border-white/10 py-1.5 text-[11px] sm:text-xs select-none shadow-sm">
+      <div className={`w-full overflow-hidden bg-transparent border-b py-1.5 text-[11px] sm:text-xs select-none transition-colors duration-300 ${
+        scrolled ? 'border-[#191A17]/10' : 'border-white/10'
+      }`}>
         <div className="animate-top-marquee flex items-center whitespace-nowrap cursor-pointer">
           {/* Primary Track */}
           <div className="flex items-center">
             {STRIP_ITEMS.map((item, idx) => (
-              <div key={idx} className="flex items-center gap-2 mx-6 text-white/85 font-medium">
-                <span className="w-4 h-4 rounded bg-white/10 border border-white/15 text-[#FFC36A] flex items-center justify-center text-[9px] shrink-0 font-bold shadow-xs">
-                  {item.icon}
+              <div key={idx} className={`flex items-center gap-2 mx-6 font-medium transition-colors duration-300 ${
+                scrolled
+                  ? 'text-[#191A17]/85'
+                  : 'text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
+              }`}>
+                <span className={`font-bold tracking-wide transition-colors duration-300 ${
+                  scrolled ? 'text-[#1749D1]' : 'text-[#e8e337]'
+                }`}>
+                  {item.highlight}
                 </span>
-                <span className="text-[#FFC36A] font-bold tracking-wide">{item.highlight}</span>
                 <span>{item.text}</span>
-                <span className="text-[#FFC36A]/40 ml-4 font-light text-xs">✦</span>
+                <span className={`ml-4 font-light text-xs transition-colors duration-300 ${
+                  scrolled ? 'text-[#1749D1]/40' : 'text-[#e8e337]/50'
+                }`}>
+                  ✦
+                </span>
               </div>
             ))}
           </div>
@@ -97,35 +109,60 @@ export default function Navbar({ onOpenPortal }) {
           {/* Duplicate Track for Smooth Infinite Loop */}
           <div className="flex items-center" aria-hidden="true">
             {STRIP_ITEMS.map((item, idx) => (
-              <div key={`dup-${idx}`} className="flex items-center gap-2 mx-6 text-white/85 font-medium">
-                <span className="w-4 h-4 rounded bg-white/10 border border-white/15 text-[#FFC36A] flex items-center justify-center text-[9px] shrink-0 font-bold shadow-xs">
-                  {item.icon}
+              <div key={`dup-${idx}`} className={`flex items-center gap-2 mx-6 font-medium transition-colors duration-300 ${
+                scrolled
+                  ? 'text-[#191A17]/85'
+                  : 'text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
+              }`}>
+                <span className={`font-bold tracking-wide transition-colors duration-300 ${
+                  scrolled ? 'text-[#1749D1]' : 'text-[#e8e337]'
+                }`}>
+                  {item.highlight}
                 </span>
-                <span className="text-[#FFC36A] font-bold tracking-wide">{item.highlight}</span>
                 <span>{item.text}</span>
-                <span className="text-[#FFC36A]/40 ml-4 font-light text-xs">✦</span>
+                <span className={`ml-4 font-light text-xs transition-colors duration-300 ${
+                  scrolled ? 'text-[#1749D1]/40' : 'text-[#e8e337]/50'
+                }`}>
+                  ✦
+                </span>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14 sm:h-16">
         {/* Brand */}
         <a
           href="#"
-          className="flex items-center gap-2.5 group"
+          className="flex items-center gap-2 sm:gap-2.5 group"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           aria-label="Adamya Dhavanam — back to top"
         >
           <img
             src="/marathon-logo.png"
             alt="Adamya Dhavanam marathon logo"
-            className="h-10 w-10 rounded-full object-cover ring-2 ring-white/20 group-hover:ring-[#FFC36A]/60 transition-all shadow shrink-0"
+            className={`h-9 w-9 sm:h-10 sm:w-10 rounded-full object-cover ring-2 transition-all shadow shrink-0 ${
+              scrolled
+                ? 'ring-[#1749D1]/30 group-hover:ring-[#1749D1]'
+                : 'ring-white/20 group-hover:ring-[#e8e337]/60'
+            }`}
           />
-          <span className="flex flex-col text-white font-semibold text-xs sm:text-sm leading-tight">
-            <span className="block text-[#FFC36A] font-serif italic text-sm sm:text-base">Adamya Dhāvanam</span>
-            <span className="block text-white/70 text-[9px] sm:text-[10px] tracking-widest font-mono">NFSU GOA · 6 DEC 2026</span>
+          <span className="flex flex-col font-semibold text-xs sm:text-sm leading-tight">
+            <span className={`block font-serif italic text-sm sm:text-base transition-colors duration-300 ${
+              scrolled
+                ? 'text-[#1749D1]'
+                : 'text-[#e8e337] drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
+            }`}>
+              Adamya Dhāvanam
+            </span>
+            <span className={`block text-[9px] sm:text-[10px] tracking-widest font-mono transition-colors duration-300 ${
+              scrolled
+                ? 'text-[#686D66]'
+                : 'text-white/70 drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
+            }`}>
+              NFSU GOA · 6 DEC 2026
+            </span>
           </span>
         </a>
 
@@ -136,7 +173,11 @@ export default function Navbar({ onOpenPortal }) {
               key={l.href}
               href={l.href}
               onClick={(e) => { e.preventDefault(); handleNavClick(l.href); }}
-              className="text-white/70 hover:text-white text-xs uppercase tracking-wider font-semibold transition-colors focus-visible:outline-none focus-visible:text-white"
+              className={`text-xs uppercase tracking-wider font-semibold transition-colors duration-300 focus-visible:outline-none ${
+                scrolled
+                  ? 'text-[#191A17]/80 hover:text-[#1749D1] focus-visible:text-[#1749D1]'
+                  : 'text-white/80 hover:text-white focus-visible:text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
+              }`}
             >
               {l.label}
             </a>
@@ -150,7 +191,7 @@ export default function Navbar({ onOpenPortal }) {
             target={EVENT.googleFormUrl ? '_blank' : undefined}
             rel={EVENT.googleFormUrl ? 'noopener noreferrer' : undefined}
             onClick={openRegistration}
-            className="flex items-center gap-1 bg-[#1749D1] hover:bg-[#1340b8] text-white text-xs font-bold px-4 py-2 rounded-full transition-all shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1749D1]"
+            className="flex items-center gap-1 bg-[#1749D1] hover:bg-[#1340b8] text-white text-[11px] sm:text-xs font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1749D1]"
           >
             <span>Register</span>
             <ChevronRight size={13} />
@@ -158,7 +199,11 @@ export default function Navbar({ onOpenPortal }) {
 
           {/* Mobile menu toggle */}
           <button
-            className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors focus-visible:outline-2 focus-visible:outline-white"
+            className={`lg:hidden p-2 rounded-lg transition-colors focus-visible:outline-2 ${
+              scrolled
+                ? 'text-[#191A17] hover:bg-[#191A17]/05 focus-visible:outline-[#1749D1]'
+                : 'text-white hover:bg-white/10 focus-visible:outline-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
+            }`}
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
@@ -170,14 +215,22 @@ export default function Navbar({ onOpenPortal }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="mobile-nav-drawer lg:hidden bg-[#111A17]/98 backdrop-blur-md border-t border-white/10 px-4 pb-5 pt-2">
+        <div className={`mobile-nav-drawer lg:hidden backdrop-blur-md border-t px-4 pb-5 pt-2 transition-colors duration-300 ${
+          scrolled
+            ? 'bg-[#FFFCEB]/98 border-[#191A17]/10'
+            : 'bg-[#111A17]/98 border-white/10'
+        }`}>
           <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
             {NAV_LINKS.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={(e) => { e.preventDefault(); handleNavClick(l.href); }}
-                className="text-white/80 hover:text-white py-2.5 px-3 rounded-lg hover:bg-white/5 text-sm font-medium transition-colors"
+                className={`py-2.5 px-3 rounded-lg text-sm font-medium transition-colors ${
+                  scrolled
+                    ? 'text-[#191A17]/80 hover:text-[#1749D1] hover:bg-[#191A17]/05'
+                    : 'text-white/80 hover:text-white hover:bg-white/5'
+                }`}
               >
                 {l.label}
               </a>
