@@ -103,59 +103,59 @@ export default function CreditsModal({ isOpen, onClose }: CreditsModalProps) {
             <span>CORE DEVELOPMENT TEAM</span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
             {/* Neel Varia Card */}
-            <div className="relative group bg-[#0C1412] border-2 border-[#FFC36A] rounded-2xl p-3 sm:p-3.5 shadow-md hover:shadow-[0_0_25px_rgba(255,195,106,0.2)] transition-all duration-300 flex flex-col justify-between">
+            <div className="relative group bg-[#0C1412] border-2 border-[#FFC36A] rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-md hover:shadow-[0_0_25px_rgba(255,195,106,0.2)] transition-all duration-300 flex flex-col justify-between">
               <div>
                 {/* Photo Frame with Inner Golden Border */}
-                <div className="relative w-full h-44 sm:h-52 rounded-xl overflow-hidden border-2 border-[#FFC36A] bg-[#070D0B] shadow-inner mb-2.5">
+                <div className="relative w-full aspect-[4/5] rounded-lg sm:rounded-xl overflow-hidden border-2 border-[#FFC36A] bg-[#070D0B] shadow-inner mb-2 sm:mb-2.5">
                   <img
                     src="/neel.jpg"
                     alt="Neel Varia"
-                    className="w-full h-full object-cover object-[center_70%] group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
                 </div>
 
                 {/* Card Meta */}
                 <div className="space-y-0.5">
-                  <h4 className="text-lg sm:text-xl font-black text-white group-hover:text-[#FFC36A] transition-colors tracking-tight font-serif italic">
+                  <h4 className="text-sm sm:text-lg font-black text-white group-hover:text-[#FFC36A] transition-colors tracking-tight font-serif italic truncate">
                     Neel Varia
                   </h4>
-                  <p className="text-xs font-semibold text-emerald-400">
+                  <p className="text-[10px] sm:text-xs font-semibold text-emerald-400 leading-tight">
                     Developer · M.Sc DFIS Sem 3
                   </p>
-                  <p className="text-[10px] text-white/60 font-medium">
+                  <p className="text-[9px] sm:text-[10px] text-white/60 font-medium">
                     NFSU Goa Campus
                   </p>
                 </div>
               </div>
 
-              {/* Links - 1 Row */}
-              <div className="grid grid-cols-3 gap-1 pt-2.5 mt-2.5 border-t border-white/10 w-full">
+              {/* Links - Responsive Single Row */}
+              <div className="grid grid-cols-3 gap-1 pt-2 sm:pt-2.5 mt-2 sm:mt-2.5 border-t border-white/10 w-full">
                 <a
                   href="https://www.linkedin.com/in/neelvaria/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-1 py-1.5 px-1 rounded-lg bg-[#0A66C2]/20 hover:bg-[#0A66C2]/40 text-[#70b5f9] hover:text-white border border-[#0A66C2]/40 text-[11px] font-semibold transition-all hover:scale-[1.02] whitespace-nowrap"
+                  className="flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1 py-1 sm:py-1.5 px-0.5 sm:px-1 rounded-lg bg-[#0A66C2]/20 hover:bg-[#0A66C2]/40 text-[#70b5f9] hover:text-white border border-[#0A66C2]/40 text-[9px] sm:text-[11px] font-semibold transition-all hover:scale-[1.02] whitespace-nowrap"
                   title="LinkedIn Profile"
                 >
-                  <LinkedinIcon className="w-3 h-3 shrink-0" />
+                  <LinkedinIcon className="w-3.5 h-3.5 sm:w-3 sm:h-3 shrink-0" />
                   <span>LinkedIn</span>
                 </a>
                 <a
                   href="https://github.com/neelvaria"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-1 py-1.5 px-1 rounded-lg bg-white/5 hover:bg-white/15 text-white/80 hover:text-white border border-white/10 text-[11px] font-semibold transition-all hover:scale-[1.02] whitespace-nowrap"
+                  className="flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1 py-1 sm:py-1.5 px-0.5 sm:px-1 rounded-lg bg-white/5 hover:bg-white/15 text-white/80 hover:text-white border border-white/10 text-[9px] sm:text-[11px] font-semibold transition-all hover:scale-[1.02] whitespace-nowrap"
                   title="GitHub Profile"
                 >
-                  <GithubIcon className="w-3 h-3 shrink-0" />
+                  <GithubIcon className="w-3.5 h-3.5 sm:w-3 sm:h-3 shrink-0" />
                   <span>GitHub</span>
                 </a>
                 <a
                   href="mailto:neelvaria08@gmail.com"
-                  className="flex items-center justify-center gap-1 py-1.5 px-1 rounded-lg bg-white/5 hover:bg-white/15 text-white/80 hover:text-white border border-white/10 text-[11px] font-semibold transition-all hover:scale-[1.02] whitespace-nowrap"
+                  className="flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1 py-1 sm:py-1.5 px-0.5 sm:px-1 rounded-lg bg-white/5 hover:bg-white/15 text-white/80 hover:text-white border border-white/10 text-[9px] sm:text-[11px] font-semibold transition-all hover:scale-[1.02] whitespace-nowrap"
                   title="Send email"
                 >
                   <Mail size={12} className="shrink-0" />
@@ -165,57 +165,57 @@ export default function CreditsModal({ isOpen, onClose }: CreditsModalProps) {
             </div>
 
             {/* Yash Bhagwani Card */}
-            <div className="relative group bg-[#0C1412] border-2 border-[#FFC36A] rounded-2xl p-3 sm:p-3.5 shadow-md hover:shadow-[0_0_25px_rgba(255,195,106,0.2)] transition-all duration-300 flex flex-col justify-between">
+            <div className="relative group bg-[#0C1412] border-2 border-[#FFC36A] rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-md hover:shadow-[0_0_25px_rgba(255,195,106,0.2)] transition-all duration-300 flex flex-col justify-between">
               <div>
                 {/* Photo Frame with Inner Golden Border */}
-                <div className="relative w-full h-44 sm:h-52 rounded-xl overflow-hidden border-2 border-[#FFC36A] bg-[#070D0B] shadow-inner mb-2.5">
+                <div className="relative w-full aspect-[4/5] rounded-lg sm:rounded-xl overflow-hidden border-2 border-[#FFC36A] bg-[#070D0B] shadow-inner mb-2 sm:mb-2.5">
                   <img
                     src="/yash.jpg"
                     alt="Yash Bhagwani"
-                    className="w-full h-full object-cover object-[center_70%] group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-[center_12%] group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
                 </div>
 
                 {/* Card Meta */}
                 <div className="space-y-0.5">
-                  <h4 className="text-lg sm:text-xl font-black text-white group-hover:text-[#FFC36A] transition-colors tracking-tight font-serif italic">
+                  <h4 className="text-sm sm:text-lg font-black text-white group-hover:text-[#FFC36A] transition-colors tracking-tight font-serif italic truncate">
                     Yash Bhagwani
                   </h4>
-                  <p className="text-xs font-semibold text-amber-300">
+                  <p className="text-[10px] sm:text-xs font-semibold text-amber-300 leading-tight">
                     Developer · M.Sc DFIS Sem 1
                   </p>
-                  <p className="text-[10px] text-white/60 font-medium">
+                  <p className="text-[9px] sm:text-[10px] text-white/60 font-medium">
                     NFSU Goa Campus
                   </p>
                 </div>
               </div>
 
-              {/* Links - 1 Row */}
-              <div className="grid grid-cols-3 gap-1 pt-2.5 mt-2.5 border-t border-white/10 w-full">
+              {/* Links - Responsive Single Row */}
+              <div className="grid grid-cols-3 gap-1 pt-2 sm:pt-2.5 mt-2 sm:mt-2.5 border-t border-white/10 w-full">
                 <a
                   href="https://www.linkedin.com/in/yash-bhagwani/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-1 py-1.5 px-1 rounded-lg bg-[#0A66C2]/20 hover:bg-[#0A66C2]/40 text-[#70b5f9] hover:text-white border border-[#0A66C2]/40 text-[11px] font-semibold transition-all hover:scale-[1.02] whitespace-nowrap"
+                  className="flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1 py-1 sm:py-1.5 px-0.5 sm:px-1 rounded-lg bg-[#0A66C2]/20 hover:bg-[#0A66C2]/40 text-[#70b5f9] hover:text-white border border-[#0A66C2]/40 text-[9px] sm:text-[11px] font-semibold transition-all hover:scale-[1.02] whitespace-nowrap"
                   title="LinkedIn Profile"
                 >
-                  <LinkedinIcon className="w-3 h-3 shrink-0" />
+                  <LinkedinIcon className="w-3.5 h-3.5 sm:w-3 sm:h-3 shrink-0" />
                   <span>LinkedIn</span>
                 </a>
                 <a
                   href="https://github.com/yash3135"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-1 py-1.5 px-1 rounded-lg bg-white/5 hover:bg-white/15 text-white/80 hover:text-white border border-white/10 text-[11px] font-semibold transition-all hover:scale-[1.02] whitespace-nowrap"
+                  className="flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1 py-1 sm:py-1.5 px-0.5 sm:px-1 rounded-lg bg-white/5 hover:bg-white/15 text-white/80 hover:text-white border border-white/10 text-[9px] sm:text-[11px] font-semibold transition-all hover:scale-[1.02] whitespace-nowrap"
                   title="GitHub Profile"
                 >
-                  <GithubIcon className="w-3 h-3 shrink-0" />
+                  <GithubIcon className="w-3.5 h-3.5 sm:w-3 sm:h-3 shrink-0" />
                   <span>GitHub</span>
                 </a>
                 <a
                   href="mailto:yashbhagwani88@gmail.com"
-                  className="flex items-center justify-center gap-1 py-1.5 px-1 rounded-lg bg-white/5 hover:bg-white/15 text-white/80 hover:text-white border border-white/10 text-[11px] font-semibold transition-all hover:scale-[1.02] whitespace-nowrap"
+                  className="flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1 py-1 sm:py-1.5 px-0.5 sm:px-1 rounded-lg bg-white/5 hover:bg-white/15 text-white/80 hover:text-white border border-white/10 text-[9px] sm:text-[11px] font-semibold transition-all hover:scale-[1.02] whitespace-nowrap"
                   title="Send email"
                 >
                   <Mail size={12} className="shrink-0" />
