@@ -271,6 +271,14 @@ export function CinematicFooter({
   const headingRef = useRef<HTMLHeadingElement>(null);
   const linksRef = useRef<HTMLDivElement>(null);
 
+  // Automatically open on hover only on desktop (devices with true pointer and hover capability)
+  // Not implemented/disabled on mobile and touch devices
+  const handleMouseEnterCredits = () => {
+    if (typeof window !== "undefined" && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      setIsCreditsOpen(true);
+    }
+  };
+
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (!wrapperRef.current) return;
@@ -495,24 +503,28 @@ export function CinematicFooter({
               © 2026 ADAMYA DHĀVANAM · NFSU GOA. ALL RIGHTS RESERVED.
             </div>
 
-            {/* "Made with Love" Badge - Click to open website credits dialog */}
+            {/* "Made with Love" Badge - Highlighted (Opens on hover on desktop only; tap/click on mobile) */}
             <button
               type="button"
               onClick={() => setIsCreditsOpen(true)}
-              className="footer-glass-pill px-5 py-2.5 rounded-full flex items-center gap-2 order-1 md:order-2 cursor-pointer border-white/10 hover:border-[#FFC36A]/50 hover:bg-white/10 hover:scale-[1.03] active:scale-95 transition-all duration-300 group shadow-lg"
-              title="Click to view website creators & credits"
+              onMouseEnter={handleMouseEnterCredits}
+              className="relative px-5 py-2.5 rounded-full flex items-center gap-2 order-1 md:order-2 cursor-pointer bg-gradient-to-r from-[#FFC36A]/15 via-white/10 to-[#FFC36A]/15 border-2 border-[#FFC36A]/70 shadow-[0_0_22px_rgba(255,195,106,0.35)] hover:shadow-[0_0_32px_rgba(255,195,106,0.65)] hover:border-[#FFC36A] hover:scale-105 active:scale-95 transition-all duration-300 group backdrop-blur-md"
+              title="View website creators & credits"
               aria-label="View website creators and credits"
             >
-              <span className="text-white/60 text-[10px] md:text-xs font-bold uppercase tracking-widest group-hover:text-white/90 transition-colors">
+              {/* Subtle ambient pulse glow behind pill */}
+              <span className="absolute inset-0 rounded-full bg-[#FFC36A]/20 blur-sm pointer-events-none group-hover:bg-[#FFC36A]/35 transition-colors" />
+
+              <span className="relative z-10 text-white/90 text-[10px] md:text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">
                 Organised with
               </span>
-              <span className="animate-footer-heartbeat text-sm md:text-base text-red-500">
+              <span className="relative z-10 animate-footer-heartbeat text-sm md:text-base text-red-500 drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">
                 ❤
               </span>
-              <span className="text-white/60 text-[10px] md:text-xs font-bold uppercase tracking-widest group-hover:text-white/90 transition-colors">
+              <span className="relative z-10 text-white/90 text-[10px] md:text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">
                 by
               </span>
-              <span className="text-[#FFC36A] font-black text-xs md:text-sm tracking-normal ml-1 font-serif italic group-hover:underline decoration-[#FFC36A]/60">
+              <span className="relative z-10 text-[#FFC36A] font-black text-xs md:text-sm tracking-normal ml-0.5 font-serif italic drop-shadow-[0_0_10px_rgba(255,195,106,0.6)] group-hover:underline decoration-[#FFC36A]">
                 NFSU Goa
               </span>
             </button>
