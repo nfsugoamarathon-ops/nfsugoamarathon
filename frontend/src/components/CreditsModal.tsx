@@ -61,7 +61,7 @@ export default function CreditsModal({ isOpen, onClose }: CreditsModalProps) {
     >
       {/* Modal Card - Single Box, NO scrollbar */}
       <div
-        className="relative w-full max-w-2xl bg-[#0C1412] text-white rounded-3xl border border-[#FFC36A]/40 shadow-[0_25px_70px_rgba(0,0,0,0.95),0_0_50px_rgba(255,195,106,0.15)] p-4 sm:p-6 space-y-3.5 overflow-hidden [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        className="relative w-full max-w-2xl bg-[#051124] text-white rounded-3xl border border-[#FFC36A]/40 shadow-[0_25px_70px_rgba(0,0,0,0.95),0_0_50px_rgba(255,195,106,0.15)] p-4 sm:p-6 space-y-3.5 overflow-hidden [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Decorative Top Accent Glow */}
@@ -105,10 +105,10 @@ export default function CreditsModal({ isOpen, onClose }: CreditsModalProps) {
 
           <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
             {/* Neel Varia Card */}
-            <div className="relative group bg-[#0C1412] border-2 border-[#FFC36A] rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-md hover:shadow-[0_0_25px_rgba(255,195,106,0.2)] transition-all duration-300 flex flex-col justify-between">
+            <div className="relative group bg-[#08152c] border-2 border-[#FFC36A] rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-md hover:shadow-[0_0_25px_rgba(255,195,106,0.2)] transition-all duration-300 flex flex-col justify-between">
               <div>
                 {/* Photo Frame with Inner Golden Border */}
-                <div className="relative w-full aspect-[4/5] rounded-lg sm:rounded-xl overflow-hidden border-2 border-[#FFC36A] bg-[#070D0B] shadow-inner mb-2 sm:mb-2.5">
+                <div className="relative w-full aspect-[4/5] rounded-lg sm:rounded-xl overflow-hidden border-2 border-[#FFC36A] bg-[#030914] shadow-inner mb-2 sm:mb-2.5">
                   <img
                     src="/neel.jpg"
                     alt="Neel Varia"
@@ -165,10 +165,10 @@ export default function CreditsModal({ isOpen, onClose }: CreditsModalProps) {
             </div>
 
             {/* Yash Bhagwani Card */}
-            <div className="relative group bg-[#0C1412] border-2 border-[#FFC36A] rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-md hover:shadow-[0_0_25px_rgba(255,195,106,0.2)] transition-all duration-300 flex flex-col justify-between">
+            <div className="relative group bg-[#08152c] border-2 border-[#FFC36A] rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-md hover:shadow-[0_0_25px_rgba(255,195,106,0.2)] transition-all duration-300 flex flex-col justify-between">
               <div>
                 {/* Photo Frame with Inner Golden Border */}
-                <div className="relative w-full aspect-[4/5] rounded-lg sm:rounded-xl overflow-hidden border-2 border-[#FFC36A] bg-[#070D0B] shadow-inner mb-2 sm:mb-2.5">
+                <div className="relative w-full aspect-[4/5] rounded-lg sm:rounded-xl overflow-hidden border-2 border-[#FFC36A] bg-[#030914] shadow-inner mb-2 sm:mb-2.5">
                   <img
                     src="/yash.jpg"
                     alt="Yash Bhagwani"

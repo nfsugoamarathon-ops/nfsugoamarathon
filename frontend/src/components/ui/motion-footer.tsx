@@ -344,11 +344,11 @@ export function CinematicFooter({
       */}
       <div
         ref={wrapperRef}
-        className="relative h-screen w-full bg-[#111A17]"
+        className="relative h-screen w-full bg-[#051124]"
         style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
       >
         {/* The actual footer stays fixed to the viewport underneath everything */}
-        <footer className="fixed bottom-0 left-0 flex h-screen w-full flex-col justify-between overflow-hidden bg-[#111A17] text-white cinematic-footer-wrapper">
+        <footer className="fixed bottom-0 left-0 flex h-screen w-full flex-col justify-between overflow-hidden bg-[#051124] text-white cinematic-footer-wrapper">
           
           {/* Ambient Light & Grid Background */}
           <div className="footer-aurora absolute left-1/2 top-1/2 h-[60vh] w-[80vw] -translate-x-1/2 -translate-y-1/2 animate-footer-breathe rounded-[50%] blur-[80px] pointer-events-none z-0" />
@@ -368,10 +368,10 @@ export function CinematicFooter({
             - Rich obsidian glass with glowing golden borders & shadow
             - Crisp white & gold typography with live pulse indicator
           */}
-          <div className="relative z-30 w-full overflow-hidden border-y-2 border-[#FFC36A]/50 bg-[#0E1714]/95 backdrop-blur-xl py-3.5 shadow-[0_10px_35px_rgba(0,0,0,0.8),0_0_20px_rgba(255,195,106,0.15)] mt-4 sm:mt-6">
+          <div className="relative z-30 w-full overflow-hidden border-y-2 border-[#FFC36A]/50 bg-[#030d1e]/95 backdrop-blur-xl py-3.5 shadow-[0_10px_35px_rgba(0,0,0,0.8),0_0_20px_rgba(255,195,106,0.15)] mt-4 sm:mt-6">
             <div className="flex items-center">
               {/* Optional Fixed Sticky Badge on the left for context */}
-              <div className="hidden lg:flex items-center gap-2 pl-6 pr-4 border-r border-white/10 shrink-0 z-10 bg-[#0E1714]">
+              <div className="hidden lg:flex items-center gap-2 pl-6 pr-4 border-r border-white/10 shrink-0 z-10 bg-[#030d1e]">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#FFC36A] animate-ping" />
                 <span className="text-[11px] font-black tracking-widest text-[#FFC36A] uppercase">
                   RACE TICKER

@@ -41,7 +41,7 @@ export default function App() {
   const handleOpenPortal = SHOW_PORTALS ? (portal) => setCurrentView(portal) : undefined;
 
   return (
-    <div className="relative min-h-screen bg-[#111A17] text-[#191A17] font-sans selection:bg-[#1749D1] selection:text-white overflow-x-clip">
+    <div className="relative min-h-screen bg-[#051124] text-[#191A17] font-sans selection:bg-[#1749D1] selection:text-white overflow-x-clip">
       {/* 
         MAIN CONTENT FLOW LAYER (z-10)
         Elevated above the fixed curtain-reveal footer with a bottom shadow and rounded corner 
