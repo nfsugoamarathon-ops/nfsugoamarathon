@@ -391,9 +391,15 @@ export function CinematicFooter({
           {/* 2. Main Center Content (With adequate top padding to prevent overlap) */}
           <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 pt-4 pb-6 w-full max-w-5xl mx-auto">
             {/* Marathon Crest Badge */}
-            <div className="flex items-center gap-2.5 mb-4 bg-white/10 border border-white/20 px-4 py-1.5 rounded-full text-xs text-white/90 shadow-md backdrop-blur-md">
-              <img src="/marathon-logo.png" alt="Marathon Crest" className="w-5 h-5 rounded-full object-contain" />
-              <span className="font-semibold">National Forensic Sciences University · Goa Campus</span>
+            <div className="inline-flex items-center gap-2.5 mb-4 bg-white/10 border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-sm text-white/90 shadow-md backdrop-blur-md">
+              <div className="w-6 h-6 rounded-full bg-white overflow-hidden p-[1px] shrink-0 flex items-center justify-center shadow-xs">
+                <img
+                  src="/marathon-logo-square.png"
+                  alt="Marathon Crest"
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              <span className="font-semibold tracking-wide">National Forensic Sciences University · Goa Campus</span>
             </div>
 
             <h2

@@ -262,7 +262,7 @@ export default function About() {
               <div className="absolute -bottom-5 -left-3 sm:-bottom-6 sm:-left-6 bg-[#111A17] rounded-full p-1.5 shadow-[0_12px_32px_rgba(0,0,0,0.28)] border-2 border-[#FFFCEB]">
                 <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full overflow-hidden border border-white/15">
                   <img
-                    src="/marathon-logo.png"
+                    src="/marathon-logo-square.png"
                     alt="Adamya Dhavanam official crest"
                     className="h-full w-full object-cover"
                     loading="lazy"
