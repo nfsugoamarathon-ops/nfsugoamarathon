@@ -26,19 +26,19 @@ export default function Contact() {
     <section id="contact" className="relative bg-[#051124] pt-12 sm:pt-14 md:pt-16 pb-14 sm:pb-18 scroll-mt-16 text-white overflow-hidden" aria-labelledby="contact-heading">
       {/* Hero-matching atmospheric lighting & blurs */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#030b18]/60 via-[#051124] to-[#040e1e] pointer-events-none" />
-      <div className="absolute -top-24 right-0 w-96 h-96 rounded-full bg-[#1749D1]/10 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-24 left-0 w-96 h-96 rounded-full bg-[#FFC36A]/[0.06] blur-3xl pointer-events-none" />
+      <div className="absolute -top-24 right-0 w-96 h-96 rounded-full bg-[#e8e337]/10 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 left-0 w-96 h-96 rounded-full bg-[#e8e337]/[0.06] blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-start">
           {/* Left Column: Contact & Event Details */}
           <div>
-            <p className="text-[#FFC36A] text-xs font-semibold uppercase tracking-widest mb-4">Get in touch</p>
+            <p className="text-[#e8e337] text-xs font-semibold uppercase tracking-widest mb-4">Get in touch</p>
             <h2 id="contact-heading" className="font-serif italic text-4xl sm:text-5xl text-white leading-tight mb-6">
               We're here <br />to help.
             </h2>
             <p className="text-white/60 text-base leading-relaxed mb-8">
-              Have a question about registration, payment, or the race weekend? Reach out to Abhay — the fastest way is WhatsApp.
+              Have a question about registration, payment, or the race weekend? Reach out to Abhay the fastest way is WhatsApp.
             </p>
 
             <div className="space-y-4">
@@ -76,15 +76,15 @@ export default function Contact() {
               <p className="text-white/40 text-xs uppercase tracking-wider mb-3">Event Details</p>
               <div className="space-y-2.5 text-sm">
                 <p className="text-white/80 flex items-center gap-2">
-                  <Calendar size={15} className="text-[#FFC36A] shrink-0" />
+                  <Calendar size={15} className="text-[#e8e337] shrink-0" />
                   <span className="text-white/40">Race Date:</span> 6 December 2026
                 </p>
                 <p className="text-white/80 flex items-center gap-2">
-                  <MapPin size={15} className="text-[#FFC36A] shrink-0" />
+                  <MapPin size={15} className="text-[#e8e337] shrink-0" />
                   <span className="text-white/40">Venue:</span> NFSU Girls Hostel, Ponda, Goa
                 </p>
                 <p className="text-white/80 flex items-center gap-2">
-                  <Compass size={15} className="text-[#FFC36A] shrink-0" />
+                  <Compass size={15} className="text-[#e8e337] shrink-0" />
                   <span className="text-white/40">Itinerary:</span> 4-Day Marathon & Heritage Circuit
                 </p>
               </div>
@@ -92,11 +92,11 @@ export default function Contact() {
           </div>
 
           {/* Right Column: 4-Day Marathon & Heritage Itinerary */}
-          <div className="bg-[#0b182e]/85 backdrop-blur-xl border border-cyan-400/25 rounded-2xl p-5 sm:p-6 shadow-[0_16px_40px_rgba(0,0,0,0.6)] flex flex-col justify-between">
+          <div className="bg-[#0b182e]/85 backdrop-blur-xl border-[#e8e337] rounded-2xl p-5 sm:p-6 shadow-[0_0_30px_rgba(232,227,55,0.22),0_16px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_0_40px_rgba(232,227,55,0.35),0_16px_40px_rgba(0,0,0,0.6)] transition-all duration-300 flex flex-col justify-between">
             {/* Header */}
             <div className="flex items-start justify-between gap-3 mb-4">
               <div>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-[#FFC36A]/20 text-[#FFC36A] border border-[#FFC36A]/30 mb-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-[#e8e337]/15 text-[#e8e337] border border-[#e8e337]/40 mb-2">
                   4-Day Heritage Itinerary
                 </span>
                 {/* <h3 className="font-serif italic text-2xl sm:text-3xl text-white leading-tight">
@@ -106,7 +106,7 @@ export default function Contact() {
               <button
                 type="button"
                 onClick={() => setIsModalOpen(true)}
-                className="inline-flex items-center gap-1.5 text-xs text-white/70 hover:text-white bg-white/10 hover:bg-white/20 border border-white/10 px-3 py-1.5 rounded-lg transition-colors shrink-0 cursor-pointer"
+                className="inline-flex items-center gap-1.5 text-xs text-white/80 hover:text-[#e8e337] bg-white/10 hover:bg-[#e8e337]/15 border border-white/15 hover:border-[#e8e337]/50 px-3 py-1.5 rounded-lg transition-all shrink-0 cursor-pointer"
                 aria-label="Expand itinerary poster"
               >
                 <Maximize2 size={13} />
@@ -151,7 +151,7 @@ export default function Contact() {
             {/* Top Bar */}
             <div className="w-full flex items-center justify-between gap-3 text-white mb-3 px-1">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#FFC36A]" />
+                <span className="w-2 h-2 rounded-full bg-[#e8e337]" />
                 <span className="text-xs sm:text-sm font-semibold tracking-wide">
                   4-Day Goa Marathon & Heritage Itinerary
                 </span>
