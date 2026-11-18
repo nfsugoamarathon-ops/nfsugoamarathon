@@ -26,8 +26,8 @@ export default function Sponsors() {
 
         {/* Coming soon badge */}
         <div className="flex justify-center mb-6">
-          <div className="inline-flex items-center gap-2 bg-[#FFF7E6] border border-[#FFC36A]/60 rounded-full px-4 py-2 text-sm font-medium text-[#191A17] shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-[#FFC36A] animate-pulse" aria-hidden="true" />
+          <div className="inline-flex items-center gap-2 bg-[#FFF7E6] border border-[#e8e337]/60 rounded-full px-4 py-2 text-sm font-medium text-[#191A17] shadow-xs">
+            <span className="w-2 h-2 rounded-full bg-[#e8e337] animate-pulse" aria-hidden="true" />
             Coming soon
           </div>
         </div>

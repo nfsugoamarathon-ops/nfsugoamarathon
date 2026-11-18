@@ -16,10 +16,10 @@ export default function Footer({ onOpenPortal }) {
               <img
                 src="/marathon-logo.png"
                 alt="Adamya Dhavanam logo"
-                className="h-12 w-12 rounded-full ring-2 ring-[#FFC36A]/50 bg-white/10 object-contain p-0.5"
+                className="h-12 w-12 rounded-full ring-2 ring-[#e8e337]/50 bg-white/10 object-contain p-0.5"
               />
               <div>
-                <span className="font-serif italic text-lg text-[#FFC36A] block leading-none">
+                <span className="font-serif italic text-lg text-[#e8e337] block leading-none">
                   अदम्यधावनम्
                 </span>
                 <span className="text-xs uppercase tracking-widest text-white/70 font-semibold block mt-1">
@@ -31,8 +31,8 @@ export default function Footer({ onOpenPortal }) {
               Inaugural marathon organised by National Forensic Sciences University (NFSU), Goa Campus.
               Celebrating endurance, spirit, and community.
             </p>
-            <div className="pt-2 text-xs text-[#FFC36A] flex items-center gap-1.5 font-medium">
-              <span className="w-2 h-2 rounded-full bg-[#FFC36A] animate-ping" />
+            <div className="pt-2 text-xs text-[#e8e337] flex items-center gap-1.5 font-medium">
+              <span className="w-2 h-2 rounded-full bg-[#e8e337] animate-ping" />
               Race Day: 6th December 2026
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function Footer({ onOpenPortal }) {
             <h4 className="text-xs font-semibold uppercase tracking-widest text-white/50 mb-4">Event Logistics</h4>
             <ul className="space-y-3 text-xs text-white/70">
               <li className="flex items-start gap-2">
-                <MapPin size={14} className="text-[#FFC36A] mt-0.5 shrink-0" />
+                <MapPin size={14} className="text-[#e8e337] mt-0.5 shrink-0" />
                 <span>NFSU Goa Campus, Ponda, Goa</span>
               </li>
               <li className="flex items-start gap-2">

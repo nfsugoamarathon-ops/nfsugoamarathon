@@ -168,7 +168,7 @@ export default function Categories() {
     <section
       ref={sectionRef}
       id="categories"
-      className="bg-[#FFFCEB] pt-4 sm:pt-6 pb-12 sm:pb-16 scroll-mt-16 overflow-hidden"
+      className="bg-[#FFFCEB] pt-4 sm:pt-6 pb-4 sm:pb-6 scroll-mt-16 overflow-hidden"
       aria-labelledby="categories-heading"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
@@ -294,9 +294,9 @@ export default function Categories() {
         </div>
 
         {/* Note */}
-        <p className="categories-note text-[#686D66] text-xs text-center mt-6">
+        {/* <p className="categories-note text-[#686D66] text-xs text-center mt-6">
           Registration fee is ₹750 across all categories. Age eligibility is verified at bib collection — carry a valid ID proof.
-        </p>
+        </p> */}
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import { EVENT, openRegistration } from '../data/eventData';
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Categories', href: '#categories' },
+  { label: 'Prizes', href: '#prizes' },
   { label: 'Schedule', href: '#schedule' },
   { label: 'Route', href: '#route' },
   { label: 'FAQs', href: '#faqs' },
@@ -199,16 +200,12 @@ export default function Navbar({ onOpenPortal }) {
 
           {/* Mobile menu toggle */}
           <button
-            className={`lg:hidden p-2 rounded-lg transition-colors focus-visible:outline-2 ${
-              scrolled
-                ? 'text-[#191A17] hover:bg-[#191A17]/05 focus-visible:outline-[#1749D1]'
-                : 'text-white hover:bg-white/10 focus-visible:outline-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
-            }`}
+            className="lg:hidden p-2 rounded-xl bg-[#191A17] hover:bg-[#2A2B27] text-white shadow-sm border border-black/20 flex items-center justify-center transition-all cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1749D1]"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
           >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+            {menuOpen ? <X size={20} className="text-white" /> : <Menu size={20} className="text-white" />}
           </button>
         </div>
       </div>

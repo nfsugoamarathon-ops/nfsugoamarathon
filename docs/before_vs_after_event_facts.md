@@ -31,7 +31,7 @@ export default function EventFacts() {
 
 #### After:
 - **Scroll-Scrubbed Top Accent Bar**:
-  - Added a `2px` top gradient line (`from-[#1749D1] via-[#FFC36A] to-[#1749D1]`) that sweeps from `scaleX: 0` to `scaleX: 1` tied directly to scroll (`scrub: 0.6`, `start: "top 95%"`, `end: "top 45%"`).
+  - Added a `2px` top gradient line (`from-[#1749D1] via-[#e8e337] to-[#1749D1]`) that sweeps from `scaleX: 0` to `scaleX: 1` tied directly to scroll (`scrub: 0.6`, `start: "top 95%"`, `end: "top 45%"`).
 - **Staggered Fact Card Reveal**:
   - `.fact-card` items animate from `{ y: 28, opacity: 0, scale: 0.97 }` to `{ y: 0, opacity: 1, scale: 1 }` with `stagger: 0.09` (`power3.out`) and `toggleActions: "play none none reverse"` triggered at `start: "top 88%"`.
 - **Elastic Icon Pop**:

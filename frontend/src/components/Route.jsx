@@ -33,7 +33,7 @@ export default function Route() {
             {/* Quick Logistics Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-2">
               <div className="flex items-start gap-3 p-3.5 bg-white border border-[#DADBCF] rounded-xl shadow-xs">
-                <MapPin size={17} className="text-[#FFC36A] mt-0.5 flex-shrink-0" />
+                <MapPin size={17} className="text-[#e8e337] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-xs font-bold text-[#191A17] uppercase tracking-wider">Start & Finish</p>
                   <p className="text-xs text-[#686D66] mt-0.5">NFSU Girls Hostel, Ponda</p>
@@ -49,7 +49,7 @@ export default function Route() {
               </div>
 
               <div className="flex items-start gap-3 p-3.5 bg-white border border-[#DADBCF] rounded-xl shadow-xs">
-                <Clock size={17} className="text-[#FFC36A] mt-0.5 flex-shrink-0" />
+                <Clock size={17} className="text-[#e8e337] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-xs font-bold text-[#191A17] uppercase tracking-wider">Flag-Off Time</p>
                   <p className="text-xs text-[#686D66] mt-0.5">6:30 AM onwards</p>

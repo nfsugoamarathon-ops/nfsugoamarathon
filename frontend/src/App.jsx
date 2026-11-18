@@ -6,6 +6,7 @@ import EventFacts from './components/EventFacts';
 import About from './components/About';
 import CrossedMarquee from './components/CrossedMarquee';
 import Categories from './components/Categories';
+import Prizes from './components/Prizes';
 import RegistrationForm from './components/RegistrationForm';
 import Schedule from './components/Schedule';
 import Route from './components/Route';
@@ -53,6 +54,7 @@ export default function App() {
         <About />
         <CrossedMarquee />
         <Categories />
+        <Prizes />
         {SHOW_BUILT_IN_REGISTRATION && (
           <RegistrationForm onOpenPortal={handleOpenPortal} />
         )}

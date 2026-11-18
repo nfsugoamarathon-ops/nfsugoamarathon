@@ -42,7 +42,7 @@ Suggested palette, to be adjusted to the marathon logo and any established NFSU 
 | `--muted` | `#686D66` | Supporting text and metadata |
 | `--race-blue` | `#1749D1` | Primary action and focus accent |
 | `--dawn-lilac` | `#EBD3F5` | Secondary highlight |
-| `--marigold` | `#FFC36A` | Race-day detail and small emphasis |
+| `--marigold` | `#e8e337` | Race-day detail and small emphasis |
 | `--line` | `#DADBCF` | Dividers on light surfaces |
 
 These are starting suggestions, not colors extracted from the reference. Keep text contrast strong and use accents sparingly. Prefer a restrained palette with a few purposeful contrasts over a single-hue interface.

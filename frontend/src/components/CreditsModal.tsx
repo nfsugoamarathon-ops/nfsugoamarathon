@@ -61,11 +61,11 @@ export default function CreditsModal({ isOpen, onClose }: CreditsModalProps) {
     >
       {/* Modal Card - Single Box, NO scrollbar */}
       <div
-        className="relative w-full max-w-2xl bg-[#051124] text-white rounded-3xl border border-[#FFC36A]/40 shadow-[0_25px_70px_rgba(0,0,0,0.95),0_0_50px_rgba(255,195,106,0.15)] p-4 sm:p-6 space-y-3.5 overflow-hidden [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        className="relative w-full max-w-2xl bg-[#051124] text-white rounded-3xl border border-[#e8e337]/40 shadow-[0_25px_70px_rgba(0,0,0,0.95),0_0_50px_rgba(255,195,106,0.15)] p-4 sm:p-6 space-y-3.5 overflow-hidden [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Decorative Top Accent Glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[2px] bg-gradient-to-r from-transparent via-[#FFC36A] to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[2px] bg-gradient-to-r from-transparent via-[#e8e337] to-transparent pointer-events-none" />
 
         {/* Close Button */}
         <button
@@ -79,36 +79,36 @@ export default function CreditsModal({ isOpen, onClose }: CreditsModalProps) {
 
         {/* Header */}
         <div className="space-y-1.5 pr-8">
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FFC36A]/10 border border-[#FFC36A]/30 text-[#FFC36A] text-[10px] font-bold tracking-widest uppercase">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#e8e337]/10 border border-[#e8e337]/30 text-[#e8e337] text-[10px] font-bold tracking-widest uppercase">
             <Sparkles size={11} className="animate-pulse" />
             <span>WEBSITE ENGINEERING &amp; DESIGN</span>
           </div>
           <h2
             id="credits-modal-title"
-            className="text-xl sm:text-2xl font-extrabold tracking-tight text-white font-serif italic"
+            className="text-2xl sm:text-2xl font-bold tracking-tight text-white font-serif"
           >
             Crafted with <span className="text-red-500 not-italic inline-block animate-pulse">❤️</span> for NFSU Goa
           </h2>
           <p className="text-white/60 text-[11px] sm:text-xs leading-relaxed max-w-xl">
             This digital platform was designed and engineered from the ground up by students of the{' '}
             <strong className="text-white font-medium">NFSU, Goa Campus</strong> for{' '}
-            <span className="text-[#FFC36A] font-semibold">Adamya Dhāvanam 2026</span> - Forensic Marathon.
+            <span className="text-[#e8e337] font-semibold">Adamya Dhāvanam 2026</span> - Forensic Marathon.
           </p>
         </div>
 
         {/* Team Section */}
         <div className="space-y-2">
-          <div className="text-[10px] font-bold uppercase tracking-widest text-[#FFC36A]/80 flex items-center gap-1">
+          <div className="text-[10px] font-bold uppercase tracking-widest text-[#e8e337]/80 flex items-center gap-1">
             <Code2 size={13} />
             <span>CORE DEVELOPMENT TEAM</span>
           </div>
 
           <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
             {/* Neel Varia Card */}
-            <div className="relative group bg-[#08152c] border-2 border-[#FFC36A] rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-md hover:shadow-[0_0_25px_rgba(255,195,106,0.2)] transition-all duration-300 flex flex-col justify-between">
+            <div className="relative group bg-[#08152c] border-2 border-[#e8e337] rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-md hover:shadow-[0_0_25px_rgba(255,195,106,0.2)] transition-all duration-300 flex flex-col justify-between">
               <div>
                 {/* Photo Frame with Inner Golden Border */}
-                <div className="relative w-full aspect-[4/5] rounded-lg sm:rounded-xl overflow-hidden border-2 border-[#FFC36A] bg-[#030914] shadow-inner mb-2 sm:mb-2.5">
+                <div className="relative w-full aspect-[4/5] rounded-lg sm:rounded-xl overflow-hidden border-2 border-[#e8e337] bg-[#030914] shadow-inner mb-2 sm:mb-2.5">
                   <img
                     src="/neel.jpg"
                     alt="Neel Varia"
@@ -119,7 +119,7 @@ export default function CreditsModal({ isOpen, onClose }: CreditsModalProps) {
 
                 {/* Card Meta */}
                 <div className="space-y-0.5">
-                  <h4 className="text-sm sm:text-lg font-black text-white group-hover:text-[#FFC36A] transition-colors tracking-tight font-serif italic truncate">
+                  <h4 className="text-sm sm:text-lg font-black text-white group-hover:text-[#e8e337] transition-colors tracking-tight font-serif italic truncate">
                     Neel Varia
                   </h4>
                   <p className="text-[10px] sm:text-xs font-semibold text-emerald-400 leading-tight">
@@ -165,10 +165,10 @@ export default function CreditsModal({ isOpen, onClose }: CreditsModalProps) {
             </div>
 
             {/* Yash Bhagwani Card */}
-            <div className="relative group bg-[#08152c] border-2 border-[#FFC36A] rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-md hover:shadow-[0_0_25px_rgba(255,195,106,0.2)] transition-all duration-300 flex flex-col justify-between">
+            <div className="relative group bg-[#08152c] border-2 border-[#e8e337] rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 shadow-md hover:shadow-[0_0_25px_rgba(255,195,106,0.2)] transition-all duration-300 flex flex-col justify-between">
               <div>
                 {/* Photo Frame with Inner Golden Border */}
-                <div className="relative w-full aspect-[4/5] rounded-lg sm:rounded-xl overflow-hidden border-2 border-[#FFC36A] bg-[#030914] shadow-inner mb-2 sm:mb-2.5">
+                <div className="relative w-full aspect-[4/5] rounded-lg sm:rounded-xl overflow-hidden border-2 border-[#e8e337] bg-[#030914] shadow-inner mb-2 sm:mb-2.5">
                   <img
                     src="/yash.jpg"
                     alt="Yash Bhagwani"
@@ -179,7 +179,7 @@ export default function CreditsModal({ isOpen, onClose }: CreditsModalProps) {
 
                 {/* Card Meta */}
                 <div className="space-y-0.5">
-                  <h4 className="text-sm sm:text-lg font-black text-white group-hover:text-[#FFC36A] transition-colors tracking-tight font-serif italic truncate">
+                  <h4 className="text-sm sm:text-lg font-black text-white group-hover:text-[#e8e337] transition-colors tracking-tight font-serif italic truncate">
                     Yash Bhagwani
                   </h4>
                   <p className="text-[10px] sm:text-xs font-semibold text-amber-300 leading-tight">

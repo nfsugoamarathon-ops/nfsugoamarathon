@@ -9,9 +9,9 @@ if (typeof window !== 'undefined') {
 
 const FACTS = [
   { icon: Calendar, label: 'Date', value: '6 December 2026', accent: '#1749D1' },
-  { icon: MapPin, label: 'Venue', value: 'NFSU Goa Campus', accent: '#FFC36A' },
+  { icon: MapPin, label: 'Venue', value: 'NFSU Goa Campus', accent: '#e8e337' },
   { icon: Clock, label: 'Reporting', value: '5:00 – 5:30 AM', accent: '#1749D1' },
-  { icon: Flag, label: 'Flag-off', value: '6:30 AM onwards', accent: '#FFC36A' },
+  { icon: Flag, label: 'Flag-off', value: '6:30 AM onwards', accent: '#e8e337' },
   { icon: Layers, label: 'Distances', value: '3 km · 6 km · 10 km', accent: '#1749D1' },
 ];
 
@@ -127,7 +127,7 @@ export default function EventFacts() {
       {/* Scroll-scrubbed top accent bar */}
       <div
         ref={progressLineRef}
-        className="absolute top-0 left-0 right-0 h-[2px] origin-left bg-gradient-to-r from-[#1749D1] via-[#FFC36A] to-[#1749D1] pointer-events-none"
+        className="absolute top-0 left-0 right-0 h-[2px] origin-left bg-gradient-to-r from-[#1749D1] via-[#e8e337] to-[#1749D1] pointer-events-none"
         aria-hidden="true"
       />
 

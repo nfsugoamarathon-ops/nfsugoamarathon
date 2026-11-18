@@ -15,7 +15,7 @@ Added GSAP `ScrollTrigger` animations and container alignment to [`frontend/src/
 
 #### After:
 - **Header Stagger (`.categories-header-item`)**: Eyebrow (`Choose your race`), serif heading (`Find your distance.`), and subtitle glide up smoothly (`y: 24 -> 0`, `opacity: 0 -> 1`, `stagger: 0.08`, `power3.out`) on scroll (`start: "top 85%"`).
-- **Scroll-Scrubbed Tri-Color Track Line (`trackLineRef`)**: A `2px` divider above the race cards sweeps across from left to right (`scaleX: 0 -> 1`, `from-[#FFC36A] via-[#1749D1] to-[#9B59C8]`) synced directly to scroll (`scrub: 0.6`, `start: "top 92%"`, `end: "top 50%"`).
+- **Scroll-Scrubbed Tri-Color Track Line (`trackLineRef`)**: A `2px` divider above the race cards sweeps across from left to right (`scaleX: 0 -> 1`, `from-[#e8e337] via-[#1749D1] to-[#9B59C8]`) synced directly to scroll (`scrub: 0.6`, `start: "top 92%"`, `end: "top 50%"`).
 - **Staggered Race Card Reveal (`.category-card`)**: All three cards (`3 KM`, `6 KM`, `10 KM`) rise in sequentially (`y: 40 -> 0`, `scale: 0.95 -> 1`, `opacity: 0 -> 1`, `stagger: 0.12`, `power3.out`) with `clearProps: "transform"` and subtle hover lift (`hover:-translate-y-1`).
 - **Elastic Badge Pop (`.category-badge`)**: Distance pill badges pop in (`scale: 0.7 -> 1`, `back.out(1.7)`, `stagger: 0.12`).
 - **Inclusions Micro-Stagger (`.category-inclusion`)**: Included perks list items slide in cleanly (`x: -10 -> 0`, `stagger: 0.03`).

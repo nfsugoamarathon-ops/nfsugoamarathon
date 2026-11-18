@@ -29,8 +29,8 @@ const PILLARS = [
     icon: GraduationCap,
     title: 'NFSU Goa Pride',
     desc: 'Organised by the National Forensic Sciences University, Goa.',
-    accent: '#FFC36A',
-    iconBg: 'bg-[#FFC36A]/20 text-[#9A6200]',
+    accent: '#e8e337',
+    iconBg: 'bg-[#e8e337]/20 text-[#9A6200]',
   },
   {
     num: '04',
@@ -182,7 +182,7 @@ export default function About() {
 
             <p className="about-text-item text-[#686D66] text-base leading-relaxed mb-8">
               Three categories {' '}
-              <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-[#FFC36A]/25 text-[#191A17] font-semibold text-sm mx-0.5">
+              <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-[#e8e337]/25 text-[#191A17] font-semibold text-sm mx-0.5">
                 3 km
               </span>
               ,{' '}
@@ -210,7 +210,7 @@ export default function About() {
                 <ChevronRight size={15} className="transition-transform group-hover:translate-x-0.5" />
               </a>
               {/* <span className="text-xs font-medium text-[#686D66] flex items-center gap-1.5">
-                <Sparkles size={14} className="text-[#FFC36A]" />
+                <Sparkles size={14} className="text-[#e8e337]" />
                 6 December 2026 · Ponda Sunrise Route
               </span> */}
             </div>
@@ -221,7 +221,7 @@ export default function About() {
             <div className="about-visual relative">
               {/* Outer soft aura */}
               <div
-                className="absolute -inset-3 rounded-[2rem] bg-gradient-to-tr from-[#1749D1]/15 via-transparent to-[#FFC36A]/20 blur-2xl pointer-events-none"
+                className="absolute -inset-3 rounded-[2rem] bg-gradient-to-tr from-[#1749D1]/15 via-transparent to-[#e8e337]/20 blur-2xl pointer-events-none"
                 aria-hidden="true"
               />
 
@@ -243,13 +243,13 @@ export default function About() {
 
                 {/* Top-left glass badge */}
                 <div className="absolute top-4 left-4 sm:top-5 sm:left-5 inline-flex items-center gap-2 bg-[#0b1320]/65 backdrop-blur-xl border border-white/15 rounded-full px-3.5 py-1.5 text-white/90 text-[11px] font-medium tracking-wide shadow-lg">
-                  <span className="w-2 h-2 rounded-full bg-[#FFC36A] animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-[#e8e337] animate-pulse" />
                   Inaugural Edition · NFSU Goa Campus
                 </div>
 
                 {/* Bottom-right glass info chip */}
                 <div className="absolute bottom-4 right-4 sm:bottom-5 sm:right-5 bg-[#0b1320]/75 backdrop-blur-xl border border-white/15 rounded-2xl px-4 py-2.5 text-right shadow-xl">
-                  <span className="block text-[10px] uppercase tracking-[0.2em] text-[#FFC36A] font-semibold">
+                  <span className="block text-[10px] uppercase tracking-[0.2em] text-[#e8e337] font-semibold">
                     अदम्यधावनम्
                   </span>
                   <span className="block text-white text-xs sm:text-sm font-bold mt-0.5">

@@ -218,10 +218,10 @@ MagneticButton.displayName = "MagneticButton";
 const HighVisibilityMarqueeItem = () => (
   <div className="flex items-center space-x-8 px-6 whitespace-nowrap">
     <span className="flex items-center gap-2">
-      <span className="text-[#FFC36A] font-serif italic text-base">अदम्यधावनम्</span>
+      <span className="text-[#e8e337] font-serif italic text-base">अदम्यधावनम्</span>
       <span className="text-white font-black tracking-wider">ADAMYA DHĀVANAM 2026</span>
     </span>
-    <span className="text-[#FFC36A] text-lg font-black drop-shadow-[0_0_8px_#FFC36A]">✦</span>
+    <span className="text-[#e8e337] text-lg font-black drop-shadow-[0_0_8px_#e8e337]">✦</span>
     
     <span className="bg-[#1749D1] text-white px-3 py-0.5 rounded-full font-bold text-xs tracking-wider">
       6 DECEMBER 2026
@@ -229,15 +229,15 @@ const HighVisibilityMarqueeItem = () => (
     <span className="text-[#93c5fd] text-lg font-black">✦</span>
 
     <span className="text-white font-bold">NFSU GOA CAMPUS · PONDA</span>
-    <span className="text-[#FFC36A] text-lg font-black drop-shadow-[0_0_8px_#FFC36A]">✦</span>
+    <span className="text-[#e8e337] text-lg font-black drop-shadow-[0_0_8px_#e8e337]">✦</span>
 
-    <span className="text-[#FFC36A] font-extrabold tracking-wide">
+    <span className="text-[#e8e337] font-extrabold tracking-wide">
       10K ELITE · 6K CHALLENGE · 3K FUN RUN
     </span>
     <span className="text-[#93c5fd] text-lg font-black">✦</span>
 
     <span className="text-white font-semibold">DAWN RACE · REPORTING 5:00 AM</span>
-    <span className="text-[#FFC36A] text-lg font-black drop-shadow-[0_0_8px_#FFC36A]">✦</span>
+    <span className="text-[#e8e337] text-lg font-black drop-shadow-[0_0_8px_#e8e337]">✦</span>
 
     <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-3 py-0.5 rounded-full text-xs font-bold">
       BIB PICKUP: 4 &amp; 5 DEC
@@ -245,7 +245,7 @@ const HighVisibilityMarqueeItem = () => (
     <span className="text-[#93c5fd] text-lg font-black">✦</span>
 
     <span className="text-white/90 font-medium">HELPDESK: +91 87886 29231</span>
-    <span className="text-[#FFC36A] text-lg font-black drop-shadow-[0_0_8px_#FFC36A]">✦</span>
+    <span className="text-[#e8e337] text-lg font-black drop-shadow-[0_0_8px_#e8e337]">✦</span>
   </div>
 );
 
@@ -368,12 +368,12 @@ export function CinematicFooter({
             - Rich obsidian glass with glowing golden borders & shadow
             - Crisp white & gold typography with live pulse indicator
           */}
-          <div className="relative z-30 w-full overflow-hidden border-y-2 border-[#FFC36A]/50 bg-[#030d1e]/95 backdrop-blur-xl py-3.5 shadow-[0_10px_35px_rgba(0,0,0,0.8),0_0_20px_rgba(255,195,106,0.15)] mt-4 sm:mt-6">
+          <div className="relative z-30 w-full overflow-hidden border-y-2 border-[#e8e337]/50 bg-[#030d1e]/95 backdrop-blur-xl py-3.5 shadow-[0_10px_35px_rgba(0,0,0,0.8),0_0_20px_rgba(255,195,106,0.15)] mt-4 sm:mt-6">
             <div className="flex items-center">
               {/* Optional Fixed Sticky Badge on the left for context */}
               <div className="hidden lg:flex items-center gap-2 pl-6 pr-4 border-r border-white/10 shrink-0 z-10 bg-[#030d1e]">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#FFC36A] animate-ping" />
-                <span className="text-[11px] font-black tracking-widest text-[#FFC36A] uppercase">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#e8e337] animate-ping" />
+                <span className="text-[11px] font-black tracking-widest text-[#e8e337] uppercase">
                   RACE TICKER
                 </span>
               </div>
@@ -465,6 +465,18 @@ export function CinematicFooter({
 
                 <MagneticButton
                   as="a"
+                  href="#prizes"
+                  onClick={(e: React.MouseEvent) => {
+                    e.preventDefault();
+                    scrollToSection('#prizes');
+                  }}
+                  className="footer-glass-pill px-5 py-2 rounded-full text-white/70 font-medium text-xs md:text-sm hover:text-white"
+                >
+                  Prizes &amp; Awards
+                </MagneticButton>
+
+                <MagneticButton
+                  as="a"
                   href="#schedule"
                   onClick={(e: React.MouseEvent) => {
                     e.preventDefault();
@@ -504,48 +516,51 @@ export function CinematicFooter({
 
           {/* 3. Bottom Bar / Credits */}
           <div className="relative z-20 w-full pb-6 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
-            {/* Copyright */}
-            <div className="text-white/50 text-[10px] md:text-xs font-semibold tracking-widest uppercase order-2 md:order-1">
+            {/* Copyright (Left) */}
+            <div className="text-white/50 text-[10px] md:text-xs font-semibold tracking-widest uppercase text-center md:text-left order-2 md:order-1">
               © 2026 ADAMYA DHĀVANAM · NFSU GOA. ALL RIGHTS RESERVED.
             </div>
 
-            {/* "Made with Love" Badge - Highlighted (Opens on hover on desktop only; tap/click on mobile) */}
-            <button
-              type="button"
-              onClick={() => setIsCreditsOpen(true)}
-              onMouseEnter={handleMouseEnterCredits}
-              className="relative px-5 py-2.5 rounded-full flex items-center gap-2 order-1 md:order-2 cursor-pointer bg-gradient-to-r from-[#FFC36A]/15 via-white/10 to-[#FFC36A]/15 border-2 border-[#FFC36A]/70 shadow-[0_0_22px_rgba(255,195,106,0.35)] hover:shadow-[0_0_32px_rgba(255,195,106,0.65)] hover:border-[#FFC36A] hover:scale-105 active:scale-95 transition-all duration-300 group backdrop-blur-md"
-              title="View website creators & credits"
-              aria-label="View website creators and credits"
-            >
-              {/* Subtle ambient pulse glow behind pill */}
-              <span className="absolute inset-0 rounded-full bg-[#FFC36A]/20 blur-sm pointer-events-none group-hover:bg-[#FFC36A]/35 transition-colors" />
+            {/* Right Side Group: "Made with Love" Badge + Back to Top */}
+            <div className="flex items-center gap-3 sm:gap-4 order-1 md:order-2">
+              {/* "Made with Love" Badge - Positioned on the right to prevent overlap with floating registration pill */}
+              <button
+                type="button"
+                onClick={() => setIsCreditsOpen(true)}
+                onMouseEnter={handleMouseEnterCredits}
+                className="relative px-5 py-2.5 rounded-full flex items-center gap-2 cursor-pointer bg-gradient-to-r from-[#e8e337]/15 via-white/10 to-[#e8e337]/15 border-2 border-[#e8e337]/70 shadow-[0_0_22px_rgba(255,195,106,0.35)] hover:shadow-[0_0_32px_rgba(255,195,106,0.65)] hover:border-[#e8e337] hover:scale-105 active:scale-95 transition-all duration-300 group backdrop-blur-md"
+                title="View website creators & credits"
+                aria-label="View website creators and credits"
+              >
+                {/* Subtle ambient pulse glow behind pill */}
+                <span className="absolute inset-0 rounded-full bg-[#e8e337]/20 blur-sm pointer-events-none group-hover:bg-[#e8e337]/35 transition-colors" />
 
-              <span className="relative z-10 text-white/90 text-[10px] md:text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">
-                Organised with
-              </span>
-              <span className="relative z-10 animate-footer-heartbeat text-sm md:text-base text-red-500 drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">
-                ❤
-              </span>
-              <span className="relative z-10 text-white/90 text-[10px] md:text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">
-                by
-              </span>
-              <span className="relative z-10 text-[#FFC36A] font-black text-xs md:text-sm tracking-normal ml-0.5 font-serif italic drop-shadow-[0_0_10px_rgba(255,195,106,0.6)] group-hover:underline decoration-[#FFC36A]">
-                NFSU Goa
-              </span>
-            </button>
+                <span className="relative z-10 text-white/90 text-[10px] md:text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">
+                  Organised with
+                </span>
+                <span className="relative z-10 animate-footer-heartbeat text-sm md:text-base text-red-500 drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">
+                  ❤
+                </span>
+                <span className="relative z-10 text-white/90 text-[10px] md:text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">
+                  by
+                </span>
+                <span className="relative z-10 text-[#e8e337] font-black text-xs md:text-sm tracking-normal ml-0.5 font-serif drop-shadow-[0_0_10px_rgba(255,195,106,0.6)] group-hover:underline decoration-[#e8e337]">
+                  NFSU Goa
+                </span>
+              </button>
 
-            {/* Back to top */}
-            <MagneticButton
-              as="button"
-              onClick={scrollToTop}
-              className="w-11 h-11 rounded-full footer-glass-pill flex items-center justify-center text-white/70 hover:text-white group order-3"
-              aria-label="Back to top"
-            >
-              <svg className="w-5 h-5 transform group-hover:-translate-y-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-              </svg>
-            </MagneticButton>
+              {/* Back to top */}
+              <MagneticButton
+                as="button"
+                onClick={scrollToTop}
+                className="w-11 h-11 rounded-full footer-glass-pill flex items-center justify-center text-white/70 hover:text-white group shrink-0"
+                aria-label="Back to top"
+              >
+                <svg className="w-5 h-5 transform group-hover:-translate-y-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                </svg>
+              </MagneticButton>
+            </div>
           </div>
         </footer>
       </div>

@@ -2,7 +2,7 @@
 
 **Feature:** Top Header Marquee Strip Styling & Text Synchronization (`Navbar.jsx`)  
 **Reference:** User-provided Screenshot (`media_1794311998306_de3b6154.png`)  
-**Theme:** Deep Charcoal (`#111A17`), Marigold Gold (`#FFC36A`), and Off-White (`rgba(255, 255, 255, 0.85)`)  
+**Theme:** Deep Charcoal (`#111A17`), Marigold Gold (`#e8e337`), and Off-White (`rgba(255, 255, 255, 0.85)`)  
 **Date:** 10 November 2026  
 **Document Path:** `docs/before_vs_after_neon_strip.md`
 
@@ -16,9 +16,9 @@ The top marquee strip has been updated to strictly follow the color theme and te
 - **Background Surface:** Deep charcoal / night `#111A17`, matching the header navigation and marathon hero section.
 - **Top & Bottom Divider:** Clean hairline border `border-white/10`.
 - **Text & Tag Hierarchy:**
-  - **Highlighted Lead Label:** Bold marigold gold (`#FFC36A`), e.g., `ADAMYA DHĀVANAM:`, `REPORTING TIME:`, `BIB DISTRIBUTION:`.
+  - **Highlighted Lead Label:** Bold marigold gold (`#e8e337`), e.g., `ADAMYA DHĀVANAM:`, `REPORTING TIME:`, `BIB DISTRIBUTION:`.
   - **Body Text:** Crisp off-white (`text-white/85`), e.g., `NFSU Goa Marathon · 6 Dec 2026`, `5:00 – 5:30 AM near NFSU Girls Hostel`.
-  - **Separators:** Gold stars (`✦ text-[#FFC36A]/40`) and soft white micro-badges.
+  - **Separators:** Gold stars (`✦ text-[#e8e337]/40`) and soft white micro-badges.
 - **Smooth Infinite Marquee Animation:** Dual duplicate track scrolling continuously with pause-on-hover interaction.
 
 ---
@@ -46,12 +46,12 @@ The top marquee strip has been updated to strictly follow the color theme and te
     <div className="flex items-center">
       {STRIP_ITEMS.map((item, idx) => (
         <div key={idx} className="flex items-center gap-2 mx-6 text-white/85 font-medium">
-          <span className="w-4 h-4 rounded bg-white/10 border border-white/15 text-[#FFC36A] flex items-center justify-center text-[9px] shrink-0 font-bold shadow-xs">
+          <span className="w-4 h-4 rounded bg-white/10 border border-white/15 text-[#e8e337] flex items-center justify-center text-[9px] shrink-0 font-bold shadow-xs">
             {item.icon}
           </span>
-          <span className="text-[#FFC36A] font-bold tracking-wide">{item.highlight}</span>
+          <span className="text-[#e8e337] font-bold tracking-wide">{item.highlight}</span>
           <span>{item.text}</span>
-          <span className="text-[#FFC36A]/40 ml-4 font-light text-xs">✦</span>
+          <span className="text-[#e8e337]/40 ml-4 font-light text-xs">✦</span>
         </div>
       ))}
     </div>
@@ -60,12 +60,12 @@ The top marquee strip has been updated to strictly follow the color theme and te
     <div className="flex items-center" aria-hidden="true">
       {STRIP_ITEMS.map((item, idx) => (
         <div key={`dup-${idx}`} className="flex items-center gap-2 mx-6 text-white/85 font-medium">
-          <span className="w-4 h-4 rounded bg-white/10 border border-white/15 text-[#FFC36A] flex items-center justify-center text-[9px] shrink-0 font-bold shadow-xs">
+          <span className="w-4 h-4 rounded bg-white/10 border border-white/15 text-[#e8e337] flex items-center justify-center text-[9px] shrink-0 font-bold shadow-xs">
             {item.icon}
           </span>
-          <span className="text-[#FFC36A] font-bold tracking-wide">{item.highlight}</span>
+          <span className="text-[#e8e337] font-bold tracking-wide">{item.highlight}</span>
           <span>{item.text}</span>
-          <span className="text-[#FFC36A]/40 ml-4 font-light text-xs">✦</span>
+          <span className="text-[#e8e337]/40 ml-4 font-light text-xs">✦</span>
         </div>
       ))}
     </div>
