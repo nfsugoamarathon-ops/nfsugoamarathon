@@ -227,20 +227,48 @@ export const FAQS = [
 
 export const PROMINENT_PARTICIPANTS = [
   {
+    id: 'so-junare',
+    name: 'Prof. (Dr.) S. O. Junare',
+    honorific: 'Prof. (Dr.)',
+    designation: 'Vice-Chancellor (I/C)',
+    organization: 'National Forensic Sciences University',
+    image: '/ppd/so_junare.jpg',
+    objectPosition: 'center',
+    description:
+      'Vice-Chancellor (In-Charge) of NFSU, providing visionary leadership to India\'s premier forensic sciences institution.',
+  },
+  {
+    id: 'naveen-chaudhary',
+    name: 'Prof. (Dr.) Naveen Chaudhary',
+    honorific: 'Prof. (Dr.)',
+    designation: 'Campus Director, NFSU Goa',
+    organization: 'NFSU, Goa Campus',
+    image: '/ppd/naveen_chaudhary.jpg',
+    objectPosition: '50% 15%',
+    description:
+      'Campus Director of NFSU Goa and Dean of the School of Cyber Security & Digital Forensics at NFSU Gandhinagar — a pioneer in digital forensics education and research.',
+  },
+  {
+    id: 'lokesh-chouhan',
+    name: 'Dr. Lokesh Chouhan',
+    honorific: 'Dr.',
+    designation: 'Dean Academics & Professor',
+    organization: 'NFSU, Goa Campus',
+    image: '/ppd/lokesh_chouhan.jpg',
+    objectPosition: 'center',
+    description:
+      'Dean Academics and Professor at the National Forensic Sciences University, Goa Campus — leading academic excellence and research in forensic sciences.',
+  },
+  
+  {
     id: 'naveen-kumar',
     name: 'Shri. Naveen Kumar',
     honorific: 'Shri.',
     designation: 'Managing Director',
     organization: 'Goa Dairy',
-    // role: 'Member Secretary',
-    // badge: 'Distinguished Dignitary',
     image: '/ppd/naveen_kumar_md.jpg',
     description:
       'Managing Director at Goa Dairy & Member Secretary, championing endurance, discipline, and community wellness.',
-    // highlights: ['Managing Director, Goa Dairy', 
-    //   'Member Secretary', 
-    //   // 'Public Health Patron'
-    // ],
   },
   {
     id: 'gaurav-desai',
@@ -250,16 +278,31 @@ export const PROMINENT_PARTICIPANTS = [
     specialization: 'Ayurvedic Toxicology',
     designation: 'Senior Faculty & Ayurvedic Doctor',
     organization: 'Gomantak University & Hospital, Goa',
-    role: 'Ayurvedic Toxicology',
-    // badge: 'Prominent Dignitary',
     image: '/ppd/dr_gaurav_desai.jpg',
     description:
       'Senior faculty at Gomantak University & Hospital with an MD in Ayurvedic Toxicology from KLE University. Practicing in Panjim & Margao, dedicated to student mentorship and community health.',
-    // highlights: [
-    //   'Ayurvedic Toxicology',
-    //   'Senior Faculty, Gomantak Hospital',
-    //   // 'Clinics: Panjim & Margao',
-    // ],
+  },
+  {
+    id: 'ajay-gaude',
+    name: 'Shri. Ajay Gaude',
+    honorific: 'Shri.',
+    designation: 'Director of Sports & Youth Affairs',
+    organization: 'Government of Goa',
+    image: '/ppd/ajay_gaude.jpg',
+    description:
+      'Director of Sports & Youth Affairs, Government of Goa — championing grassroots fitness and youth participation across the state.',
+  },
+  {
+    id: 'arun-desai',
+    name: 'Shri. Arun Desai',
+    honorific: 'Shri.',
+    designation: 'IAS (Rtd.) & Air Veteran',
+    organization: 'Government of India',
+    image: '/ppd/arun_desai.jpg',
+    objectFit: 'contain',
+    objectPosition: 'center',
+    description:
+      'Retired IAS officer and distinguished Air Veteran, bringing decades of administrative leadership and service to the nation.',
   },
 ];
 

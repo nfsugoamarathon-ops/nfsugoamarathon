@@ -74,6 +74,21 @@ body {
   animation: spin-slow 22s linear infinite;
 }
 
+@keyframes marquee-cards {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-cards {
+  display: flex;
+  width: max-content;
+  animation: marquee-cards 32s linear infinite;
+}
+
+.animate-marquee-cards:hover {
+  animation-play-state: paused;
+}
+
 /* ─── Hero Section Animations ─── */
 
 @keyframes hero-fadeUp {

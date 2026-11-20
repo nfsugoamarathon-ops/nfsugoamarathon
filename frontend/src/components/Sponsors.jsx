@@ -25,6 +25,12 @@ const GOLD_SPONSORS = [
     logo: '/sponsors/treehouse.jpg',
     rank: 1,
   },
+  {
+    id: 'madhavrao-dhavalikar-trust',
+    name: 'Shri. Madhavrao Dhavalikar Charitable Trust',
+    logo: '/sponsors/madhavrao_dhavalikar_trust.jpg',
+    rank: 2,
+  },
 ];
 
 const IN_KIND_SPONSORS = [

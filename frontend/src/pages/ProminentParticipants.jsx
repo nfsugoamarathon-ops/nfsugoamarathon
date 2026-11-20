@@ -1,18 +1,13 @@
 import { useState, useEffect } from 'react';
 import {
   ArrowLeft,
-  Award,
   Building2,
   Calendar,
   MapPin,
   Clock,
-  Sparkles,
   ChevronRight,
-  ShieldCheck,
   Users,
-  Search,
   Share2,
-  GraduationCap
 } from 'lucide-react';
 import { PROMINENT_PARTICIPANTS, EVENT, openRegistration } from '../data/eventData';
 
@@ -189,93 +184,36 @@ export default function ProminentParticipantsPage({ onBackToHome }) {
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-4xl mx-auto items-stretch">
+          <div className="flex flex-wrap justify-center gap-5 lg:gap-6">
             {filteredParticipants.map((person, idx) => (
               <article
                 key={person.id}
-                className="bg-[#071730] rounded-3xl border border-white/15 shadow-[0_20px_50px_rgba(0,0,0,0.4)] overflow-hidden transition-all duration-300 hover:border-[#FFC36A]/50 relative group flex flex-col hover:-translate-y-1"
+                className="w-[calc(50%-10px)] sm:w-[240px] lg:w-[260px] group relative bg-[#071730] rounded-2xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition-shadow duration-300 hover:shadow-[0_16px_40px_rgba(0,0,0,0.55)] shrink-0"
               >
-                {/* ── BIG HERO PICTURE ── */}
-                <div className="relative bg-[#030a16] h-[400px] sm:h-[460px] lg:h-[480px] w-full overflow-hidden shrink-0">
+                {/* Hero photo */}
+                <div className="relative bg-[#030a16] h-[260px] sm:h-[300px] lg:h-[300px] w-full overflow-hidden">
                   <img
                     src={person.image}
                     alt={person.name}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+                    style={{ objectFit: person.objectFit || 'cover', objectPosition: person.objectPosition || 'top' }}
                     loading={idx === 0 ? 'eager' : 'lazy'}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071730] via-black/10 to-black/30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071730] via-[#071730]/30 to-transparent" />
 
-                  {/* Top Badges */}
-                  {/* <div className="absolute top-4 left-4 right-4 z-10 flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center gap-1.5 bg-[#FFC36A] text-[#071730] font-black text-xs uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
-                      <Award size={13} className="shrink-0" />
-                      <span>{person.badge || 'Distinguished Dignitary'}</span>
-                    </span>
-                    {person.credentials && (
-                      <span className="inline-flex items-center gap-1 bg-[#1749D1] text-white font-bold text-xs px-2.5 py-1 rounded-full shadow-md">
-                        <GraduationCap size={12} className="text-[#FFC36A]" />
-                        <span>{person.credentials}</span>
-                      </span>
-                    )}
-                  </div> */}
-
-                  {/* Bottom of Photo: Name & Title Overlay */}
-                  <div className="absolute bottom-0 inset-x-0 p-5 sm:p-6 bg-gradient-to-t from-[#071730] via-[#071730]/90 to-transparent z-10">
-                    <div className="text-[#FFC36A] text-xs font-bold uppercase tracking-wider mb-1">
+                  {/* Name & designation overlay */}
+                  <div className="absolute bottom-0 inset-x-0 p-4 z-10">
+                    <div className="text-[#FFC36A] text-[10px] font-bold uppercase tracking-wider mb-0.5 leading-tight">
                       {person.designation}
                     </div>
-                    <h2 className="font-sans font-black text-2xl sm:text-3xl text-white tracking-tight leading-tight mb-1">
+                    <h2 className="font-sans font-black text-base sm:text-lg text-white tracking-tight leading-snug mb-1">
                       {person.name}
                     </h2>
-                    <p className="text-xs text-white/80 font-medium flex items-center gap-1.5 truncate">
-                      <Building2 size={13} className="text-[#38bdf8] shrink-0" />
-                      <span className="truncate">{person.organization}</span>
+                    <p className="text-[11px] text-white/75 font-medium flex items-center gap-1 leading-tight">
+                      <Building2 size={11} className="text-[#38bdf8] shrink-0" />
+                      <span className="line-clamp-1">{person.organization}</span>
                     </p>
                   </div>
-                </div>
-
-                {/* ── CONCISE PROFILE DETAILS (Lesser text) ── */}
-                <div className="p-5 sm:p-6 flex flex-col justify-between flex-1">
-                  <div>
-                    {/* Concise 1-sentence bio */}
-                    <p className="text-white/80 text-xs sm:text-sm leading-relaxed mb-4 font-light">
-                      {person.description}
-                    </p>
-
-                    {/* Highlights Pills */}
-                    {person.highlights && (
-                      <div className="flex flex-wrap gap-1.5 mb-4">
-                        {person.highlights.map((h, i) => (
-                          <span
-                            key={i}
-                            className="text-[11px] font-medium text-white/85 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg"
-                          >
-                            {h}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Card Bottom CTA */}
-                  {/* <div className="pt-3 border-t border-white/10 flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-1.5 text-xs text-white/60">
-                      <ShieldCheck size={13} className="text-emerald-400 shrink-0" />
-                      <span className="truncate">Honoured Dignitary</span>
-                    </div>
-
-                    <a
-                      href={EVENT.googleFormUrl || '#contact'}
-                      target={EVENT.googleFormUrl ? '_blank' : undefined}
-                      rel={EVENT.googleFormUrl ? 'noopener noreferrer' : undefined}
-                      onClick={openRegistration}
-                      className="inline-flex items-center gap-1 bg-[#1749D1] hover:bg-[#1340b8] text-white text-xs font-bold px-4 py-2 rounded-full shadow-md transition-all hover:scale-[1.02] shrink-0"
-                    >
-                      <span>Join Marathon</span>
-                      <ChevronRight size={13} />
-                    </a>
-                  </div> */}
-
                 </div>
               </article>
             ))}
