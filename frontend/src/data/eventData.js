@@ -236,8 +236,11 @@ export const PROMINENT_PARTICIPANTS = [
     // badge: 'Distinguished Dignitary',
     image: '/ppd/naveen_kumar_md.jpg',
     description:
-      'Managing Director at NDDB & Member Secretary, championing endurance, discipline, and community wellness.',
-    highlights: ['Managing Director, NDDB', 'Member Secretary', 'Public Health Patron'],
+      'Managing Director at Goa Dairy & Member Secretary, championing endurance, discipline, and community wellness.',
+    // highlights: ['Managing Director, Goa Dairy', 
+    //   'Member Secretary', 
+    //   // 'Public Health Patron'
+    // ],
   },
   {
     id: 'gaurav-desai',
@@ -252,11 +255,11 @@ export const PROMINENT_PARTICIPANTS = [
     image: '/ppd/dr_gaurav_desai.jpg',
     description:
       'Senior faculty at Gomantak University & Hospital with an MD in Ayurvedic Toxicology from KLE University. Practicing in Panjim & Margao, dedicated to student mentorship and community health.',
-    highlights: [
-      'Ayurvedic Toxicology',
-      'Senior Faculty, Gomantak Hospital',
-      'Clinics: Panjim & Margao',
-    ],
+    // highlights: [
+    //   'Ayurvedic Toxicology',
+    //   'Senior Faculty, Gomantak Hospital',
+    //   // 'Clinics: Panjim & Margao',
+    // ],
   },
 ];
 
