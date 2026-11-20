@@ -6,7 +6,7 @@ export default function CrossedMarquee() {
     'FINISHER MEDAL',
     'DRY-FIT T-SHIRT',
     'PODIUM TROPHY',
-    'RECOVERY', 
+    'RECOVERY',
     'BREAKFAST',
     'RACE DAY · 6 DEC 2026',
   ];
@@ -16,7 +16,7 @@ export default function CrossedMarquee() {
     'EVIDENCE DOESN’T LIE',
     'NFSU GOA CAMPUS',
     'EVERY STEP. EVERY CLUE. EVERY TRUTH.',
-    'ENTRY ₹750 ALL CATEGORIES',
+    'PwD FREE',
     '6 DECEMBER 2026',
   ];
 

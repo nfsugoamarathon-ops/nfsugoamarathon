@@ -1,4 +1,4 @@
-# About Section & Event Copy — Ponda, Goa Terrain & Visual Alignment
+# About Section & Event Copy - Ponda, Goa Terrain & Visual Alignment
 
 ## Summary
 

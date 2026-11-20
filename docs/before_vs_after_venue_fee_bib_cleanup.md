@@ -17,11 +17,11 @@ Updated all components, data definitions, and portal pages across `frontend/src/
 |---|---|---|
 | `EVENT.organizer` | `'NFSU Goa'` | `'NFSU Goa Campus'` |
 | `EVENT.venue` | `'Near NFSU Girls Hostel, NFSU Goa Campus'` | `'NFSU Goa Campus'` |
-| `EVENT.bibCollection.venue` | `'Ponda — exact venue to be announced in the event group'` | `'NFSU Goa Campus, Canteen Area'` |
+| `EVENT.bibCollection.venue` | `'Ponda - exact venue to be announced in the event group'` | `'NFSU Goa Campus, Canteen Area'` |
 | `CATEGORIES` (`3k`, `6k`, `10k`) `fee` | `'To be announced'` | `'₹500'` |
-| FAQ — Bib Collection venue | `'...at Ponda (exact venue to be announced in the event group)...'` | `'...at NFSU Goa Campus, Canteen Area...'` |
-| FAQ — Race Day check-in rule | `'No bib means no timing or medal.'` | `'No bib means no official result or medal.'` |
-| FAQ — Route start/finish | `'Near NFSU Girls Hostel, NFSU Goa Campus.'` | `'NFSU Goa Campus.'` |
+| FAQ - Bib Collection venue | `'...at Ponda (exact venue to be announced in the event group)...'` | `'...at NFSU Goa Campus, Canteen Area...'` |
+| FAQ - Race Day check-in rule | `'No bib means no timing or medal.'` | `'No bib means no official result or medal.'` |
+| FAQ - Route start/finish | `'Near NFSU Girls Hostel, NFSU Goa Campus.'` | `'NFSU Goa Campus.'` |
 
 ---
 
@@ -45,12 +45,12 @@ Updated all components, data definitions, and portal pages across `frontend/src/
 
 ### 5. [`frontend/src/components/Categories.jsx`](file:///d:/Yash%20Bhagwani/NFSU%20DFIS/Banner/Marathon_26/website/frontend/src/components/Categories.jsx)
 - **Card Fee Display**: Automatically pulls `₹500` from `CATEGORIES` in `eventData.js` for `3 KM`, `6 KM`, and `10 KM`.
-- **Bottom Note**: `'Registration fees will be announced...'` → `'Registration fee is ₹500 across all categories. Age eligibility is verified at bib collection — carry a valid ID proof.'`
+- **Bottom Note**: `'Registration fees will be announced...'` → `'Registration fee is ₹500 across all categories. Age eligibility is verified at bib collection - carry a valid ID proof.'`
 
 ---
 
 ### 6. [`frontend/src/components/RegistrationForm.jsx`](file:///d:/Yash%20Bhagwani/NFSU%20DFIS/Banner/Marathon_26/website/frontend/src/components/RegistrationForm.jsx)
-- **Confirmation Bib Collection Box**: `'Venue: Ponda, Goa — exact venue will be notified in the runner group.'` → `'Venue: NFSU Goa Campus, Canteen Area.'`
+- **Confirmation Bib Collection Box**: `'Venue: Ponda, Goa - exact venue will be notified in the runner group.'` → `'Venue: NFSU Goa Campus, Canteen Area.'`
 - **Step 4 Payment Summary**: `'Timing Chip & Finisher Medal:'` → `'Race Bib, T-Shirt & Finisher Medal:'` (displays `₹500` via `selectedCategory?.fee`).
 
 ---

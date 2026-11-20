@@ -6,8 +6,8 @@ const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Categories', href: '#categories' },
   { label: 'Prizes', href: '#prizes' },
+  { label: 'Dignitaries', href: '#prominent-participants' },
   { label: 'Schedule', href: '#schedule' },
-  { label: 'Route', href: '#route' },
   { label: 'FAQs', href: '#faqs' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -40,11 +40,11 @@ const STRIP_ITEMS = [
   {
     icon: '🏅',
     highlight: 'INCLUDED PERKS:',
-    text: 'Finisher Medal, Dry-Fit T-Shirt, Certificate & Recovery Breakfast',
+    text: 'Finisher Medal, Dry-Fit T-Shirt, E-Certificate & Recovery Breakfast',
   },
 ];
 
-export default function Navbar({ onOpenPortal }) {
+export default function Navbar({ onOpenPortal, onOpenProminent }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -67,40 +67,44 @@ export default function Navbar({ onOpenPortal }) {
 
   const handleNavClick = (href) => {
     setMenuOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    if (href === '#prominent-participants-page' && onOpenProminent) {
+      onOpenProminent();
+      return;
+    }
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    } else if (href === '#prominent-participants' && onOpenProminent) {
+      onOpenProminent();
+    }
   };
 
   return (
     <header
       ref={menuRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'bg-[#FFFCEB]/85 backdrop-blur-md border-b border-[#191A17]/10 shadow-xs'
           : 'bg-transparent backdrop-blur-xs'
-      }`}
+        }`}
     >
       {/* Dark & Gold Theme Marquee Ribbon (Matching Event Identity & Uploaded Reference) */}
-      <div className={`w-full overflow-hidden bg-transparent border-b py-1.5 text-[11px] sm:text-xs select-none transition-colors duration-300 ${
-        scrolled ? 'border-[#191A17]/10' : 'border-white/10'
-      }`}>
+      <div className={`w-full overflow-hidden bg-transparent border-b py-1.5 text-[11px] sm:text-xs select-none transition-colors duration-300 ${scrolled ? 'border-[#191A17]/10' : 'border-white/10'
+        }`}>
         <div className="animate-top-marquee flex items-center whitespace-nowrap cursor-pointer">
           {/* Primary Track */}
           <div className="flex items-center">
             {STRIP_ITEMS.map((item, idx) => (
-              <div key={idx} className={`flex items-center gap-2 mx-6 font-medium transition-colors duration-300 ${
-                scrolled
+              <div key={idx} className={`flex items-center gap-2 mx-6 font-medium transition-colors duration-300 ${scrolled
                   ? 'text-[#191A17]/85'
                   : 'text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
-              }`}>
-                <span className={`font-bold tracking-wide transition-colors duration-300 ${
-                  scrolled ? 'text-[#1749D1]' : 'text-[#e8e337]'
                 }`}>
+                <span className={`font-bold tracking-wide transition-colors duration-300 ${scrolled ? 'text-[#1749D1]' : 'text-[#e8e337]'
+                  }`}>
                   {item.highlight}
                 </span>
                 <span>{item.text}</span>
-                <span className={`ml-4 font-light text-xs transition-colors duration-300 ${
-                  scrolled ? 'text-[#1749D1]/40' : 'text-[#e8e337]/50'
-                }`}>
+                <span className={`ml-4 font-light text-xs transition-colors duration-300 ${scrolled ? 'text-[#1749D1]/40' : 'text-[#e8e337]/50'
+                  }`}>
                   ✦
                 </span>
               </div>
@@ -110,20 +114,17 @@ export default function Navbar({ onOpenPortal }) {
           {/* Duplicate Track for Smooth Infinite Loop */}
           <div className="flex items-center" aria-hidden="true">
             {STRIP_ITEMS.map((item, idx) => (
-              <div key={`dup-${idx}`} className={`flex items-center gap-2 mx-6 font-medium transition-colors duration-300 ${
-                scrolled
+              <div key={`dup-${idx}`} className={`flex items-center gap-2 mx-6 font-medium transition-colors duration-300 ${scrolled
                   ? 'text-[#191A17]/85'
                   : 'text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
-              }`}>
-                <span className={`font-bold tracking-wide transition-colors duration-300 ${
-                  scrolled ? 'text-[#1749D1]' : 'text-[#e8e337]'
                 }`}>
+                <span className={`font-bold tracking-wide transition-colors duration-300 ${scrolled ? 'text-[#1749D1]' : 'text-[#e8e337]'
+                  }`}>
                   {item.highlight}
                 </span>
                 <span>{item.text}</span>
-                <span className={`ml-4 font-light text-xs transition-colors duration-300 ${
-                  scrolled ? 'text-[#1749D1]/40' : 'text-[#e8e337]/50'
-                }`}>
+                <span className={`ml-4 font-light text-xs transition-colors duration-300 ${scrolled ? 'text-[#1749D1]/40' : 'text-[#e8e337]/50'
+                  }`}>
                   ✦
                 </span>
               </div>
@@ -138,30 +139,27 @@ export default function Navbar({ onOpenPortal }) {
           href="#"
           className="flex items-center gap-2 sm:gap-2.5 group"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          aria-label="Adamya Dhavanam — back to top"
+          aria-label="Adamya Dhavanam - back to top"
         >
           <img
             src="/marathon-logo.png"
             alt="Adamya Dhavanam marathon logo"
-            className={`h-9 w-9 sm:h-10 sm:w-10 rounded-full object-cover ring-2 transition-all shadow shrink-0 ${
-              scrolled
+            className={`h-9 w-9 sm:h-10 sm:w-10 rounded-full object-cover ring-2 transition-all shadow shrink-0 ${scrolled
                 ? 'ring-[#1749D1]/30 group-hover:ring-[#1749D1]'
                 : 'ring-white/20 group-hover:ring-[#e8e337]/60'
-            }`}
+              }`}
           />
           <span className="flex flex-col font-semibold text-xs sm:text-sm leading-tight">
-            <span className={`block font-serif italic text-sm sm:text-base transition-colors duration-300 ${
-              scrolled
+            <span className={`block font-serif italic text-sm sm:text-base transition-colors duration-300 ${scrolled
                 ? 'text-[#1749D1]'
                 : 'text-[#e8e337] drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
-            }`}>
+              }`}>
               Adamya Dhāvanam
             </span>
-            <span className={`block text-[9px] sm:text-[10px] tracking-widest font-mono transition-colors duration-300 ${
-              scrolled
+            <span className={`block text-[9px] sm:text-[10px] tracking-widest font-mono transition-colors duration-300 ${scrolled
                 ? 'text-[#686D66]'
                 : 'text-white/70 drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
-            }`}>
+              }`}>
               NFSU GOA · 6 DEC 2026
             </span>
           </span>
@@ -174,11 +172,10 @@ export default function Navbar({ onOpenPortal }) {
               key={l.href}
               href={l.href}
               onClick={(e) => { e.preventDefault(); handleNavClick(l.href); }}
-              className={`text-xs uppercase tracking-wider font-semibold transition-colors duration-300 focus-visible:outline-none ${
-                scrolled
+              className={`text-xs uppercase tracking-wider font-semibold transition-colors duration-300 focus-visible:outline-none ${scrolled
                   ? 'text-[#191A17]/80 hover:text-[#1749D1] focus-visible:text-[#1749D1]'
                   : 'text-white/80 hover:text-white focus-visible:text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
-              }`}
+                }`}
             >
               {l.label}
             </a>
@@ -212,22 +209,20 @@ export default function Navbar({ onOpenPortal }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className={`mobile-nav-drawer lg:hidden backdrop-blur-md border-t px-4 pb-5 pt-2 transition-colors duration-300 ${
-          scrolled
+        <div className={`mobile-nav-drawer lg:hidden backdrop-blur-md border-t px-4 pb-5 pt-2 transition-colors duration-300 ${scrolled
             ? 'bg-[#FFFCEB]/98 border-[#191A17]/10'
             : 'bg-[#111A17]/98 border-white/10'
-        }`}>
+          }`}>
           <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
             {NAV_LINKS.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={(e) => { e.preventDefault(); handleNavClick(l.href); }}
-                className={`py-2.5 px-3 rounded-lg text-sm font-medium transition-colors ${
-                  scrolled
+                className={`py-2.5 px-3 rounded-lg text-sm font-medium transition-colors ${scrolled
                     ? 'text-[#191A17]/80 hover:text-[#1749D1] hover:bg-[#191A17]/05'
                     : 'text-white/80 hover:text-white hover:bg-white/5'
-                }`}
+                  }`}
               >
                 {l.label}
               </a>

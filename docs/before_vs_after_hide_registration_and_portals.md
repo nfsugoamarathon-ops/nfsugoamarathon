@@ -7,7 +7,7 @@ All active `"Register"` / `"Register Now"` CTAs now route through a shared `open
 
 ---
 
-## 1. Central Config & Registration Helper — `frontend/src/data/eventData.js`
+## 1. Central Config & Registration Helper - `frontend/src/data/eventData.js`
 
 ### Google Form URL & `openRegistration()` Helper
 - **Before:**
@@ -52,7 +52,7 @@ All active `"Register"` / `"Register Now"` CTAs now route through a shared `open
 
 ---
 
-## 2. Main App Shell — `frontend/src/App.jsx`
+## 2. Main App Shell - `frontend/src/App.jsx`
 
 - **Before:**
   - Unconditionally switched views to `<ParticipantDashboard />` or `<AdminDashboard />` when `currentView` was `'participant'` or `'admin'`.
@@ -70,7 +70,7 @@ All active `"Register"` / `"Register Now"` CTAs now route through a shared `open
 
 ---
 
-## 3. Top Navigation Bar — `frontend/src/components/Navbar.jsx`
+## 3. Top Navigation Bar - `frontend/src/components/Navbar.jsx`
 
 - **Before:**
   - Desktop header rendered **Runner Login** (`onOpenPortal?.('participant')`) and **Admin** (`onOpenPortal?.('admin')`) buttons alongside **Register** (`href="#register"`).
@@ -82,7 +82,7 @@ All active `"Register"` / `"Register Now"` CTAs now route through a shared `open
 
 ---
 
-## 4. Hero Section CTA — `frontend/src/components/Hero.jsx`
+## 4. Hero Section CTA - `frontend/src/components/Hero.jsx`
 
 - **Before:**
   ```jsx
@@ -110,7 +110,7 @@ All active `"Register"` / `"Register Now"` CTAs now route through a shared `open
 
 ---
 
-## 5. Categories Section CTAs — `frontend/src/components/Categories.jsx`
+## 5. Categories Section CTAs - `frontend/src/components/Categories.jsx`
 
 - **Before:**
   `handleRegister(categoryId)` scrolled to `#register` and dispatched `selectCategory` for the built-in form.
@@ -119,7 +119,7 @@ All active `"Register"` / `"Register Now"` CTAs now route through a shared `open
 
 ---
 
-## 6. Curtain-Reveal Footer — `frontend/src/components/ui/motion-footer.tsx`
+## 6. Curtain-Reveal Footer - `frontend/src/components/ui/motion-footer.tsx`
 
 - **Before:**
   - Primary pill actions included **Register Now (3K · 6K · 10K)** (`scrollToSection('#register')`) and **Runner Portal & e-Bib** (`onOpenPortal?.('participant')`).
@@ -130,7 +130,7 @@ All active `"Register"` / `"Register Now"` CTAs now route through a shared `open
 
 ---
 
-## 7. Legacy Footer Component — `frontend/src/components/Footer.jsx`
+## 7. Legacy Footer Component - `frontend/src/components/Footer.jsx`
 
 - **Before:**
   Rendered a **Portals** column containing **Participant Portal** (`onOpenPortal('participant')`), **Admin Dashboard** (`onOpenPortal('admin')`), and **Register as Runner** (`href="#register"`), using the `Shield` icon.

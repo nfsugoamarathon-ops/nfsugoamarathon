@@ -142,7 +142,7 @@ export default function Hero() {
   return (
     <section
       className="hero-section relative min-h-screen lg:h-screen lg:max-h-screen flex flex-col justify-between overflow-hidden bg-[#051124]"
-      aria-label="Hero — Adamya Dhavanam marathon"
+      aria-label="Hero - Adamya Dhavanam marathon"
     >
       {/* ───────────────────────────────────────────────────────────
           1. BACKGROUND IMAGERY & GRADIENT OVERLAYS
@@ -161,11 +161,11 @@ export default function Hero() {
 
       {/* ── Desktop Gradient Overlays (>=1024px) - Strictly Unchanged ── */}
       <div className="hidden lg:block absolute inset-0 pointer-events-none" aria-hidden="true">
-        {/* Left side — gradient for text */}
+        {/* Left side - gradient for text */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a1020]/95 via-[#0a1020]/75 to-transparent" />
-        {/* Bottom — darker floor for countdown & seamless section transition */}
+        {/* Bottom - darker floor for countdown & seamless section transition */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a1020]/95 via-[#0a1020]/25 to-transparent" />
-        {/* Top — subtle dark strip for navbar area */}
+        {/* Top - subtle dark strip for navbar area */}
         <div className="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-[#0a1020]/70 to-transparent" />
         {/* Subtle blue tint */}
         <div className="absolute inset-0 bg-[#1749D1]/[0.03]" />
@@ -195,10 +195,10 @@ export default function Hero() {
           Exact match to user's uploaded reference mockup
           ─────────────────────────────────────────────────────────── */}
       <div className="lg:hidden relative z-10 flex flex-col items-center justify-between w-full max-w-lg mx-auto px-5 pt-28 sm:pt-32 pb-6 min-h-screen text-center">
-        
+
         {/* Top Group: Pill Badge + Sanskrit + Titles + Tagline + Facts + Buttons */}
         <div className="w-full flex flex-col items-center animate-hero-fadeUp">
-          
+
           {/* Date & Venue Pill Badge */}
           <div className="inline-flex items-center gap-2 bg-white/[0.08] backdrop-blur-md border border-white/[0.15] rounded-full px-4 py-1.5 text-white/90 text-xs sm:text-sm font-medium tracking-wide shadow-md mb-4 sm:mb-5">
             <span className="w-2 h-2 rounded-full bg-[#e8e337] shrink-0 animate-pulse" />
@@ -274,7 +274,7 @@ export default function Hero() {
           <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full border-[3.5px] border-white shadow-[0_12px_40px_rgba(0,0,0,0.65)] overflow-hidden bg-white flex items-center justify-center">
             <img
               src="/marathon-logo-square.png"
-              alt="Adamya Dhāvanam Marathon — NFSU Goa"
+              alt="Adamya Dhāvanam Marathon - NFSU Goa"
               className="w-full h-full object-cover object-center"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               loading="eager"
@@ -343,10 +343,10 @@ export default function Hero() {
 
       {/* ───────────────────────────────────────────────────────────
           3. DESKTOP LAYOUT (>=1024px)
-          STRICTLY UNCHANGED — Preserves 100% of Original Desktop Code
+          STRICTLY UNCHANGED - Preserves 100% of Original Desktop Code
           ─────────────────────────────────────────────────────────── */}
       <div className="hidden lg:flex relative z-10 flex-1 flex-col justify-center w-full max-w-[1440px] mx-auto px-14 xl:px-16 pt-28 pb-0">
-        
+
         {/* Top: Event Badge */}
         <div className="animate-hero-fadeUp mb-4 flex items-center justify-between gap-3">
           <div className="inline-flex items-center gap-2 bg-white/[0.08] backdrop-blur-lg border border-white/[0.15] rounded-full px-3.5 py-1.5 text-white/90 text-xs font-medium tracking-wide shadow-md">
@@ -436,7 +436,7 @@ export default function Hero() {
               <div className="relative w-52 h-52 xl:w-64 xl:h-64 rounded-full overflow-hidden border-2 border-white/[0.12] shadow-[0_0_50px_rgba(23,73,209,0.2),0_0_80px_rgba(255,195,106,0.06)]">
                 <img
                   src="/marathon-logo.png"
-                  alt="Adamya Dhāvanam Marathon — NFSU Goa"
+                  alt="Adamya Dhāvanam Marathon - NFSU Goa"
                   className="w-full h-full object-cover"
                   loading="eager"
                 />
@@ -451,7 +451,7 @@ export default function Hero() {
       <div className="hidden lg:block hero-bottom-bar relative z-10 w-full max-w-[1440px] mx-auto px-14 xl:px-16 pb-7 pt-0">
         <div className="hero-bottom-inner flex items-end justify-between gap-4">
 
-          {/* Scroll Indicator — Bottom Left */}
+          {/* Scroll Indicator - Bottom Left */}
           <div className="hero-scroll-indicator flex items-center gap-2.5 animate-hero-fadeUp pb-1" style={{ animationDelay: '0.5s' }}>
             <div className="w-5 h-7 rounded-full border border-white/20 flex items-start justify-center pt-1">
               <div className="w-1 h-1.5 rounded-full bg-white/40 animate-hero-scrollDot" />

@@ -73,7 +73,7 @@ export default function AdminDashboard({ onBackToHome }) {
       phone: '+91 98450 11223',
       email: 'parent.rohan@example.com',
       paymentStatus: 'PAID',
-      amount: '₹750',
+      amount: '₹400',
       idProofStatus: 'PENDING_REVIEW', // minor requiring ID proof
       regDate: '2026-11-02',
     },
@@ -105,7 +105,7 @@ export default function AdminDashboard({ onBackToHome }) {
       phone: '+91 94220 33445',
       email: 'sharad.prabhu@example.com',
       paymentStatus: 'PAID',
-      amount: '₹750',
+      amount: '₹400',
       idProofStatus: 'VERIFIED',
       regDate: '2026-11-03',
     },
@@ -397,6 +397,7 @@ export default function AdminDashboard({ onBackToHome }) {
                   <option value="10k">10 KM Elite</option>
                   <option value="6k">6 KM Challenge</option>
                   <option value="3k">3 KM Fun Run</option>
+                  <option value="pwd">3 KM Inclusive Run (PwD)</option>
                 </select>
 
                 <select

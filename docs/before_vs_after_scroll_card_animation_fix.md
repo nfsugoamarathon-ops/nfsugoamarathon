@@ -4,14 +4,14 @@
 All three scroll-animated card sections (`EventFacts.jsx`, `About.jsx`, and `Categories.jsx`) had two compounding issues causing cards to stall at uneven heights, jitter, or reverse mid-scroll:
 
 1. **CSS `transition-all duration-300` fighting GSAP `ScrollTrigger` transforms:**
-   In `Categories.jsx` (`.category-card`) and `About.jsx` (`.about-pillar`), Tailwind's `transition-all duration-300` and `hover:-translate-y-1` were applied directly on the exact same DOM elements animated by GSAP (`y`, `scale`, `opacity`, and `clearProps: 'transform'`). CSS tried to interpolate every GSAP frame over `300ms` and interfered when `clearProps` removed inline `transform` values at different stagger completion times — visibly misaligning `Fun Run`, `Challenge Run`, and `Elite Run` vertically.
+   In `Categories.jsx` (`.category-card`) and `About.jsx` (`.about-pillar`), Tailwind's `transition-all duration-300` and `hover:-translate-y-1` were applied directly on the exact same DOM elements animated by GSAP (`y`, `scale`, `opacity`, and `clearProps: 'transform'`). CSS tried to interpolate every GSAP frame over `300ms` and interfered when `clearProps` removed inline `transform` values at different stagger completion times - visibly misaligning `Fun Run`, `Challenge Run`, and `Elite Run` vertically.
 
 2. **`toggleActions: 'play none none reverse'` triggering mid-scroll reversals:**
    Because `.fact-card`, `.about-pillar`, `.category-card`, `.category-badge`, and `.category-inclusion` reversed near bottom viewport thresholds (`top 82%` – `88%`), minor upward nudges or differing thresholds caused cards to reverse unevenly or show partially faded elements.
 
 ---
 
-## 1. Race Categories Cards — `frontend/src/components/Categories.jsx`
+## 1. Race Categories Cards - `frontend/src/components/Categories.jsx`
 
 - **Before:**
   - `.category-card` had `transition-all duration-300 cursor-pointer hover:-translate-y-1` on the same element targeted by `gsap.fromTo('.category-card', ...)`.
@@ -27,7 +27,7 @@ All three scroll-animated card sections (`EventFacts.jsx`, `About.jsx`, and `Cat
 
 ---
 
-## 2. About Section Pillar Cards — `frontend/src/components/About.jsx`
+## 2. About Section Pillar Cards - `frontend/src/components/About.jsx`
 
 - **Before:**
   - `.about-pillar` had `transition-all duration-300 hover:-translate-y-1` directly on the GSAP-animated element.
@@ -40,7 +40,7 @@ All three scroll-animated card sections (`EventFacts.jsx`, `About.jsx`, and `Cat
 
 ---
 
-## 3. Event Facts Cards — `frontend/src/components/EventFacts.jsx`
+## 3. Event Facts Cards - `frontend/src/components/EventFacts.jsx`
 
 - **Before:**
   - `.fact-card` and `.fact-icon` staggered entrances used `toggleActions: 'play none none reverse'` at `start: 'top 88%'` with `clearProps: 'transform'`.

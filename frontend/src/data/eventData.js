@@ -1,4 +1,4 @@
-// Event data — single source of truth matching docs/info.txt
+// Event data - single source of truth matching docs/info.txt
 export const EVENT = {
   name: 'Adamya Dhāvanam',
   nameDevanagari: 'अदम्यधावनम्',
@@ -7,6 +7,8 @@ export const EVENT = {
   website: 'nfsugoamarathon.in',
   // Official Google Form registration URL
   googleFormUrl: 'https://forms.gle/mJH5q4Rnm3N2k8Uv5',
+  // Dedicated Google Form registration URL for Persons with Disabilities (PwD)
+  pwdGoogleFormUrl: 'https://forms.gle/K4c6jexzm47kxjT3A',
   // Official Sponsorship Proposal PDF
   sponsorshipProposalPdf: '/sponsorship-proposal.pdf',
   // Official Google My Maps course route
@@ -46,10 +48,11 @@ export const CATEGORIES = [
     flagOff: '6:50 AM',
     eligibility: 'Age 60+ and under 14',
     ageGroups: ['Under 14', '60 and above'],
-    inclusions: ['Finisher medal', 'Participation certificate', 'T-shirt', 'Podium Trophy', 'Water & refreshments', 'Result on website within 24h'],
-    fee: '₹750',
+    inclusions: ['Finisher medal', 'Participation e-certificate', 'T-shirt', 'Podium Trophy', 'Water & refreshments'],
+    fee: '₹400',
     cutoff: '2 hours',
     description: 'A spirited short run for the youngest hearts and our senior champions.',
+    formUrl: 'https://forms.gle/mJH5q4Rnm3N2k8Uv5',
   },
   {
     id: '6k',
@@ -60,10 +63,11 @@ export const CATEGORIES = [
     flagOff: '6:45 AM',
     eligibility: 'Age 15–35 and 36–59',
     ageGroups: ['15–35', '36–59'],
-    inclusions: ['Finisher medal', 'Participation certificate', 'T-shirt', 'Podium Trophy', 'Water & refreshments', 'Result on website within 24h'],
+    inclusions: ['Finisher medal', 'Participation e-certificate', 'T-shirt', 'Podium Trophy', 'Water & refreshments'],
     fee: '₹750',
     cutoff: '2 hours',
     description: 'Push your limits on a scenic Ponda course built for driven runners.',
+    formUrl: 'https://forms.gle/mJH5q4Rnm3N2k8Uv5',
   },
   {
     id: '10k',
@@ -74,19 +78,35 @@ export const CATEGORIES = [
     flagOff: '6:30 AM',
     eligibility: 'Age 15–35 and 36–59',
     ageGroups: ['15–35', '36–59'],
-    inclusions: ['Finisher medal', 'Participation certificate', 'T-shirt', 'Podium Trophy', 'Water & refreshments', 'Result on website within 24h'],
+    inclusions: ['Finisher medal', 'Participation e-certificate', 'T-shirt', 'Podium Trophy', 'Water & refreshments'],
     fee: '₹750',
     cutoff: '2 hours',
-    description: 'The marquee distance — a full test of endurance across the hills and avenues of Ponda, Goa.',
+    description: 'The marquee distance - a full test of endurance across the hills and avenues of Ponda, Goa.',
+    formUrl: 'https://forms.gle/mJH5q4Rnm3N2k8Uv5',
+  },
+  {
+    id: 'pwd',
+    label: '3 KM',
+    distance: '3 km',
+    name: 'Inclusive Run',
+    color: 'emerald',
+    flagOff: '6:50 AM',
+    eligibility: 'PwD',
+    ageGroups: ['Open to all PwD'],
+    inclusions: ['Finisher medal', 'Participation e-certificate', 'T-shirt', 'Volunteer assistance', 'Water & refreshments'],
+    fee: 'FREE',
+    cutoff: '2 hours',
+    description: 'Dedicated inclusive race for Persons with Disabilities with volunteer support.',
+    formUrl: 'https://forms.gle/K4c6jexzm47kxjT3A',
   },
 ];
 
 export const SCHEDULE = [
   { time: '5:00 – 5:30 AM', event: 'Reporting & check-in at start line', type: 'info' },
   { time: '6:00 AM', event: 'Warm-up session', type: 'info' },
-  { time: '6:30 AM', event: 'Flag-off — 10 KM Elite Run', type: 'race', category: '10k' },
-  { time: '6:45 AM', event: 'Flag-off — 6 KM Challenge Run', type: 'race', category: '6k' },
-  { time: '6:50 AM', event: 'Flag-off — 3 KM Fun Run', type: 'race', category: '3k' },
+  { time: '6:30 AM', event: 'Flag-off - 10 KM Elite Run', type: 'race', category: '10k' },
+  { time: '6:45 AM', event: 'Flag-off - 6 KM Challenge Run', type: 'race', category: '6k' },
+  { time: '6:50 AM', event: 'Flag-off - 3 KM Fun Run & PwD Inclusive Run', type: 'race', category: '3k' },
   { time: 'Every 2 km', event: 'Water stations along route', type: 'support' },
   { time: 'Every 3 km', event: 'Medical desk (also at Start/Finish)', type: 'support' },
   { time: 'Within 24 h', event: 'Results published on website', type: 'info' },
@@ -98,11 +118,15 @@ export const FAQS = [
     questions: [
       {
         q: 'How do I register?',
-        a: 'Registrations are handled via our official Google Form. Select your category (3K / 6K / 10K), fill in your participant details, upload ID proof if required, and follow the instructions in the form.',
+        a: 'Registrations are handled via our official Google Forms. For standard categories (3K, 6K, 10K), register at https://forms.gle/mJH5q4Rnm3N2k8Uv5. For Persons with Disabilities (PwD), register via the dedicated form at https://forms.gle/K4c6jexzm47kxjT3A.',
       },
       {
         q: 'Is there an age limit for each category?',
-        a: 'Yes. 3K: age under 14 and age 60+. 6K and 10K: age 15–35 and 36–59. Age proof is verified at bib collection.',
+        a: 'Yes. 3K: age under 14, age 60+, and all Persons with Disabilities (PwD) participants. 6K and 10K: age 15–35 and 36–59. Age proof and PwD/UDID proof are verified at bib collection.',
+      },
+      {
+        q: 'Can Persons with Disabilities (PwD) participate in the marathon?',
+        a: 'Absolutely! Adamya Dhāvanam proudly hosts a dedicated 3 KM Inclusive Run for Persons with Disabilities (PwD) with 100% FREE registration (no fee). You can register directly using the official PwD registration form: https://forms.gle/K4c6jexzm47kxjT3A. Dedicated volunteer assistance, accessible resting areas, and medical support are arranged by the organising committee.',
       },
       {
         q: 'What documents does a participant under 18 need?',
@@ -123,7 +147,7 @@ export const FAQS = [
       },
       {
         q: 'Is the registration fee refundable?',
-        a: 'The fee is non-refundable and non-transferable. If the event is cancelled due to weather, government order, or force majeure, the fee will be carried forward to the next edition — no cash refund.',
+        a: 'The fee is non-refundable and non-transferable. If the event is cancelled due to weather, government order, or force majeure, the fee will be carried forward to the next edition - no cash refund.',
       },
       {
         q: 'My payment was deducted but I did not receive a confirmation.',
@@ -161,7 +185,7 @@ export const FAQS = [
       },
       {
         q: 'Is there a cut-off time?',
-        a: 'Yes — 2 hours for all categories.',
+        a: 'Yes - 2 hours for all categories.',
       },
       {
         q: 'What support is available on the route?',
@@ -201,17 +225,67 @@ export const FAQS = [
   },
 ];
 
+export const PROMINENT_PARTICIPANTS = [
+  {
+    id: 'naveen-kumar',
+    name: 'Shri. Naveen Kumar',
+    honorific: 'Shri.',
+    designation: 'Managing Director',
+    organization: 'Goa Dairy',
+    // role: 'Member Secretary',
+    // badge: 'Distinguished Dignitary',
+    image: '/ppd/naveen_kumar_md.jpg',
+    description:
+      'Managing Director at NDDB & Member Secretary, championing endurance, discipline, and community wellness.',
+    highlights: ['Managing Director, NDDB', 'Member Secretary', 'Public Health Patron'],
+  },
+  {
+    id: 'gaurav-desai',
+    name: 'Dr. Gaurav Desai',
+    honorific: 'Dr.',
+    credentials: 'BAMS, MD (Ayurveda)',
+    specialization: 'Ayurvedic Toxicology',
+    designation: 'Senior Faculty & Ayurvedic Doctor',
+    organization: 'Gomantak University & Hospital, Goa',
+    role: 'Ayurvedic Toxicology',
+    // badge: 'Prominent Dignitary',
+    image: '/ppd/dr_gaurav_desai.jpg',
+    description:
+      'Senior faculty at Gomantak University & Hospital with an MD in Ayurvedic Toxicology from KLE University. Practicing in Panjim & Margao, dedicated to student mentorship and community health.',
+    highlights: [
+      'Ayurvedic Toxicology',
+      'Senior Faculty, Gomantak Hospital',
+      'Clinics: Panjim & Margao',
+    ],
+  },
+];
+
 /**
  * Opens the Google Form registration link when configured, or scrolls to
  * `#contact` so runners can reach organizers while the link is finalized.
+ * Accepts an optional category id ('pwd', '3k', etc.) or explicit URL.
  */
-export function openRegistration(e) {
-  if (EVENT.googleFormUrl) {
+export function openRegistration(e, categoryOrUrl) {
+  let targetUrl = EVENT.googleFormUrl;
+  if (typeof categoryOrUrl === 'string') {
+    if (categoryOrUrl.startsWith('http')) {
+      targetUrl = categoryOrUrl;
+    } else if (categoryOrUrl === 'pwd') {
+      targetUrl = EVENT.pwdGoogleFormUrl || EVENT.googleFormUrl;
+    } else {
+      const cat = CATEGORIES.find((c) => c.id === categoryOrUrl);
+      if (cat?.formUrl) {
+        targetUrl = cat.formUrl;
+      }
+    }
+  }
+
+  if (targetUrl) {
     if (e?.currentTarget?.tagName === 'A') {
       return;
     }
     if (e?.preventDefault) e.preventDefault();
-    window.open(EVENT.googleFormUrl, '_blank', 'noopener,noreferrer');
+    window.open(targetUrl, '_blank', 'noopener,noreferrer');
     return;
   }
   if (e?.preventDefault) e.preventDefault();

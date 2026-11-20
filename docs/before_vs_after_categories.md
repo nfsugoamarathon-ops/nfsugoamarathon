@@ -1,4 +1,4 @@
-# Categories ("Choose your race") Section — GSAP Scroll Animations
+# Categories ("Choose your race") Section - GSAP Scroll Animations
 
 ## Summary
 

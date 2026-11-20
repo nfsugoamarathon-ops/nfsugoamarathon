@@ -1,4 +1,4 @@
-# EventFacts Section — Scroll Animations & Layout Polish
+# EventFacts Section - Scroll Animations & Layout Polish
 
 ## Summary
 

@@ -44,12 +44,12 @@ export default function Sponsors() {
           </a>
         </div>
 
-        {/* Organizer — Conference-room institutional lockup */}
+        {/* Organizer - Conference-room institutional lockup */}
         <div className="flex flex-col items-center gap-4 mt-6 sm:mt-8">
           <p className="text-[#686D66] text-xs font-semibold uppercase tracking-[0.2em]">Organised by</p>
 
           <div className="sponsors-organizer-card w-full max-w-4xl bg-white/90 backdrop-blur-sm border border-[#DADBCF] rounded-2xl px-5 py-6 sm:px-10 sm:py-8 shadow-[0_14px_40px_-16px_rgba(17,26,23,0.08)]">
-            
+
             {/* Mobile Layout (< 640px): Compact Official Header Lockup */}
             <div className="sm:hidden flex flex-col items-center gap-4 text-center">
               {/* Dual Institutional Emblems */}

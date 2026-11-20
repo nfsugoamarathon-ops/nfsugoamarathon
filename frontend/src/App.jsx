@@ -7,6 +7,7 @@ import About from './components/About';
 import CrossedMarquee from './components/CrossedMarquee';
 import Categories from './components/Categories';
 import Prizes from './components/Prizes';
+import ProminentParticipants from './components/ProminentParticipants';
 import RegistrationForm from './components/RegistrationForm';
 import Schedule from './components/Schedule';
 import Route from './components/Route';
@@ -17,6 +18,7 @@ import TermsAndConditions from './components/TermsAndConditions';
 import { CinematicFooter } from '@/components/ui/motion-footer';
 import ParticipantDashboard from './pages/ParticipantDashboard';
 import AdminDashboard from './pages/AdminDashboard';
+import ProminentParticipantsPage from './pages/ProminentParticipants';
 
 // Feature flags: registration is moving to Google Forms, so on-site
 // registration and participant/admin login portals are hidden.
@@ -24,12 +26,23 @@ const SHOW_PORTALS = false;
 const SHOW_BUILT_IN_REGISTRATION = false;
 
 export default function App() {
-  const [currentView, setCurrentView] = useState('home'); // 'home' | 'participant' | 'admin'
+  const [currentView, setCurrentView] = useState('home'); // 'home' | 'participant' | 'admin' | 'prominent-participants'
 
-  // Scroll to top when view changes
+  // Scroll to top when view changes & listen for hash
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentView]);
+
+  useEffect(() => {
+    const handleHash = () => {
+      if (window.location.hash === '#prominent-participants-page') {
+        setCurrentView('prominent-participants');
+      }
+    };
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
 
   if (SHOW_PORTALS && currentView === 'participant') {
     return <ParticipantDashboard onBackToHome={() => setCurrentView('home')} />;
@@ -37,6 +50,10 @@ export default function App() {
 
   if (SHOW_PORTALS && currentView === 'admin') {
     return <AdminDashboard onBackToHome={() => setCurrentView('home')} />;
+  }
+
+  if (currentView === 'prominent-participants') {
+    return <ProminentParticipantsPage onBackToHome={() => setCurrentView('home')} />;
   }
 
   const handleOpenPortal = SHOW_PORTALS ? (portal) => setCurrentView(portal) : undefined;
@@ -48,13 +65,14 @@ export default function App() {
         Elevated above the fixed curtain-reveal footer with a bottom shadow and rounded corner 
       */}
       <div className="relative z-10 bg-[#FFFCEB] shadow-2xl rounded-b-3xl">
-        <Navbar onOpenPortal={handleOpenPortal} />
+        <Navbar onOpenPortal={handleOpenPortal} onOpenProminent={() => setCurrentView('prominent-participants')} />
         <Hero />
         <EventFacts />
         <About />
         <CrossedMarquee />
         <Categories />
         <Prizes />
+        <ProminentParticipants onOpenFullPage={() => setCurrentView('prominent-participants')} />
         {SHOW_BUILT_IN_REGISTRATION && (
           <RegistrationForm onOpenPortal={handleOpenPortal} />
         )}

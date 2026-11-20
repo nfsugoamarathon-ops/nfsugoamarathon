@@ -33,6 +33,14 @@ const COLOR_MAP = {
     ring: 'ring-[#9B59C8]',
     dot: 'bg-[#9B59C8]',
   },
+  emerald: {
+    bg: 'bg-[#F0FDF4]',
+    border: 'border-[#10B981]',
+    badge: 'bg-[#10B981] text-white',
+    btn: 'bg-[#10B981] hover:bg-[#059669] text-white',
+    ring: 'ring-[#10B981]',
+    dot: 'bg-[#10B981]',
+  },
 };
 
 export default function Categories() {
@@ -184,7 +192,7 @@ export default function Categories() {
             Find your distance.
           </h2>
           <p className="categories-header-item text-[#686D66] text-base leading-relaxed">
-            Three categories, one race day. Select the distance that matches your age and ambition then register.
+            Four categories, one race day. Select the distance that matches your ambition then register.
           </p>
         </div>
 
@@ -192,12 +200,12 @@ export default function Categories() {
         <div className="relative h-[2px] w-full bg-[#DADBCF]/60 rounded-full mb-8 overflow-hidden" aria-hidden="true">
           <div
             ref={trackLineRef}
-            className="absolute inset-0 origin-left bg-gradient-to-r from-[#e8e337] via-[#1749D1] to-[#9B59C8]"
+            className="absolute inset-0 origin-left bg-gradient-to-r from-[#e8e337] via-[#1749D1] via-[#9B59C8] to-[#10B981]"
           />
         </div>
 
-        {/* Category cards */}
-        <div className="categories-grid grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        {/* Category cards (4 cards in single row on desktop) */}
+        <div className="categories-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-5 items-stretch">
           {CATEGORIES.map((cat) => {
             const c = COLOR_MAP[cat.color];
             const isSelected = selected === cat.id;
@@ -227,45 +235,47 @@ export default function Categories() {
                     </div>
                   )}
 
-                  <div className="p-7 flex-1 flex flex-col">
+                  <div className="p-5 xl:p-6 flex-1 flex flex-col">
                     {/* Distance badge */}
                     <span
-                      className={`category-badge self-start inline-block text-xs font-bold px-3 py-1 rounded-full mb-4 ${c.badge}`}
+                      className={`category-badge self-start inline-block text-xs font-bold px-3 py-1 rounded-full mb-3.5 ${c.badge}`}
                     >
-                      {cat.label}
+                      {cat.id === 'pwd' ? '3 KM · PwD' : cat.label}
                     </span>
 
-                    <h3 className="text-[#191A17] font-bold text-2xl mb-1">{cat.name}</h3>
-                    <p className="text-[#686D66] text-sm mb-5 leading-relaxed">{cat.description}</p>
+                    <h3 className="text-[#191A17] font-bold text-xl xl:text-2xl mb-1">{cat.name}</h3>
+                    <p className="text-[#686D66] text-xs xl:text-sm mb-4 leading-relaxed min-h-[40px]">{cat.description}</p>
 
                     {/* Key details */}
-                    <dl className="space-y-2 mb-6">
-                      <div className="flex justify-between text-sm">
+                    <dl className="space-y-1.5 mb-5 text-xs xl:text-sm">
+                      <div className="flex justify-between text-xs xl:text-sm">
                         <dt className="text-[#686D66]">Eligibility</dt>
-                        <dd className="text-[#191A17] font-medium text-right">{cat.eligibility}</dd>
+                        <dd className="text-[#191A17] font-medium text-right truncate max-w-[150px]">{cat.eligibility}</dd>
                       </div>
-                      <div className="flex justify-between text-sm">
+                      <div className="flex justify-between text-xs xl:text-sm">
                         <dt className="text-[#686D66]">Flag-off</dt>
                         <dd className="text-[#191A17] font-medium">{cat.flagOff}</dd>
                       </div>
-                      <div className="flex justify-between text-sm">
+                      <div className="flex justify-between text-xs xl:text-sm">
                         <dt className="text-[#686D66]">Cut-off</dt>
                         <dd className="text-[#191A17] font-medium">{cat.cutoff}</dd>
                       </div>
-                      <div className="flex justify-between text-sm">
+                      <div className="flex justify-between items-center text-xs xl:text-sm">
                         <dt className="text-[#686D66]">Fee</dt>
-                        <dd className="text-[#686D66] italic">{cat.fee}</dd>
+                        <dd className={cat.id === 'pwd' ? 'text-emerald-700 font-extrabold text-sm xl:text-base uppercase tracking-wider' : 'text-[#191A17] font-bold text-sm xl:text-base'}>
+                          {cat.fee}
+                        </dd>
                       </div>
                     </dl>
 
                     {/* Inclusions */}
-                    <div className="border-t border-[#DADBCF] pt-4 mb-6">
-                      <p className="text-[#686D66] text-xs uppercase tracking-wider font-medium mb-3">Included</p>
-                      <ul className="space-y-1.5">
+                    <div className="border-t border-[#DADBCF] pt-3.5 mb-5">
+                      <p className="text-[#686D66] text-[11px] uppercase tracking-wider font-semibold mb-2.5">Included</p>
+                      <ul className="space-y-1">
                         {cat.inclusions.map((inc) => (
-                          <li key={inc} className="category-inclusion flex items-start gap-2 text-sm text-[#191A17]">
+                          <li key={inc} className="category-inclusion flex items-start gap-1.5 text-xs xl:text-sm text-[#191A17]">
                             <span className={`mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 ${c.dot}`} />
-                            {inc}
+                            <span className="leading-tight">{inc}</span>
                           </li>
                         ))}
                       </ul>
@@ -273,18 +283,18 @@ export default function Categories() {
 
                     {/* Register CTA */}
                     <a
-                      href={EVENT.googleFormUrl || '#contact'}
-                      target={EVENT.googleFormUrl ? '_blank' : undefined}
-                      rel={EVENT.googleFormUrl ? 'noopener noreferrer' : undefined}
-                      className={`mt-auto w-full flex items-center justify-center gap-2 font-semibold py-3 rounded-xl transition-all text-sm ${c.btn} focus-visible:outline-2 focus-visible:outline-offset-2`}
+                      href={cat.formUrl || (cat.id === 'pwd' ? EVENT.pwdGoogleFormUrl : EVENT.googleFormUrl) || '#contact'}
+                      target={(cat.formUrl || EVENT.googleFormUrl) ? '_blank' : undefined}
+                      rel={(cat.formUrl || EVENT.googleFormUrl) ? 'noopener noreferrer' : undefined}
+                      className={`mt-auto w-full flex items-center justify-center gap-1.5 font-semibold py-2.5 sm:py-3 rounded-xl transition-all text-xs sm:text-sm ${c.btn} focus-visible:outline-2 focus-visible:outline-offset-2`}
                       onClick={(e) => {
                         e.stopPropagation();
-                        openRegistration(e);
+                        openRegistration(e, cat.id);
                       }}
                       aria-label={`Register for ${cat.label} ${cat.name}`}
                     >
-                      <span>Register for {cat.label}</span>
-                      <ChevronRight size={15} />
+                      <span>{cat.id === 'pwd' ? 'Register for PwD' : `Register for ${cat.label}`}</span>
+                      <ChevronRight size={14} />
                     </a>
                   </div>
                 </div>
@@ -292,11 +302,6 @@ export default function Categories() {
             );
           })}
         </div>
-
-        {/* Note */}
-        {/* <p className="categories-note text-[#686D66] text-xs text-center mt-6">
-          Registration fee is ₹750 across all categories. Age eligibility is verified at bib collection — carry a valid ID proof.
-        </p> */}
       </div>
     </section>
   );

@@ -16,7 +16,7 @@ Redesigned the **Organised by** block in [`frontend/src/components/Sponsors.jsx`
 
 ---
 
-## 2. Sponsors / Organiser Lockup — `frontend/src/components/Sponsors.jsx`
+## 2. Sponsors / Organiser Lockup - `frontend/src/components/Sponsors.jsx`
 
 - **Before:**
   Displayed a simple inline row with `/marathon-logo.png` (`48x48`) next to two-line text (`National Forensic Sciences University` / `Goa Campus`):

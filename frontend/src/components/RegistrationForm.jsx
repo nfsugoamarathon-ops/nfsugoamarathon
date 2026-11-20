@@ -33,13 +33,12 @@ function StepIndicator({ current }) {
           <div key={step} className="flex items-center gap-2">
             <div className={`flex items-center gap-2 ${active ? '' : done ? '' : 'opacity-40'}`}>
               <div
-                className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
-                  done
+                className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${done
                     ? 'bg-[#1749D1] text-white'
                     : active
-                    ? 'bg-[#191A17] text-white ring-2 ring-[#1749D1] ring-offset-2'
-                    : 'bg-[#DADBCF] text-[#686D66]'
-                }`}
+                      ? 'bg-[#191A17] text-white ring-2 ring-[#1749D1] ring-offset-2'
+                      : 'bg-[#DADBCF] text-[#686D66]'
+                  }`}
                 aria-current={active ? 'step' : undefined}
               >
                 {done ? <CheckCircle size={14} /> : i + 1}
@@ -189,7 +188,7 @@ export default function RegistrationForm({ onOpenPortal }) {
     const age = getAge();
     if (age !== null) {
       if (form.categoryId === '3k' && age >= 14 && age < 60) {
-        e.dob = 'Note: 3K is intended for ages under 14 and 60+. For age 15–59, consider 6K or 10K.';
+        e.dob = 'Note: 3K Fun Run is intended for ages under 14 and 60+. For age 15–59, consider 6K or 10K. For PwD runners, please select the Inclusive Run category.';
       }
     }
 
@@ -365,11 +364,10 @@ export default function RegistrationForm({ onOpenPortal }) {
                 {CATEGORIES.map((cat) => (
                   <label
                     key={cat.id}
-                    className={`flex items-start gap-4 p-5 rounded-2xl border-2 cursor-pointer transition-all ${
-                      form.categoryId === cat.id
+                    className={`flex items-start gap-4 p-5 rounded-2xl border-2 cursor-pointer transition-all ${form.categoryId === cat.id
                         ? 'border-[#1749D1] bg-[#EEF2FF] shadow-sm'
                         : 'border-[#DADBCF] bg-white hover:border-[#1749D1]/40'
-                    }`}
+                      }`}
                   >
                     <input
                       type="radio"
@@ -382,7 +380,7 @@ export default function RegistrationForm({ onOpenPortal }) {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="font-bold text-[#191A17] text-base">
-                          {cat.label} — {cat.name}
+                          {cat.label} - {cat.name}
                         </span>
                         <span className="text-xs bg-[#111A17] text-white px-2.5 py-0.5 rounded-full font-medium">
                           Flag-off {cat.flagOff}
@@ -713,9 +711,8 @@ export default function RegistrationForm({ onOpenPortal }) {
                 </span>
 
                 <label
-                  className={`flex items-center gap-3 p-3.5 rounded-xl border-2 cursor-pointer transition-all ${
-                    form.paymentMethod === 'upi' ? 'border-[#1749D1] bg-white shadow-sm' : 'border-[#DADBCF] bg-white'
-                  }`}
+                  className={`flex items-center gap-3 p-3.5 rounded-xl border-2 cursor-pointer transition-all ${form.paymentMethod === 'upi' ? 'border-[#1749D1] bg-white shadow-sm' : 'border-[#DADBCF] bg-white'
+                    }`}
                 >
                   <input
                     type="radio"
@@ -734,9 +731,8 @@ export default function RegistrationForm({ onOpenPortal }) {
                 </label>
 
                 <label
-                  className={`flex items-center gap-3 p-3.5 rounded-xl border-2 cursor-pointer transition-all ${
-                    form.paymentMethod === 'card' ? 'border-[#1749D1] bg-white shadow-sm' : 'border-[#DADBCF] bg-white'
-                  }`}
+                  className={`flex items-center gap-3 p-3.5 rounded-xl border-2 cursor-pointer transition-all ${form.paymentMethod === 'card' ? 'border-[#1749D1] bg-white shadow-sm' : 'border-[#DADBCF] bg-white'
+                    }`}
                 >
                   <input
                     type="radio"
@@ -754,9 +750,8 @@ export default function RegistrationForm({ onOpenPortal }) {
                 </label>
 
                 <label
-                  className={`flex items-center gap-3 p-3.5 rounded-xl border-2 cursor-pointer transition-all ${
-                    form.paymentMethod === 'netbanking' ? 'border-[#1749D1] bg-white shadow-sm' : 'border-[#DADBCF] bg-white'
-                  }`}
+                  className={`flex items-center gap-3 p-3.5 rounded-xl border-2 cursor-pointer transition-all ${form.paymentMethod === 'netbanking' ? 'border-[#1749D1] bg-white shadow-sm' : 'border-[#DADBCF] bg-white'
+                    }`}
                 >
                   <input
                     type="radio"

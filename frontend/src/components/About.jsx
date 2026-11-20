@@ -181,20 +181,23 @@ export default function About() {
             </p>
 
             <p className="about-text-item text-[#686D66] text-base leading-relaxed mb-8">
-              Three categories {' '}
+              Four race categories {' '}
               <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-[#e8e337]/25 text-[#191A17] font-semibold text-sm mx-0.5">
-                3 km
+                3 km Fun Run
               </span>
               ,{' '}
               <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-[#1749D1]/10 text-[#1749D1] font-semibold text-sm mx-0.5">
                 6 km
               </span>
-              , and{' '}
+              ,{' '}
               <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-[#111A17]/10 text-[#191A17] font-semibold text-sm mx-0.5">
                 10 km
+              </span>
+              , and{' '}
+              <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-semibold text-sm mx-0.5">
+                3 km PwD (Free)
               </span>{' '}
-              are open to participants across a wide age range, including young runners and
-              senior athletes.
+              are open to participants across all age groups and abilities.
             </p>
 
             <div className="about-text-item flex flex-wrap items-center gap-4">

@@ -1,4 +1,4 @@
-# Hero Section — Coastal Waves Effect & Larger Logo-Aligned Countdown
+# Hero Section - Coastal Waves Effect & Larger Logo-Aligned Countdown
 
 ## Summary
 

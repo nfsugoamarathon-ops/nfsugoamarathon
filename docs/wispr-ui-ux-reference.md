@@ -1,4 +1,4 @@
-# Wispr × Scaler "India Runs on Voice" — UI/UX Style Reference Guide
+# Wispr × Scaler "India Runs on Voice" - UI/UX Style Reference Guide
 
 > **Source:** [hackos.scaler.com/wispr](https://hackos.scaler.com/wispr)  
 > **Purpose:** A complete design-language and UI/UX reference to guide AI-assisted development of your website in a similar style.
@@ -14,7 +14,7 @@ The site is a **high-impact hackathon landing page** built with a "premium edito
 - **Playful interactivity** (scroll-triggered animations, word-reveal effects, animated counters, floating pills)
 - **Indian identity** (Rupee symbols, Hindi/Bharat references, voice-first narrative)
 
-The page reads like a **"transcript" of a conversation** — sections are timestamped (`00:08`, `00:43`, `01:09`, `01:20`) and attributed to speakers (Wispr Flow / Scaler), mimicking a voice dictation experience. This is the site's core conceptual hook.
+The page reads like a **"transcript" of a conversation** - sections are timestamped (`00:08`, `00:43`, `01:09`, `01:20`) and attributed to speakers (Wispr Flow / Scaler), mimicking a voice dictation experience. This is the site's core conceptual hook.
 
 ---
 
@@ -32,7 +32,7 @@ All colors are defined as CSS custom properties on `:root`.
 | `--mute` | `#8C8C80` | Labels, metadata, placeholder |
 | `--ghost` | `#C9C9B8` | Inactive/greyed text, decorative |
 | `--green` | `#034F46` | Scrubber/timeline dark section |
-| `--lav` | `#F0D7FF` | Lavender — accent (CTA bg, card, highlights) |
+| `--lav` | `#F0D7FF` | Lavender - accent (CTA bg, card, highlights) |
 | `--orange` | `#FFA946` | Warm accent (progress bars, waveform head, prize card) |
 | `--pink` | `#FFBCF2` | Soft accent (tags, prize medal) |
 | `--mint` | `#34D399` | Success / check state |
@@ -42,9 +42,9 @@ All colors are defined as CSS custom properties on `:root`.
 ### Key Color Rules
 - **Background:** Always `--cream` (never white or pure black).
 - **Dark sections:** Background `--ink` (`#1A1A1A`), text `--cream`. Used for the registration/final section.
-- **Lavender** is the "delight" accent — used on CTAs, highlighted tags, and hover states.
-- **Orange** is the "energy/progress" accent — waveform heads, progress fills, prize highlights.
-- **Blue** is the "authority/action" accent — primary buttons, active nav, Scaler brand link.
+- **Lavender** is the "delight" accent - used on CTAs, highlighted tags, and hover states.
+- **Orange** is the "energy/progress" accent - waveform heads, progress fills, prize highlights.
+- **Blue** is the "authority/action" accent - primary buttons, active nav, Scaler brand link.
 
 ---
 
@@ -72,9 +72,9 @@ Fonts are loaded from Google Fonts.
 | Buttons | `15–16px` | Weight 600 |
 
 ### Key Typography Rules
-- **Serif display font** (`DM Serif Display`) is reserved for large headline moments — the `.say` quote blocks, the registration hero headline.
+- **Serif display font** (`DM Serif Display`) is reserved for large headline moments - the `.say` quote blocks, the registration hero headline.
 - **Italic** in `DM Serif Display` creates a conversational, spoken emphasis.
-- **Monospace labels** (`.mono` class) are used for timestamps, metadata, section numbers — always UPPERCASE with generous letter-spacing.
+- **Monospace labels** (`.mono` class) are used for timestamps, metadata, section numbers - always UPPERCASE with generous letter-spacing.
 - **Filler word** styling: Words like "um", "uh" are shown with orange highlight + strikethrough, reinforcing the voice/transcription concept.
 
 ---
@@ -91,7 +91,7 @@ Fonts are loaded from Google Fonts.
 
 | Pattern | CSS | Used for |
 |---|---|---|
-| Transcript layout | `grid-template-columns: var(--gut) minmax(0, 1fr)` | All `article.turn` sections — left side = speaker label, right = content |
+| Transcript layout | `grid-template-columns: var(--gut) minmax(0, 1fr)` | All `article.turn` sections - left side = speaker label, right = content |
 | 2-col card grid | `grid-template-columns: 1fr 1fr` | FAQ, prizes, tracks |
 | 3-col card grid | `grid-template-columns: repeat(3, minmax(0, 1fr))` | Steps/process, track categories, podium bars |
 | Stats bar | `grid-template-columns: repeat(4, 1fr)` | Fact strip (dates, prize total, etc.) |
@@ -137,7 +137,7 @@ border: 2px solid var(--ink);
 | Primary (Blue) | `.btn-blue` | `--blue` | White | `--blue2` |
 | Lavender | `.btn-lav` | `--lav` | `--ink` | `#E6C4FA` |
 | Outline | `.btn-line` | White | `--ink` | `--cream2` |
-| Small | `.btn.sm` | — | — | Height 44px, radius 10px |
+| Small | `.btn.sm` | - | - | Height 44px, radius 10px |
 
 - Arrow icon (`.arr`) inside button slides right `4px` on hover.
 - Active press: `transform: scale(0.98)`.
@@ -159,7 +159,7 @@ color: var(--cream);
 border-radius: 28px;
 ```
 
-The **6px hard drop shadow** is a signature visual element — used on most card components. It creates a flat/sticker aesthetic.
+The **6px hard drop shadow** is a signature visual element - used on most card components. It creates a flat/sticker aesthetic.
 
 ### 5.3 Tags / Pills (`.tag`)
 
@@ -192,7 +192,7 @@ Contains: animated waveform bars, countdown text, and a lavender "Register now �
 
 ### 5.5 Waveform Animation (`.wv`)
 
-Voice waveform bars — used throughout as a "listening/active" indicator:
+Voice waveform bars - used throughout as a "listening/active" indicator:
 ```css
 display: inline-flex; align-items: center; gap: 3px; height: 20px;
 /* Each bar: */
@@ -214,7 +214,7 @@ Fixed top nav, 72px height:
 - **Scrolled:** `backdrop-filter: blur(14px)`, cream tint background, bottom border
 - **Dark mode** (over dark section): transparent dark background, cream text
 
-Nav links: `.chap` — monospace uppercase, 11.5px. Active: `background: var(--ink); color: var(--cream); border-radius: 999px`.
+Nav links: `.chap` - monospace uppercase, 11.5px. Active: `background: var(--ink); color: var(--cream); border-radius: 999px`.
 
 Logos: `Scaler × Wispr Flow` lockup with the `×` separator in serif font.
 
@@ -268,7 +268,7 @@ Three-column bar chart for prize positions:
 - P2 (2nd): White, height 76%, `transition-delay: 0.12s`
 - P3 (3rd): `background: --lav`, height 58%, `transition-delay: 0.24s`
 
-Animated via `IntersectionObserver` — bars animate from 0 to full height with `1.4s var(--ease)` transition.
+Animated via `IntersectionObserver` - bars animate from 0 to full height with `1.4s var(--ease)` transition.
 
 ---
 
@@ -295,7 +295,7 @@ Animated via `IntersectionObserver` — bars animate from 0 to full height with 
 
 ### Scroll-Driven Transcript
 
-The left column `.gut-in` is `position: sticky; top: 110px` — the speaker label stays fixed as the content scrolls by, reinforcing the "transcript" metaphor.
+The left column `.gut-in` is `position: sticky; top: 110px` - the speaker label stays fixed as the content scrolls by, reinforcing the "transcript" metaphor.
 
 ---
 
@@ -376,11 +376,11 @@ Dark background, 3-column grid:
 ## 8. Form / Registration Flow
 
 A modal sheet with 5 sequential panes:
-1. **Register** — Full name, email, phone (+91 prefix)
-2. **OTP verification** — 6 individual digit inputs, auto-advance, resend timer
-3. **Login** — Phone-only, then OTP
-4. **Team invite** — Accept/decline flow
-5. **Success** — Confirmation + "Go to dashboard →"
+1. **Register** - Full name, email, phone (+91 prefix)
+2. **OTP verification** - 6 individual digit inputs, auto-advance, resend timer
+3. **Login** - Phone-only, then OTP
+4. **Team invite** - Accept/decline flow
+5. **Success** - Confirmation + "Go to dashboard →"
 
 Form field styles:
 ```css
@@ -450,7 +450,7 @@ TYPOGRAPHY:
 
 CARDS:
 - border: 2px solid #1A1A1A
-- box-shadow: 6px 6px 0 #1A1A1A  (hard offset, no blur — signature style)
+- box-shadow: 6px 6px 0 #1A1A1A  (hard offset, no blur - signature style)
 - border-radius: 22px
 - background: white or accent color
 
@@ -478,7 +478,7 @@ STYLE NOTES:
 - Voice/waveform bars: animated 3px wide bars with scaleY animation
 - Monospace uppercase labels for all metadata
 - DM Serif Display italic for the "spoken word" moments
-- Keep white space generous — the cream background IS the breathing room
+- Keep white space generous - the cream background IS the breathing room
 - Always use 2px solid #1A1A1A borders on interactive elements
 ```
 
@@ -486,26 +486,26 @@ STYLE NOTES:
 
 ## 12. Key Design Decisions to Emulate
 
-1. **The Transcript Metaphor** — Structure your page like a conversation. Timestamps, speaker labels, and "spoken" headings make the UI feel alive.
+1. **The Transcript Metaphor** - Structure your page like a conversation. Timestamps, speaker labels, and "spoken" headings make the UI feel alive.
 
-2. **Hard Drop Shadows** — Use `6px 6px 0 #1A1A1A` on cards instead of soft box-shadows. This creates a flat, sticker-like, printed quality.
+2. **Hard Drop Shadows** - Use `6px 6px 0 #1A1A1A` on cards instead of soft box-shadows. This creates a flat, sticker-like, printed quality.
 
-3. **Cream Background** — Never pure white. `#FFFFEB` is warm and maintains a premium editorial feel.
+3. **Cream Background** - Never pure white. `#FFFFEB` is warm and maintains a premium editorial feel.
 
-4. **Serif + Sans Pairing** — `DM Serif Display` for drama, `Plus Jakarta Sans` for clarity. The italic serif is used sparingly for maximum impact.
+4. **Serif + Sans Pairing** - `DM Serif Display` for drama, `Plus Jakarta Sans` for clarity. The italic serif is used sparingly for maximum impact.
 
-5. **Lavender as the "Delight" Color** — Use `#F0D7FF` for secondary CTAs, hover states, and surprise moments.
+5. **Lavender as the "Delight" Color** - Use `#F0D7FF` for secondary CTAs, hover states, and surprise moments.
 
-6. **Progressive Disclosure Through Scroll** — Use `IntersectionObserver` to reveal words, cards, and counters as the user scrolls.
+6. **Progressive Disclosure Through Scroll** - Use `IntersectionObserver` to reveal words, cards, and counters as the user scrolls.
 
-7. **Voice Waveform as a Universal Indicator** — Animated waveform bars (`3px`, `border-radius: 2px`, `scaleY` animation) appear everywhere.
+7. **Voice Waveform as a Universal Indicator** - Animated waveform bars (`3px`, `border-radius: 2px`, `scaleY` animation) appear everywhere.
 
-8. **Monospace Labels** — Every section has a monospace uppercase label grounding the reader. Use `letter-spacing: 0.1em` and `font-size: 11-12px`.
+8. **Monospace Labels** - Every section has a monospace uppercase label grounding the reader. Use `letter-spacing: 0.1em` and `font-size: 11-12px`.
 
-9. **Fixed Floating CTA** — The sticky pill at the bottom ensures conversion is always one click away.
+9. **Fixed Floating CTA** - The sticky pill at the bottom ensures conversion is always one click away.
 
-10. **Interactive Identity Card** — The personalisable badge in the registration section makes visitors feel ownership before signing up.
+10. **Interactive Identity Card** - The personalisable badge in the registration section makes visitors feel ownership before signing up.
 
 ---
 
-*Document generated from live HTML analysis of https://hackos.scaler.com/wispr — Nov 2026*
+*Document generated from live HTML analysis of https://hackos.scaler.com/wispr - Nov 2026*

@@ -172,33 +172,30 @@ export default function ParticipantDashboard({ onBackToHome }) {
         <div className="participant-tabs flex items-center gap-1.5 sm:gap-2 border-b border-[#DADBCF] mb-6 sm:mb-8 overflow-x-auto pb-2 scrollbar-none" style={{ WebkitOverflowScrolling: 'touch' }}>
           <button
             onClick={() => setActiveTab('overview')}
-            className={`px-4 py-2.5 rounded-xl font-medium text-sm transition-all flex items-center gap-2 ${
-              activeTab === 'overview'
+            className={`px-4 py-2.5 rounded-xl font-medium text-sm transition-all flex items-center gap-2 ${activeTab === 'overview'
                 ? 'bg-[#1749D1] text-white shadow-sm'
                 : 'text-[#686D66] hover:bg-white'
-            }`}
+              }`}
           >
             <User size={15} />
             Registration &amp; e-Bib
           </button>
           <button
             onClick={() => setActiveTab('edit')}
-            className={`px-4 py-2.5 rounded-xl font-medium text-sm transition-all flex items-center gap-2 ${
-              activeTab === 'edit'
+            className={`px-4 py-2.5 rounded-xl font-medium text-sm transition-all flex items-center gap-2 ${activeTab === 'edit'
                 ? 'bg-[#1749D1] text-white shadow-sm'
                 : 'text-[#686D66] hover:bg-white'
-            }`}
+              }`}
           >
             <Edit2 size={15} />
             Update Permitted Details
           </button>
           <button
             onClick={() => setActiveTab('certificate')}
-            className={`px-4 py-2.5 rounded-xl font-medium text-sm transition-all flex items-center gap-2 ${
-              activeTab === 'certificate'
+            className={`px-4 py-2.5 rounded-xl font-medium text-sm transition-all flex items-center gap-2 ${activeTab === 'certificate'
                 ? 'bg-[#1749D1] text-white shadow-sm'
                 : 'text-[#686D66] hover:bg-white'
-            }`}
+              }`}
           >
             <Award size={15} />
             Certificate of Participation
@@ -517,7 +514,7 @@ export default function ParticipantDashboard({ onBackToHome }) {
                     National Forensic Sciences University, Goa Campus
                   </p>
                   <h3 className="font-serif italic text-3xl font-bold text-[#191A17] mt-1 mb-3">
-                    अदम्यधावनम् — Adamya Dhāvanam 2026
+                    अदम्यधावनम् - Adamya Dhāvanam 2026
                   </h3>
                   <div className="w-24 h-0.5 bg-[#FFC36A] mx-auto mb-4" />
 
