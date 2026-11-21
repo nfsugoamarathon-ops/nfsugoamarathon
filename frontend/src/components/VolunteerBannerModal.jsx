@@ -1,28 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { X, ChevronRight } from 'lucide-react';
 
-export default function VolunteerBannerModal({ isOpen, onClose, onExploreVolunteers, autoCloseMs = 2000 }) {
-  const [progress, setProgress] = useState(100);
-
+export default function VolunteerBannerModal({ isOpen, onClose, onExploreVolunteers }) {
   useEffect(() => {
     if (!isOpen) return;
-
-    // Reset progress and animate down over autoCloseMs
-    setProgress(100);
-    const start = performance.now();
-    const interval = setInterval(() => {
-      const elapsed = performance.now() - start;
-      const remaining = Math.max(0, 100 - (elapsed / autoCloseMs) * 100);
-      setProgress(remaining);
-      if (remaining <= 0) {
-        clearInterval(interval);
-      }
-    }, 25);
-
-    // Auto-disable / close after autoCloseMs
-    const timer = setTimeout(() => {
-      onClose();
-    }, autoCloseMs);
 
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
@@ -31,12 +12,8 @@ export default function VolunteerBannerModal({ isOpen, onClose, onExploreVolunte
     };
 
     window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      clearInterval(interval);
-      clearTimeout(timer);
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [isOpen, onClose, autoCloseMs]);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -52,15 +29,7 @@ export default function VolunteerBannerModal({ isOpen, onClose, onExploreVolunte
         className="relative w-full max-w-sm sm:max-w-md md:max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden border border-white/20 transform transition-all duration-300 scale-100 flex flex-col max-h-[92vh]"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* 2-Second Auto-dismiss Progress Bar */}
-        <div className="h-1 w-full bg-slate-200 overflow-hidden">
-          <div
-            className="h-full bg-gradient-to-r from-[#1749D1] via-[#0052FF] to-[#e8e337] transition-all duration-75 ease-linear"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
-
-        {/* Modal Top Bar (matching the NFSU dialog reference) */}
+        {/* Modal Top Bar (styled matching the reference) */}
         <div className="flex items-center justify-between px-4 py-2.5 bg-slate-50 border-b border-slate-200 text-slate-700">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />

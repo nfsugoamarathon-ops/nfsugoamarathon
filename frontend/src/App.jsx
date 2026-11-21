@@ -31,7 +31,7 @@ export default function App() {
   const [currentView, setCurrentView] = useState('home'); // 'home' | 'participant' | 'admin' | 'prominent-participants' | 'volunteers'
   const [showBannerModal, setShowBannerModal] = useState(false);
 
-  // Pop banner when user comes to website; automatically disabled/closed after 2s
+  // Pop banner when user comes to website
   useEffect(() => {
     setShowBannerModal(true);
   }, []);
