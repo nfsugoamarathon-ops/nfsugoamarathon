@@ -259,7 +259,7 @@ export const PROMINENT_PARTICIPANTS = [
     description:
       'Dean Academics and Professor at the National Forensic Sciences University, Goa Campus — leading academic excellence and research in forensic sciences.',
   },
-  
+
   {
     id: 'naveen-kumar',
     name: 'Shri. Naveen Kumar',
@@ -319,12 +319,12 @@ export const PROMINENT_PARTICIPANTS = [
     id: 'dharma-gaonkar',
     name: 'Shri. Dharma K. Gaonkar',
     honorific: 'Shri.',
-    designation: 'Round Forest Officer',
-    organization: 'Department of Forest, Govt. of Goa',
+    //designation: 'Round Forest Officer',
+    //organization: 'Department of Forest, Govt. of Goa',
     image: '/ppd/dharma_gaonkar.jpg',
     objectPosition: 'center 20%',
-    description:
-      'Round Forest Officer with the Department of Forest, Government of Goa (Ponda), dedicated to forest conservation, environmental stewardship, and community wellness.',
+    // description:
+      //'Round Forest Officer with the Department of Forest, Government of Goa (Ponda), dedicated to forest conservation, environmental stewardship, and community wellness.',
   },
 ];
 
