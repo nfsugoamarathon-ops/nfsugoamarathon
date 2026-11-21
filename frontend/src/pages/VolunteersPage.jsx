@@ -175,7 +175,7 @@ export default function VolunteersPage({ onBackToHome }) {
                     </span>
                   </div>
 
-                  <h2 className="text-xl sm:text-2xl font-black font-sans tracking-tight text-white flex items-center gap-2">
+                  <h2 className="text-xl sm:text-2xl font-bold font-sans tracking-tight text-white flex items-center gap-2">
                     {committee.title}
                     {isLeadership && <Sparkles size={16} className="text-[#FFC36A]" />}
                   </h2>
@@ -220,14 +220,14 @@ export default function VolunteersPage({ onBackToHome }) {
                       {/* Member Details */}
                       <div className="flex-1 flex flex-col justify-between">
                         <div>
-                          <div className="flex items-center justify-between gap-1 mb-0.5">
-                            <h3 className={`font-black font-sans tracking-tight text-white group-hover:text-[#FFC36A] transition-colors leading-snug ${
-                              isCoreRole ? 'text-xs sm:text-sm' : 'text-[11px] sm:text-xs line-clamp-1'
+                          <div className="flex items-center justify-between gap-1.5 mb-0.5">
+                            <h3 className={`font-semibold font-sans tracking-normal text-white/95 group-hover:text-[#FFC36A] transition-colors leading-tight ${
+                              isCoreRole ? 'text-xs sm:text-sm font-bold' : 'text-xs sm:text-[13px] line-clamp-1'
                             }`}>
                               {member.name}
                             </h3>
                             {member.role === 'Committee Head' && (
-                              <span className="text-[8px] font-bold uppercase tracking-wider bg-[#FFC36A]/20 text-[#FFC36A] border border-[#FFC36A]/40 px-1 py-0.2 rounded shrink-0">
+                              <span className="text-[9px] font-semibold uppercase tracking-wider bg-[#FFC36A]/20 text-[#FFC36A] border border-[#FFC36A]/40 px-1.5 py-0.5 rounded shrink-0">
                                 Head
                               </span>
                             )}
