@@ -19,16 +19,22 @@ export const COMMITTEES_DATA = [
         "image": "/volunteers/dr-mrinmayee-kale.webp"
       },
       {
-        "name": "Abhay Madkaikar",
-        "role": "Overall Student Coordinator",
-        "committee": "Organizers",
-        "image": "/volunteers/abhay-madkaikar.webp"
-      },
-      {
         "name": "Shreya Naik",
         "role": "Student Coordinator",
         "committee": "Organizers",
         "image": "/volunteers/shreya-naik.webp"
+      },
+      {
+        "name": "Sivananda T S",
+        "role": "Student Coordinator",
+        "committee": "Organizers",
+        "image": "/volunteers/Shivananda.webp"
+      },
+      {
+        "name": "Abhay Madkaikar",
+        "role": "Overall Student Coordinator",
+        "committee": "Organizers",
+        "image": "/volunteers/abhay-madkaikar.webp"
       }
     ]
   },
@@ -199,6 +205,12 @@ export const COMMITTEES_DATA = [
         "role": "Volunteer",
         "committee": "Stage Committee",
         "image": "/volunteers/parsapu-satish-kumar.webp"
+      },
+      {
+        "name": "Satyam Sundar Dutta",
+        "role": "Volunteer",
+        "committee": "Stage Committee",
+        "image": "/volunteers/satyam-sundar-dutta.webp"
       },
       {
         "name": "Anukriti Goel",
@@ -385,7 +397,7 @@ export const COMMITTEES_DATA = [
         "image": "/volunteers/md-farhan-azam.webp"
       },
       {
-        "name": "Shreshta Deka",
+        "name": "Shrestha Deka",
         "role": "Volunteer",
         "committee": "Registration Committee",
         "image": "/volunteers/shrestha-deka.webp"
@@ -417,7 +429,7 @@ export const COMMITTEES_DATA = [
         "image": "/volunteers/shreya-sinha.webp"
       },
       {
-        "name": "Prachi Deepak Chaudha",
+        "name": "Prachi Deepak Chaudhari",
         "role": "Volunteer",
         "committee": "Medical & First Aid Committee",
         "image": "/volunteers/prachi-deepak-chaudhari.webp"
@@ -503,7 +515,7 @@ export const COMMITTEES_DATA = [
         "image": "/volunteers/chetna-kumari.webp"
       },
       {
-        "name": "Sathyam Sundar Dutta",
+        "name": "Satyam Sundar Dutta",
         "role": "Volunteer",
         "committee": "Refreshment Committee",
         "image": "/volunteers/satyam-sundar-dutta.webp"
@@ -619,12 +631,6 @@ export const COMMITTEES_DATA = [
         "image": "/volunteers/jagannath-raul.webp"
       },
       {
-        "name": "Dhaval Makwana",
-        "role": "Volunteer",
-        "committee": "Publicity And Media Committee",
-        "image": "/volunteers/makwana-dhaval.webp"
-      },
-      {
         "name": "Anish Sharma",
         "role": "Volunteer",
         "committee": "Publicity And Media Committee",
@@ -729,7 +735,7 @@ export const COMMITTEES_DATA = [
         "image": "/volunteers/athira-m.webp"
       },
       {
-        "name": "Vinni P",
+        "name": "Vinni PP",
         "role": "Volunteer",
         "committee": "Route Management Committee",
         "image": "/volunteers/vinni-pp.webp"
