@@ -19,6 +19,7 @@ import { CinematicFooter } from '@/components/ui/motion-footer';
 import ParticipantDashboard from './pages/ParticipantDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import ProminentParticipantsPage from './pages/ProminentParticipants';
+import VolunteersPage from './pages/VolunteersPage';
 
 // Feature flags: registration is moving to Google Forms, so on-site
 // registration and participant/admin login portals are hidden.
@@ -26,7 +27,7 @@ const SHOW_PORTALS = false;
 const SHOW_BUILT_IN_REGISTRATION = false;
 
 export default function App() {
-  const [currentView, setCurrentView] = useState('home'); // 'home' | 'participant' | 'admin' | 'prominent-participants'
+  const [currentView, setCurrentView] = useState('home'); // 'home' | 'participant' | 'admin' | 'prominent-participants' | 'volunteers'
 
   // Scroll to top when view changes & listen for hash
   useEffect(() => {
@@ -37,6 +38,10 @@ export default function App() {
     const handleHash = () => {
       if (window.location.hash === '#prominent-participants-page') {
         setCurrentView('prominent-participants');
+      } else if (window.location.hash === '#volunteers' || window.location.hash === '#committee') {
+        setCurrentView('volunteers');
+      } else if (window.location.hash === '' || window.location.hash === '#home') {
+        setCurrentView('home');
       }
     };
     handleHash();
@@ -53,7 +58,17 @@ export default function App() {
   }
 
   if (currentView === 'prominent-participants') {
-    return <ProminentParticipantsPage onBackToHome={() => setCurrentView('home')} />;
+    return <ProminentParticipantsPage onBackToHome={() => {
+      setCurrentView('home');
+      window.location.hash = '';
+    }} />;
+  }
+
+  if (currentView === 'volunteers') {
+    return <VolunteersPage onBackToHome={() => {
+      setCurrentView('home');
+      window.location.hash = '';
+    }} />;
   }
 
   const handleOpenPortal = SHOW_PORTALS ? (portal) => setCurrentView(portal) : undefined;
@@ -65,10 +80,14 @@ export default function App() {
         Elevated above the fixed curtain-reveal footer with a bottom shadow and rounded corner 
       */}
       <div className="relative z-10 bg-[#FFFCEB] shadow-2xl rounded-b-3xl">
-        <Navbar onOpenPortal={handleOpenPortal} onOpenProminent={() => setCurrentView('prominent-participants')} />
+        <Navbar
+          onOpenPortal={handleOpenPortal}
+          onOpenProminent={() => setCurrentView('prominent-participants')}
+          onOpenVolunteers={() => setCurrentView('volunteers')}
+        />
         <Hero />
         <EventFacts />
-        <About />
+        <About onOpenVolunteers={() => setCurrentView('volunteers')} />
         <CrossedMarquee />
         <Categories />
         <Prizes />
@@ -92,6 +111,7 @@ export default function App() {
         giantText="ADAMYADHAVANAM"
         heading="Dare to run. Run to dare."
         onOpenPortal={handleOpenPortal}
+        onOpenVolunteers={() => setCurrentView('volunteers')}
       />
       <Analytics />
     </div>

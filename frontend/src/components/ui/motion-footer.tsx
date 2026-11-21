@@ -256,6 +256,7 @@ export interface CinematicFooterProps {
   giantText?: string;
   heading?: string;
   onOpenPortal?: (portal: 'participant' | 'admin') => void;
+  onOpenVolunteers?: () => void;
   brandName?: string;
 }
 
@@ -263,6 +264,7 @@ export function CinematicFooter({
   giantText = "ADAMYADHAVANAM",
   heading = "Dare to run. Run to dare.",
   onOpenPortal,
+  onOpenVolunteers,
   brandName = "NFSU Goa",
 }: CinematicFooterProps) {
   const [isCreditsOpen, setIsCreditsOpen] = useState(false);
@@ -486,6 +488,22 @@ export function CinematicFooter({
                   className="footer-glass-pill px-5 py-2 rounded-full text-white/70 font-medium text-xs md:text-sm hover:text-white"
                 >
                   Race Day Schedule
+                </MagneticButton>
+
+                <MagneticButton
+                  as="a"
+                  href="#volunteers"
+                  onClick={(e: React.MouseEvent) => {
+                    e.preventDefault();
+                    if (onOpenVolunteers) {
+                      onOpenVolunteers();
+                    } else {
+                      window.location.hash = '#volunteers';
+                    }
+                  }}
+                  className="footer-glass-pill px-5 py-2 rounded-full text-[#FFC36A] font-semibold text-xs md:text-sm hover:text-white border-[#FFC36A]/30"
+                >
+                  Volunteers &amp; Committee
                 </MagneticButton>
 
                 <MagneticButton

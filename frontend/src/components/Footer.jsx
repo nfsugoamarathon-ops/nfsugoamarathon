@@ -45,7 +45,7 @@ export default function Footer({ onOpenPortal }) {
                 <a href="#about" className="text-white/70 hover:text-white transition-colors">About Marathon</a>
               </li>
               <li>
-                <a href="#categories" className="text-white/70 hover:text-white transition-colors">Race Categories (3K/6K/10K)</a>
+                <a href="#categories" className="text-white/70 hover:text-white transition-colors">Categories &amp; Prizes</a>
               </li>
               <li>
                 <a href="#schedule" className="text-white/70 hover:text-white transition-colors">Race Day Schedule</a>
@@ -58,6 +58,9 @@ export default function Footer({ onOpenPortal }) {
               </li>
               <li>
                 <a href="#sponsors" className="text-white/70 hover:text-white transition-colors">Partners & Sponsors</a>
+              </li>
+              <li>
+                <a href="#volunteers" className="text-[#FFC36A] hover:text-white transition-colors font-medium">Volunteers &amp; Committee</a>
               </li>
             </ul>
           </div>

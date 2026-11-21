@@ -42,7 +42,7 @@ const PILLARS = [
   },
 ];
 
-export default function About() {
+export default function About({ onOpenVolunteers }) {
   const sectionRef = useRef(null);
   const imgRef = useRef(null);
 
@@ -200,7 +200,7 @@ export default function About() {
               are open to participants across all age groups and abilities.
             </p>
 
-            <div className="about-text-item flex flex-wrap items-center gap-4">
+            <div className="about-text-item flex flex-wrap items-center gap-3">
               <a
                 href="#categories"
                 onClick={(e) => {
@@ -212,10 +212,22 @@ export default function About() {
                 Explore Race Categories
                 <ChevronRight size={15} className="transition-transform group-hover:translate-x-0.5" />
               </a>
-              {/* <span className="text-xs font-medium text-[#686D66] flex items-center gap-1.5">
-                <Sparkles size={14} className="text-[#e8e337]" />
-                6 December 2026 · Ponda Sunrise Route
-              </span> */}
+
+              <a
+                href="#volunteers"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (onOpenVolunteers) {
+                    onOpenVolunteers();
+                  } else {
+                    window.location.hash = '#volunteers';
+                  }
+                }}
+                className="group inline-flex items-center gap-2 bg-[#1749D1]/10 hover:bg-[#1749D1] text-[#1749D1] hover:text-white border border-[#1749D1]/20 font-semibold px-5 py-3 rounded-full text-sm transition-all duration-300 shadow-sm cursor-pointer"
+              >
+                <span>Volunteers &amp; Committees</span>
+                <Users size={15} />
+              </a>
             </div>
           </div>
 

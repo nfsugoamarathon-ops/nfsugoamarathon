@@ -31,6 +31,10 @@ media/
 .env.test.local
 .env.production.local
 
+# Raw heavy assets / uncompressed photos
+frontend/public/Committee Profile/
+assets_raw/
+
 # Logs
 npm-debug.log*
 yarn-debug.log*

@@ -4,9 +4,9 @@ import { EVENT } from '../data/eventData';
 
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
-  { label: 'Categories', href: '#categories' },
-  { label: 'Prizes', href: '#prizes' },
+  { label: 'Categories & Prizes', href: '#categories' },
   { label: 'Dignitaries', href: '#prominent-participants' },
+  { label: 'Volunteers', href: '#volunteers' },
   { label: 'Schedule', href: '#schedule' },
   { label: 'FAQs', href: '#faqs' },
   { label: 'Contact', href: '#contact' },
@@ -44,7 +44,7 @@ const STRIP_ITEMS = [
   },
 ];
 
-export default function Navbar({ onOpenPortal, onOpenProminent }) {
+export default function Navbar({ onOpenPortal, onOpenProminent, onOpenVolunteers }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -67,6 +67,10 @@ export default function Navbar({ onOpenPortal, onOpenProminent }) {
 
   const handleNavClick = (href) => {
     setMenuOpen(false);
+    if ((href === '#volunteers' || href === '#committee') && onOpenVolunteers) {
+      onOpenVolunteers();
+      return;
+    }
     if (href === '#prominent-participants-page' && onOpenProminent) {
       onOpenProminent();
       return;
@@ -76,6 +80,8 @@ export default function Navbar({ onOpenPortal, onOpenProminent }) {
       target.scrollIntoView({ behavior: 'smooth' });
     } else if (href === '#prominent-participants' && onOpenProminent) {
       onOpenProminent();
+    } else if (href === '#volunteers' && onOpenVolunteers) {
+      onOpenVolunteers();
     }
   };
 
