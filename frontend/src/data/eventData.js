@@ -304,6 +304,28 @@ export const PROMINENT_PARTICIPANTS = [
     description:
       'Retired IAS officer and distinguished Air Veteran, bringing decades of administrative leadership and service to the nation.',
   },
+  {
+    id: 'shreeja-naik',
+    name: 'Shreeja Shailesh Naik',
+    honorific: 'Kum.',
+    designation: 'Young Athlete & Distance Runner',
+    organization: 'Goa',
+    image: '/ppd/shreeja_shailesh_naik.jpg',
+    objectPosition: 'center 20%',
+    description:
+      'Accomplished young distance runner and multi-sport athlete from Goa, podium finisher in regional distance runs and national-level gymnastics medalist.',
+  },
+  {
+    id: 'dharma-gaonkar',
+    name: 'Shri. Dharma K. Gaonkar',
+    honorific: 'Shri.',
+    designation: 'Round Forest Officer',
+    organization: 'Department of Forest, Govt. of Goa',
+    image: '/ppd/dharma_gaonkar.jpg',
+    objectPosition: 'center 20%',
+    description:
+      'Round Forest Officer with the Department of Forest, Government of Goa (Ponda), dedicated to forest conservation, environmental stewardship, and community wellness.',
+  },
 ];
 
 /**
