@@ -31,20 +31,13 @@ export default function App() {
   const [currentView, setCurrentView] = useState('home'); // 'home' | 'participant' | 'admin' | 'prominent-participants' | 'volunteers'
   const [showBannerModal, setShowBannerModal] = useState(false);
 
-  // Automatically show 100 Volunteers Announcement Banner on initial page load (session based)
+  // Pop banner when user comes to website; automatically disabled/closed after 2s
   useEffect(() => {
-    const hasSeen = sessionStorage.getItem('adamya_100_volunteers_banner_seen');
-    if (!hasSeen) {
-      const timer = setTimeout(() => {
-        setShowBannerModal(true);
-      }, 500);
-      return () => clearTimeout(timer);
-    }
+    setShowBannerModal(true);
   }, []);
 
   const handleCloseBanner = () => {
     setShowBannerModal(false);
-    sessionStorage.setItem('adamya_100_volunteers_banner_seen', 'true');
   };
 
   // Scroll to top when view changes & listen for hash
