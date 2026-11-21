@@ -46,6 +46,12 @@ const IN_KIND_SPONSORS = [
     contribution: '',
     logo: '/sponsors/mg_hostel.jpg',
   },
+    {
+    id: 'SaiService',
+    name: 'Sai-Service',
+    contribution: '',
+    logo: '/sponsors/Sai Service.png',
+  },
 ];
 
 export default function Sponsors() {
