@@ -20,6 +20,7 @@ import ParticipantDashboard from './pages/ParticipantDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import ProminentParticipantsPage from './pages/ProminentParticipants';
 import VolunteersPage from './pages/VolunteersPage';
+import VolunteerBannerModal from './components/VolunteerBannerModal';
 
 // Feature flags: registration is moving to Google Forms, so on-site
 // registration and participant/admin login portals are hidden.
@@ -28,6 +29,23 @@ const SHOW_BUILT_IN_REGISTRATION = false;
 
 export default function App() {
   const [currentView, setCurrentView] = useState('home'); // 'home' | 'participant' | 'admin' | 'prominent-participants' | 'volunteers'
+  const [showBannerModal, setShowBannerModal] = useState(false);
+
+  // Automatically show 100 Volunteers Announcement Banner on initial page load (session based)
+  useEffect(() => {
+    const hasSeen = sessionStorage.getItem('adamya_100_volunteers_banner_seen');
+    if (!hasSeen) {
+      const timer = setTimeout(() => {
+        setShowBannerModal(true);
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleCloseBanner = () => {
+    setShowBannerModal(false);
+    sessionStorage.setItem('adamya_100_volunteers_banner_seen', 'true');
+  };
 
   // Scroll to top when view changes & listen for hash
   useEffect(() => {
@@ -65,10 +83,22 @@ export default function App() {
   }
 
   if (currentView === 'volunteers') {
-    return <VolunteersPage onBackToHome={() => {
-      setCurrentView('home');
-      window.location.hash = '';
-    }} />;
+    return (
+      <>
+        <VolunteersPage onBackToHome={() => {
+          setCurrentView('home');
+          window.location.hash = '';
+        }} />
+        <VolunteerBannerModal
+          isOpen={showBannerModal}
+          onClose={handleCloseBanner}
+          onExploreVolunteers={() => {
+            handleCloseBanner();
+            setCurrentView('volunteers');
+          }}
+        />
+      </>
+    );
   }
 
   const handleOpenPortal = SHOW_PORTALS ? (portal) => setCurrentView(portal) : undefined;
@@ -112,6 +142,14 @@ export default function App() {
         heading="Dare to run. Run to dare."
         onOpenPortal={handleOpenPortal}
         onOpenVolunteers={() => setCurrentView('volunteers')}
+      />
+      <VolunteerBannerModal
+        isOpen={showBannerModal}
+        onClose={handleCloseBanner}
+        onExploreVolunteers={() => {
+          handleCloseBanner();
+          setCurrentView('volunteers');
+        }}
       />
       <Analytics />
     </div>

@@ -11,10 +11,12 @@ import {
 } from 'lucide-react';
 import { COMMITTEES_DATA } from '../data/committeeData';
 import { EVENT } from '../data/eventData';
+import VolunteerBannerModal from '../components/VolunteerBannerModal';
 
 export default function VolunteersPage({ onBackToHome }) {
   const [copied, setCopied] = useState(false);
   const [showTopBtn, setShowTopBtn] = useState(false);
+  const [showPosterModal, setShowPosterModal] = useState(false);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -127,7 +129,7 @@ export default function VolunteersPage({ onBackToHome }) {
           </p>
 
           {/* Quick Metrics */}
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm mb-6">
             <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 backdrop-blur-sm">
               <Users size={16} className="text-[#38bdf8]" />
               <span className="font-bold text-white">100+</span>
@@ -143,6 +145,18 @@ export default function VolunteersPage({ onBackToHome }) {
               <span className="font-bold text-white">1</span>
               <span className="text-white/60">United Spirit</span>
             </div>
+          </div>
+
+          {/* View Official 100 Volunteers Poster CTA */}
+          <div className="flex items-center justify-center">
+            <button
+              onClick={() => setShowPosterModal(true)}
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 hover:bg-white/15 text-white hover:text-[#FFC36A] border border-white/20 text-xs sm:text-sm font-semibold shadow-md transition-all hover:scale-[1.02] cursor-pointer"
+            >
+              <Users size={15} className="text-[#38bdf8]" />
+              <span>View Official 100 Volunteers Banner</span>
+              <ChevronRight size={14} />
+            </button>
           </div>
         </div>
       </section>
@@ -262,6 +276,12 @@ export default function VolunteersPage({ onBackToHome }) {
         </p>
         <p>© 2026 {EVENT.name}. All Rights Reserved.</p>
       </footer>
+
+      {/* ── Official 100 Volunteers Banner Modal ─────────────────── */}
+      <VolunteerBannerModal
+        isOpen={showPosterModal}
+        onClose={() => setShowPosterModal(false)}
+      />
     </div>
   );
 }
