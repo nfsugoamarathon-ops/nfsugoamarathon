@@ -610,7 +610,7 @@ export const COMMITTEES_DATA = [
         "name": "Vishal K S",
         "role": "Volunteer",
         "committee": "Publicity And Media Committee",
-        "image": "/volunteers/vishal-kumar.webp"
+        "image": "/volunteers/vishal-k-s.webp"
       },
       {
         "name": "Jagannath Raul",
@@ -930,7 +930,7 @@ export const COMMITTEES_DATA = [
         "name": "Vishal K S",
         "role": "Committee Head",
         "committee": "Certificate And Awards Committee",
-        "image": "/volunteers/vishal-kumar.webp"
+        "image": "/volunteers/vishal-k-s.webp"
       },
       {
         "name": "Aswathy A Kumar",
@@ -1048,7 +1048,7 @@ export const COMMITTEES_DATA = [
         "name": "Vishal Kumar",
         "role": "Anchor",
         "committee": "Anchoring Committee",
-        "image": "/volunteers/vishal-kumar.webp"
+        "image": "Committee Profile\Vishal Kumar.png"
       },
       {
         "name": "Malavika Suresh",
