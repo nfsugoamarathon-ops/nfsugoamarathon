@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronRight } from 'lucide-react';
-import { EVENT, openRegistration } from '../data/eventData';
+import { EVENT } from '../data/eventData';
 
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
@@ -185,11 +185,12 @@ export default function Navbar({ onOpenPortal, onOpenProminent }) {
         {/* Registration CTA */}
         <div className="flex items-center gap-2.5">
           <a
-            href={EVENT.googleFormUrl || '#contact'}
-            target={EVENT.googleFormUrl ? '_blank' : undefined}
-            rel={EVENT.googleFormUrl ? 'noopener noreferrer' : undefined}
-            onClick={openRegistration}
-            className="flex items-center gap-1 bg-[#1749D1] hover:bg-[#1340b8] text-white text-[11px] sm:text-xs font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1749D1]"
+            href="#categories"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick('#categories');
+            }}
+            className="flex items-center gap-1 bg-[#1749D1] hover:bg-[#1340b8] text-white text-[11px] sm:text-xs font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1749D1] cursor-pointer"
           >
             <span>Register</span>
             <ChevronRight size={13} />
@@ -229,11 +230,12 @@ export default function Navbar({ onOpenPortal, onOpenProminent }) {
             ))}
 
             <a
-              href={EVENT.googleFormUrl || '#contact'}
-              target={EVENT.googleFormUrl ? '_blank' : undefined}
-              rel={EVENT.googleFormUrl ? 'noopener noreferrer' : undefined}
-              onClick={(e) => { setMenuOpen(false); openRegistration(e); }}
-              className="mt-2 flex items-center justify-center gap-1 bg-[#1749D1] hover:bg-[#1340b8] text-white text-sm font-semibold px-4 py-3 rounded-xl transition-colors shadow-md"
+              href="#categories"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('#categories');
+              }}
+              className="mt-2 flex items-center justify-center gap-1 bg-[#1749D1] hover:bg-[#1340b8] text-white text-sm font-semibold px-4 py-3 rounded-xl transition-colors shadow-md cursor-pointer"
             >
               Register Now <ChevronRight size={15} />
             </a>

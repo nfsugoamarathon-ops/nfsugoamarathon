@@ -15,6 +15,18 @@ export default function ProminentParticipantsPage({ onBackToHome }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [copied, setCopied] = useState(false);
 
+  const handleRegisterClick = (e) => {
+    e.preventDefault();
+    if (onBackToHome) {
+      onBackToHome();
+      setTimeout(() => {
+        document.querySelector('#categories')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      window.location.href = '/#categories';
+    }
+  };
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
@@ -85,10 +97,8 @@ export default function ProminentParticipantsPage({ onBackToHome }) {
           )}
 
           <a
-            href={EVENT.googleFormUrl || '#contact'}
-            target={EVENT.googleFormUrl ? '_blank' : undefined}
-            rel={EVENT.googleFormUrl ? 'noopener noreferrer' : undefined}
-            onClick={openRegistration}
+            href="#categories"
+            onClick={handleRegisterClick}
             className="inline-flex items-center gap-1.5 bg-[#1749D1] hover:bg-[#1340b8] text-white text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full shadow-md transition-all hover:scale-[1.02]"
           >
             <span>Register Now</span>

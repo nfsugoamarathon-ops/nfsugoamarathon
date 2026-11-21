@@ -415,10 +415,11 @@ export function CinematicFooter({
               <div className="flex flex-wrap justify-center gap-3 md:gap-4 w-full">
                 <MagneticButton
                   as="a"
-                  href={EVENT.googleFormUrl || "#contact"}
-                  target={EVENT.googleFormUrl ? "_blank" : undefined}
-                  rel={EVENT.googleFormUrl ? "noopener noreferrer" : undefined}
-                  onClick={openRegistration}
+                  href="#categories"
+                  onClick={(e: React.MouseEvent) => {
+                    e.preventDefault();
+                    scrollToSection('#categories');
+                  }}
                   className="footer-glass-pill px-7 py-3.5 sm:px-8 sm:py-4 rounded-full text-white font-bold text-sm md:text-base flex items-center gap-2.5 group bg-[#1749D1]/40 hover:bg-[#1749D1]/70 border-[#1749D1]"
                 >
                   <span className="text-xl">🏃</span>

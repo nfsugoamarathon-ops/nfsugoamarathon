@@ -56,11 +56,12 @@ export default function ProminentParticipants({ onOpenFullPage }) {
               </button>
             )}
             <a
-              href={EVENT.googleFormUrl || '#contact'}
-              target={EVENT.googleFormUrl ? '_blank' : undefined}
-              rel={EVENT.googleFormUrl ? 'noopener noreferrer' : undefined}
-              onClick={openRegistration}
-              className="inline-flex items-center gap-2 bg-[#1749D1] hover:bg-[#1340b8] text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-full shadow-[0_4px_14px_rgba(23,73,209,0.3)] transition-all hover:scale-[1.02] active:scale-[0.98]"
+              href="#categories"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#categories')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="inline-flex items-center gap-2 bg-[#1749D1] hover:bg-[#1340b8] text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-full shadow-[0_4px_14px_rgba(23,73,209,0.3)] transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
             >
               <span>Join Marathon</span>
               <ChevronRight size={14} />

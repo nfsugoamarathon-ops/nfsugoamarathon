@@ -86,10 +86,11 @@ export default function Footer({ onOpenPortal }) {
             <h4 className="text-xs font-semibold uppercase tracking-widest text-white/50 mb-4">Registration</h4>
             <div className="space-y-3">
               <a
-                href={EVENT.googleFormUrl || '#contact'}
-                target={EVENT.googleFormUrl ? '_blank' : undefined}
-                rel={EVENT.googleFormUrl ? 'noopener noreferrer' : undefined}
-                onClick={openRegistration}
+                href="#categories"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#categories')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="block text-center bg-[#1749D1] hover:bg-[#1340b8] text-white text-xs font-bold py-2.5 rounded-xl transition-all shadow-md"
               >
                 Register as Runner
