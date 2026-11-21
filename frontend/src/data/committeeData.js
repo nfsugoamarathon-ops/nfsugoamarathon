@@ -1048,7 +1048,7 @@ export const COMMITTEES_DATA = [
         "name": "Vishal Kumar",
         "role": "Anchor",
         "committee": "Anchoring Committee",
-        "image": "Committee Profile\Vishal Kumar.png"
+        "image": "/Committee Profile/Vishal Kumar.png"
       },
       {
         "name": "Malavika Suresh",
