@@ -75,7 +75,7 @@ export default function ProminentParticipantsPage({ onBackToHome }) {
           <div className="h-4 w-px bg-white/20 hidden sm:block" />
 
           <div className="hidden sm:flex items-center gap-2 text-xs text-white/70">
-            <span className="font-serif italic text-[#FFC36A]">अदम्यधावनम्</span>
+            <span className="font-serif italic text-[#e8e337]">अदम्यधावनम्</span>
             <span>·</span>
             <span>Prominent Dignitaries Roster</span>
           </div>
@@ -110,14 +110,14 @@ export default function ProminentParticipantsPage({ onBackToHome }) {
       {/* ── Page Hero Banner ─────────────────────────────────────── */}
       <section className="relative overflow-hidden pt-12 sm:pt-16 pb-16 px-4 sm:px-6 lg:px-8 border-b border-white/10">
         {/* Ambient background glow & radial highlights */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-b from-[#1749D1]/20 via-[#FFC36A]/10 to-transparent blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-b from-[#1749D1]/20 via-[#e8e337]/10 to-transparent blur-3xl pointer-events-none" />
         <div className="absolute -top-10 right-10 w-96 h-96 bg-[#0052FF]/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
           {/* Sanskrit Badge */}
           <div className="inline-flex items-center gap-2 bg-white/[0.08] backdrop-blur-md border border-white/[0.15] rounded-full px-4 py-1.5 text-white/90 text-xs sm:text-sm font-medium tracking-wide shadow-md mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#FFC36A] animate-pulse" />
-            <span className="font-serif italic text-[#FFC36A]">विशिष्ट महानुभावाः</span>
+            <span className="w-2 h-2 rounded-full bg-[#e8e337] animate-pulse" />
+            <span className="font-serif italic text-[#e8e337]">विशिष्ट महानुभावाः</span>
             <span>·</span>
             <span>Prominent Participants &amp; Dignitaries</span>
           </div>
@@ -132,23 +132,23 @@ export default function ProminentParticipantsPage({ onBackToHome }) {
           </h1>
 
           <p className="text-white/70 text-sm sm:text-base font-light max-w-2xl mx-auto leading-relaxed mb-6">
-            Meet the distinguished administrators, healthcare luminaries, and institutional leaders joining and patronizing the inaugural marathon at the National Forensic Sciences University, Goa Campus.
+            Meet the distinguished administrators, healthcare luminaries, and institutional leaders joining and patronizing the inaugural marathon at the <b>NFSU, Goa Campus</b>.
           </p>
 
           {/* Quick Race Facts Bar */}
           <div className="inline-flex flex-wrap items-center justify-center gap-4 sm:gap-6 bg-white/5 border border-white/10 rounded-2xl px-5 py-2.5 text-xs text-white/75 backdrop-blur-sm">
             <div className="flex items-center gap-1.5">
-              <Calendar size={14} className="text-[#FFC36A]" />
+              <Calendar size={14} className="text-[#e8e337]" />
               <span>{EVENT.date}</span>
             </div>
             <span className="text-white/20">•</span>
             <div className="flex items-center gap-1.5">
-              <MapPin size={14} className="text-[#FFC36A]" />
+              <MapPin size={14} className="text-[#e8e337]" />
               <span>{EVENT.venue}, Ponda</span>
             </div>
             <span className="text-white/20">•</span>
             <div className="flex items-center gap-1.5">
-              <Clock size={14} className="text-[#FFC36A]" />
+              <Clock size={14} className="text-[#e8e337]" />
               <span>Flag-off: 6:30 AM</span>
             </div>
           </div>
@@ -213,7 +213,7 @@ export default function ProminentParticipantsPage({ onBackToHome }) {
 
                   {/* Name & designation overlay */}
                   <div className="absolute bottom-0 inset-x-0 p-4 z-10">
-                    <div className="text-[#FFC36A] text-[10px] font-bold uppercase tracking-wider mb-0.5 leading-tight">
+                    <div className="text-[#e8e337] text-[10px] font-bold uppercase tracking-wider mb-0.5 leading-tight">
                       {person.designation}
                     </div>
                     <h2 className="font-sans font-black text-base sm:text-lg text-white tracking-tight leading-snug mb-1">

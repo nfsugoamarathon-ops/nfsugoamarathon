@@ -305,6 +305,17 @@ export const PROMINENT_PARTICIPANTS = [
       'Retired IAS officer and distinguished Air Veteran, bringing decades of administrative leadership and service to the nation.',
   },
   {
+    id: 'rakesh-yadav',
+    name: 'Shri. Rakesh Yadav',
+    honorific: 'Shri.',
+    designation: 'Running & Marathon Enthusiast',
+    organization: 'Severo Infracon LLP',
+    image: '/ppd/rakesh_yadav.jpg',
+    objectPosition: 'center 20%',
+    description:
+      'Passionate distance runner and marathon enthusiast representing Severo Infracon LLP, championing endurance, fitness, and community spirit at Adamya Dhāvanam 2026.',
+  },
+  {
     id: 'shreeja-naik',
     name: 'Shreeja Shailesh Naik',
     honorific: 'Kum.',

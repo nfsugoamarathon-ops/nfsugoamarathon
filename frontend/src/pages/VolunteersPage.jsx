@@ -70,7 +70,7 @@ export default function VolunteersPage({ onBackToHome }) {
           <div className="hidden sm:flex items-center gap-2 text-xs text-white/70">
             <span className="font-serif italic text-[#FFC36A]">॥ सेवा परमो धर्मः ॥</span>
             <span>·</span>
-            <span>Organizing Committee &amp; Volunteers</span>
+            <span>Volunteers</span>
           </div>
         </div>
 
@@ -114,11 +114,11 @@ export default function VolunteersPage({ onBackToHome }) {
           </div>
 
           <h1 className="text-white mb-4">
-            <span className="block font-sans font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight uppercase leading-[0.95]">
+            {/* <span className="block font-sans font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight uppercase leading-[0.95]">
               Organizing Committee
-            </span>
+            </span> */}
             <span className="block font-serif italic text-white/80 text-2xl sm:text-4xl lg:text-5xl tracking-normal mt-1">
-              &amp; Student Volunteers
+             Student Volunteers
             </span>
           </h1>
 

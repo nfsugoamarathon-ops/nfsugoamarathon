@@ -1,43 +1,43 @@
 // Generated Committee and Volunteer Data for Adamya Dhāvanam 2026
 export const COMMITTEES_DATA = [
-  {
-    "id": "organizers",
-    "title": "Organizers",
-    "badge": "Core Leadership",
-    "description": "Student coordinators and core marathon leadership steering Adamya Dh\u0101vanam 2026.",
-    "members": [
-      {
-        "name": "Mr. Sunder Lal Sharma",
-        "role": "Organizer",
-        "committee": "Organizers",
-        "image": "/volunteers/sunder-lal-sharma.webp"
-      },
-      {
-        "name": "Dr. Mrinmayee Kale",
-        "role": "Organizer",
-        "committee": "Organizers",
-        "image": "/volunteers/dr-mrinmayee-kale.webp"
-      },
-      {
-        "name": "Shreya Naik",
-        "role": "Student Coordinator",
-        "committee": "Organizers",
-        "image": "/volunteers/shreya-naik.webp"
-      },
-      {
-        "name": "Sivananda T S",
-        "role": "Student Coordinator",
-        "committee": "Organizers",
-        "image": "/volunteers/Shivananda.webp"
-      },
-      {
-        "name": "Abhay Madkaikar",
-        "role": "Overall Student Coordinator",
-        "committee": "Organizers",
-        "image": "/volunteers/abhay-madkaikar.webp"
-      }
-    ]
-  },
+  // {
+  //   "id": "organizers",
+  //   "title": "Organizers",
+  //   "badge": "Core Leadership",
+  //   "description": "Student coordinators and core marathon leadership steering Adamya Dh\u0101vanam 2026.",
+  //   "members": [
+  //     {
+  //       "name": "Mr. Sunder Lal Sharma",
+  //       "role": "Organizer",
+  //       "committee": "Organizers",
+  //       "image": "/volunteers/sunder-lal-sharma.webp"
+  //     },
+  //     {
+  //       "name": "Dr. Mrinmayee Kale",
+  //       "role": "Organizer",
+  //       "committee": "Organizers",
+  //       "image": "/volunteers/dr-mrinmayee-kale.webp"
+  //     },
+  //     {
+  //       "name": "Shreya Naik",
+  //       "role": "Student Coordinator",
+  //       "committee": "Organizers",
+  //       "image": "/volunteers/shreya-naik.webp"
+  //     },
+  //     {
+  //       "name": "Sivananda T S",
+  //       "role": "Student Coordinator",
+  //       "committee": "Organizers",
+  //       "image": "/volunteers/Shivananda.webp"
+  //     },
+  //     {
+  //       "name": "Abhay Madkaikar",
+  //       "role": "Overall Student Coordinator",
+  //       "committee": "Organizers",
+  //       "image": "/volunteers/abhay-madkaikar.webp"
+  //     }
+  //   ]
+  // },
   {
     "id": "head-volunteers",
     "title": "Head Volunteers",
@@ -45,16 +45,16 @@ export const COMMITTEES_DATA = [
     "description": "Leading volunteer operations, mobilization, and ground execution across all departments.",
     "members": [
       {
-        "name": "Ayush Pandey",
-        "role": "Head Volunteer",
-        "committee": "Head Volunteers",
-        "image": "/volunteers/ayush-pandey.webp"
-      },
-      {
         "name": "Krati Agarwal",
         "role": "Head Volunteer",
         "committee": "Head Volunteers",
         "image": "/volunteers/krati-agarwal.webp"
+      },
+      {
+        "name": "Ayush Pandey",
+        "role": "Head Volunteer",
+        "committee": "Head Volunteers",
+        "image": "/volunteers/ayush-pandey.webp"
       },
       {
         "name":"Vrinda Gopi",
@@ -693,7 +693,7 @@ export const COMMITTEES_DATA = [
         "image": "/volunteers/c-p-abhisha-naveen.webp"
       },
       {
-        "name": "Shubhojyoti Sad",
+        "name": "Shubhojyoti Sadhu",
         "role": "Volunteer",
         "committee": "Route Management Committee",
         "image": "/volunteers/shubhojyoti-sadhu.webp"

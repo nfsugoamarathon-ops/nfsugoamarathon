@@ -145,7 +145,7 @@ export default function ParticipantDashboard({ onBackToHome }) {
             <div className="h-5 w-px bg-white/20" />
             <div className="flex items-center gap-2">
               <img src="/marathon-logo.png" alt="Logo" className="h-7 w-7 rounded-full object-contain" />
-              <span className="font-serif italic text-sm text-[#FFC36A] hidden sm:inline">
+              <span className="font-serif italic text-sm text-[#e8e337] hidden sm:inline">
                 Adamya Dhāvanam 2026
               </span>
             </div>
