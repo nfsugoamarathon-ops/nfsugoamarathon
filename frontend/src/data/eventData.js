@@ -108,7 +108,7 @@ export const SCHEDULE = [
   { time: '6:45 AM', event: 'Flag-off - 6 KM Challenge Run', type: 'race', category: '6k' },
   { time: '6:50 AM', event: 'Flag-off - 3 KM Fun Run & PwD Inclusive Run', type: 'race', category: '3k' },
   { time: 'Every 2 km', event: 'Water stations along route', type: 'support' },
-  { time: 'Every 3 km', event: 'Medical desk (also at Start/Finish)', type: 'support' },
+  { time: 'Every 2 km', event: 'Medical desk (also at Start/Finish)', type: 'support' },
   { time: 'Within 24 h', event: 'Results published on website', type: 'info' },
 ];
 
