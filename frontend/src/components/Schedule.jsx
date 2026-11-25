@@ -20,8 +20,8 @@ const STATIONS = [
     code: 'PF 0 · PRE-RACE',
     script: 'प्रवेश पत्र वितरण',
     title: 'BIB & KIT EXPO',
-    time: '4:00 PM – 8:00 PM',
-    date: '4th & 5th Dec 2026',
+    time: 'To be Announced Soon!',
+    date: 'To be Announced Soon!',
     venue: 'NFSU Goa Campus, Canteen Area',
     summary: 'Official race kit pickup, race bib verification, and dry-fit t-shirt collection.',
     announcement: 'Now announcing: Bib collection counters active at NFSU Goa Campus, Canteen Area. Carry government ID + Reg ID.',
@@ -36,7 +36,7 @@ const STATIONS = [
     script: 'उपस्थिति एवं प्रवेश',
     title: 'GATES OPEN',
     time: '5:00 AM – 5:30 AM',
-    date: 'Sunday, 6 Dec 2026',
+    date: 'Sunday, 24 January 2027',
     venue: 'NFSU Goa Campus',
     summary: 'Dawn reporting, baggage drop counters, runner identity verification, and medical pre-check.',
     announcement: 'Reporting gates open at NFSU Goa Campus. Pin your bib visibly on your chest.',
@@ -101,7 +101,7 @@ const STATIONS = [
     summary: 'Family and junior run for runners under 14, senior champions 60+, and PwD participants. Full volunteer & marshal support.',
     announcement: '3 KM Fun Run & PwD Inclusive Run depart! Youngest athletes, senior champions, and inclusive participants lead the way.',
     badge: '3 KM & PwD',
-    tags: ['Ages <14, 60+ & PwD', 'Volunteer Support', 'Full Marshals',"Water & Medical Every 2 KM"],
+    tags: ['Ages <14, 60+ & PwD', 'Volunteer Support', 'Full Marshals', "Water & Medical Every 2 KM"],
     milestone: '3.0 KM',
     accentColor: '#FFBCF2',
   },
@@ -305,7 +305,7 @@ export default function Schedule() {
           <div>
             <div className="flex items-center gap-2 mb-1.5">
               <span className="bg-[#191A17] text-[#FFFCEB] text-[10px] font-mono uppercase tracking-widest px-2.5 py-0.5 rounded font-bold">
-                TIMELINE · 6 DEC 2026
+                TIMELINE · 24 Jan 2027
               </span>
               <span className="text-xs font-semibold uppercase tracking-wider text-[#686D66] flex items-center gap-1">
                 <span>📍</span> NFSU Goa Campus, Ponda
@@ -366,9 +366,8 @@ export default function Schedule() {
                 <div
                   key={station.id}
                   onClick={() => scrollToStation(i)}
-                  className={`w-[270px] sm:w-[310px] md:w-[360px] shrink-0 cursor-pointer snap-center transition-all duration-300 flex flex-col justify-between ${
-                    isActive ? 'scale-[1.02]' : 'opacity-85 hover:opacity-100'
-                  }`}
+                  className={`w-[270px] sm:w-[310px] md:w-[360px] shrink-0 cursor-pointer snap-center transition-all duration-300 flex flex-col justify-between ${isActive ? 'scale-[1.02]' : 'opacity-85 hover:opacity-100'
+                    }`}
                 >
                   {/* Station Board - Scaler x Wispr Platform Signboard Aesthetic */}
                   <div className="relative mb-2 flex flex-col items-center">
@@ -418,9 +417,8 @@ export default function Schedule() {
 
                   {/* Station Detail Card */}
                   <div
-                    className={`bg-white border-2 border-[#191A17] rounded-2xl p-4 shadow-[4px_4px_0_#191A17] flex-1 flex flex-col justify-between transition-all ${
-                      isActive ? 'ring-2 ring-[#1749D1]' : ''
-                    }`}
+                    className={`bg-white border-2 border-[#191A17] rounded-2xl p-4 shadow-[4px_4px_0_#191A17] flex-1 flex flex-col justify-between transition-all ${isActive ? 'ring-2 ring-[#1749D1]' : ''
+                      }`}
                   >
                     <div>
                       <div className="flex items-center justify-between mb-2">
@@ -475,9 +473,8 @@ export default function Schedule() {
               <button
                 key={s.id}
                 onClick={() => scrollToStation(idx)}
-                className={`transition-colors uppercase hover:text-[#191A17] ${
-                  activeIndex === idx ? 'text-[#1749D1] font-black underline decoration-2 underline-offset-4' : ''
-                }`}
+                className={`transition-colors uppercase hover:text-[#191A17] ${activeIndex === idx ? 'text-[#1749D1] font-black underline decoration-2 underline-offset-4' : ''
+                  }`}
               >
                 {s.title}
               </button>
@@ -520,9 +517,8 @@ export default function Schedule() {
                     e.stopPropagation();
                     scrollToStation(i);
                   }}
-                  className={`w-3 h-3 rounded-full border-2 border-[#191A17] transition-all duration-200 pointer-events-auto cursor-pointer hover:scale-125 ${
-                    i <= activeIndex ? 'bg-[#1749D1] scale-110' : 'bg-white'
-                  }`}
+                  className={`w-3 h-3 rounded-full border-2 border-[#191A17] transition-all duration-200 pointer-events-auto cursor-pointer hover:scale-125 ${i <= activeIndex ? 'bg-[#1749D1] scale-110' : 'bg-white'
+                    }`}
                 />
               ))}
             </div>

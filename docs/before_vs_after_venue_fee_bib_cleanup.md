@@ -33,7 +33,7 @@ Updated all components, data definitions, and portal pages across `frontend/src/
 ---
 
 ### 3. [`frontend/src/components/Hero.jsx`](file:///d:/Yash%20Bhagwani/NFSU%20DFIS/Banner/Marathon_26/website/frontend/src/components/Hero.jsx)
-- **Top Event Badge**: `'6 December 2026 · NFSU Goa'` → `'6 December 2026 · NFSU Goa Campus'`
+- **Top Event Badge**: `'24 January 2027 · NFSU Goa'` → `'24 January 2027 · NFSU Goa Campus'`
 - **Tagline Copy**: `...at NFSU Goa,` → `...at NFSU Goa Campus,`
 
 ---

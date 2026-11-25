@@ -15,7 +15,7 @@ const NAV_LINKS = [
 const STRIP_ITEMS = [
   {
     highlight: 'ADAMYA DHĀVANAM:',
-    text: 'NFSU Goa Marathon · 6 Dec 2026',
+    text: 'NFSU Goa Marathon · 24 Jan 2027',
   },
   {
     icon: '⏰',
@@ -89,8 +89,8 @@ export default function Navbar({ onOpenPortal, onOpenProminent, onOpenVolunteers
     <header
       ref={menuRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'bg-[#FFFCEB]/85 backdrop-blur-md border-b border-[#191A17]/10 shadow-xs'
-          : 'bg-transparent backdrop-blur-xs'
+        ? 'bg-[#FFFCEB]/85 backdrop-blur-md border-b border-[#191A17]/10 shadow-xs'
+        : 'bg-transparent backdrop-blur-xs'
         }`}
     >
       {/* Dark & Gold Theme Marquee Ribbon (Matching Event Identity & Uploaded Reference) */}
@@ -101,8 +101,8 @@ export default function Navbar({ onOpenPortal, onOpenProminent, onOpenVolunteers
           <div className="flex items-center">
             {STRIP_ITEMS.map((item, idx) => (
               <div key={idx} className={`flex items-center gap-2 mx-6 font-medium transition-colors duration-300 ${scrolled
-                  ? 'text-[#191A17]/85'
-                  : 'text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
+                ? 'text-[#191A17]/85'
+                : 'text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
                 }`}>
                 <span className={`font-bold tracking-wide transition-colors duration-300 ${scrolled ? 'text-[#1749D1]' : 'text-[#e8e337]'
                   }`}>
@@ -121,8 +121,8 @@ export default function Navbar({ onOpenPortal, onOpenProminent, onOpenVolunteers
           <div className="flex items-center" aria-hidden="true">
             {STRIP_ITEMS.map((item, idx) => (
               <div key={`dup-${idx}`} className={`flex items-center gap-2 mx-6 font-medium transition-colors duration-300 ${scrolled
-                  ? 'text-[#191A17]/85'
-                  : 'text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
+                ? 'text-[#191A17]/85'
+                : 'text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
                 }`}>
                 <span className={`font-bold tracking-wide transition-colors duration-300 ${scrolled ? 'text-[#1749D1]' : 'text-[#e8e337]'
                   }`}>
@@ -151,22 +151,22 @@ export default function Navbar({ onOpenPortal, onOpenProminent, onOpenVolunteers
             src="/marathon-logo.png"
             alt="Adamya Dhavanam marathon logo"
             className={`h-9 w-9 sm:h-10 sm:w-10 rounded-full object-cover ring-2 transition-all shadow shrink-0 ${scrolled
-                ? 'ring-[#1749D1]/30 group-hover:ring-[#1749D1]'
-                : 'ring-white/20 group-hover:ring-[#e8e337]/60'
+              ? 'ring-[#1749D1]/30 group-hover:ring-[#1749D1]'
+              : 'ring-white/20 group-hover:ring-[#e8e337]/60'
               }`}
           />
           <span className="flex flex-col font-semibold text-xs sm:text-sm leading-tight">
             <span className={`block font-serif italic text-sm sm:text-base transition-colors duration-300 ${scrolled
-                ? 'text-[#1749D1]'
-                : 'text-[#e8e337] drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
+              ? 'text-[#1749D1]'
+              : 'text-[#e8e337] drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
               }`}>
               Adamya Dhāvanam
             </span>
             <span className={`block text-[9px] sm:text-[10px] tracking-widest font-mono transition-colors duration-300 ${scrolled
-                ? 'text-[#686D66]'
-                : 'text-white/70 drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
+              ? 'text-[#686D66]'
+              : 'text-white/70 drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
               }`}>
-              NFSU GOA · 6 DEC 2026
+              NFSU GOA · 24 Jan 2027
             </span>
           </span>
         </a>
@@ -179,8 +179,8 @@ export default function Navbar({ onOpenPortal, onOpenProminent, onOpenVolunteers
               href={l.href}
               onClick={(e) => { e.preventDefault(); handleNavClick(l.href); }}
               className={`text-xs uppercase tracking-wider font-semibold transition-colors duration-300 focus-visible:outline-none ${scrolled
-                  ? 'text-[#191A17]/80 hover:text-[#1749D1] focus-visible:text-[#1749D1]'
-                  : 'text-white/80 hover:text-white focus-visible:text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
+                ? 'text-[#191A17]/80 hover:text-[#1749D1] focus-visible:text-[#1749D1]'
+                : 'text-white/80 hover:text-white focus-visible:text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)]'
                 }`}
             >
               {l.label}
@@ -217,8 +217,8 @@ export default function Navbar({ onOpenPortal, onOpenProminent, onOpenVolunteers
       {/* Mobile menu */}
       {menuOpen && (
         <div className={`mobile-nav-drawer lg:hidden backdrop-blur-md border-t px-4 pb-5 pt-2 transition-colors duration-300 ${scrolled
-            ? 'bg-[#FFFCEB]/98 border-[#191A17]/10'
-            : 'bg-[#111A17]/98 border-white/10'
+          ? 'bg-[#FFFCEB]/98 border-[#191A17]/10'
+          : 'bg-[#111A17]/98 border-white/10'
           }`}>
           <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
             {NAV_LINKS.map((l) => (
@@ -227,8 +227,8 @@ export default function Navbar({ onOpenPortal, onOpenProminent, onOpenVolunteers
                 href={l.href}
                 onClick={(e) => { e.preventDefault(); handleNavClick(l.href); }}
                 className={`py-2.5 px-3 rounded-lg text-sm font-medium transition-colors ${scrolled
-                    ? 'text-[#191A17]/80 hover:text-[#1749D1] hover:bg-[#191A17]/05'
-                    : 'text-white/80 hover:text-white hover:bg-white/5'
+                  ? 'text-[#191A17]/80 hover:text-[#1749D1] hover:bg-[#191A17]/05'
+                  : 'text-white/80 hover:text-white hover:bg-white/5'
                   }`}
               >
                 {l.label}

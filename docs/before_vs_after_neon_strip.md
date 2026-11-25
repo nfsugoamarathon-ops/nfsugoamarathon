@@ -17,7 +17,7 @@ The top marquee strip has been updated to strictly follow the color theme and te
 - **Top & Bottom Divider:** Clean hairline border `border-white/10`.
 - **Text & Tag Hierarchy:**
   - **Highlighted Lead Label:** Bold marigold gold (`#e8e337`), e.g., `ADAMYA DHĀVANAM:`, `REPORTING TIME:`, `BIB DISTRIBUTION:`.
-  - **Body Text:** Crisp off-white (`text-white/85`), e.g., `NFSU Goa Marathon · 6 Dec 2026`, `5:00 – 5:30 AM near NFSU Girls Hostel`.
+  - **Body Text:** Crisp off-white (`text-white/85`), e.g., `NFSU Goa Marathon · 24 Jan 2027`, `5:00 – 5:30 AM near NFSU Girls Hostel`.
   - **Separators:** Gold stars (`✦ text-[#e8e337]/40`) and soft white micro-badges.
 - **Smooth Infinite Marquee Animation:** Dual duplicate track scrolling continuously with pause-on-hover interaction.
 
@@ -77,7 +77,7 @@ The top marquee strip has been updated to strictly follow the color theme and te
 
 ## 3. Ticker Items Synchronized with Reference Text
 
-1. 🏃 **ADAMYA DHĀVANAM:** NFSU Goa Marathon · 6 Dec 2026
+1. 🏃 **ADAMYA DHĀVANAM:** NFSU Goa Marathon · 24 Jan 2027
 2. ⏰ **REPORTING TIME:** 5:00 – 5:30 AM · Near NFSU Girls Hostel, Ponda
 3. 🏷️ **BIB DISTRIBUTION:** 4 & 5 Dec, 4:00 PM – 8:00 PM at Ponda (Carry Original ID)
 4. ⚡ **FLAG-OFF WAVES:** 10K at 6:30 AM · 6K at 6:45 AM · 3K at 6:50 AM

@@ -6,7 +6,7 @@ Use this document as the design and UX direction when building or revising the p
 
 - Event: **ADAMYA DHAVANAM**, NFSU Goa Marathon
 - Website: `nfsugoamarathon.in`
-- Event date in the project brief: **6 December 2026**
+- Event date in the project brief: **24 January 2027**
 - Current stack in the project brief: **React, Tailwind CSS, Django REST Framework, PostgreSQL**
 - Primary audiences: runners and families, participants under 18, volunteers, sponsors, and event administrators
 - Primary public action: register for a race category and complete payment

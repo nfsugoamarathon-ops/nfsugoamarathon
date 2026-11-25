@@ -202,7 +202,7 @@ export default function Hero() {
           {/* Date & Venue Pill Badge */}
           <div className="inline-flex items-center gap-2 bg-white/[0.08] backdrop-blur-md border border-white/[0.15] rounded-full px-4 py-1.5 text-white/90 text-xs sm:text-sm font-medium tracking-wide shadow-md mb-4 sm:mb-5">
             <span className="w-2 h-2 rounded-full bg-[#e8e337] shrink-0 animate-pulse" />
-            <span>6 December 2026 · NFSU Goa Campus</span>
+            <span>24 January 2027 · NFSU Goa Campus</span>
           </div>
 
           {/* Sanskrit Title */}
@@ -354,7 +354,7 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full rounded-full bg-[#e8e337] opacity-75 animate-ping" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#e8e337]" />
             </span>
-            6 December 2026 · NFSU Goa Campus
+            24 January 2027 · NFSU Goa Campus
           </div>
         </div>
 

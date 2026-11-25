@@ -138,7 +138,7 @@ const STYLES = `
 // -------------------------------------------------------------------------
 // 2. MAGNETIC BUTTON PRIMITIVE (Zero Dependency)
 // -------------------------------------------------------------------------
-export type MagneticButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & 
+export type MagneticButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   React.AnchorHTMLAttributes<HTMLAnchorElement> & {
     as?: React.ElementType;
   };
@@ -222,9 +222,9 @@ const HighVisibilityMarqueeItem = () => (
       <span className="text-white font-black tracking-wider">ADAMYA DHĀVANAM 2026</span>
     </span>
     <span className="text-[#e8e337] text-lg font-black drop-shadow-[0_0_8px_#e8e337]">✦</span>
-    
+
     <span className="bg-[#1749D1] text-white px-3 py-0.5 rounded-full font-bold text-xs tracking-wider">
-      6 DECEMBER 2026
+      24 January 2027
     </span>
     <span className="text-[#93c5fd] text-lg font-black">✦</span>
 
@@ -338,7 +338,7 @@ export function CinematicFooter({
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: STYLES }} />
-      
+
       {/* 
         The "Curtain Reveal" Wrapper:
         It sits in standard flow. Because it has clip-path, its contents
@@ -351,7 +351,7 @@ export function CinematicFooter({
       >
         {/* The actual footer stays fixed to the viewport underneath everything */}
         <footer className="fixed bottom-0 left-0 flex h-screen w-full flex-col justify-between overflow-hidden bg-[#051124] text-white cinematic-footer-wrapper">
-          
+
           {/* Ambient Light & Grid Background */}
           <div className="footer-aurora absolute left-1/2 top-1/2 h-[60vh] w-[80vw] -translate-x-1/2 -translate-y-1/2 animate-footer-breathe rounded-[50%] blur-[80px] pointer-events-none z-0" />
           <div className="footer-bg-grid absolute inset-0 z-0 pointer-events-none" />

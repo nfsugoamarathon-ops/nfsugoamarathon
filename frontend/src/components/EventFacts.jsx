@@ -11,7 +11,7 @@ const FACTS = [
   {
     icon: Calendar,
     label: 'Date',
-    value: '6 December 2026',
+    value: '24 January 2027',
     subtext: 'Sunday · Race Day',
     accent: '#38bdf8',
   },
@@ -105,7 +105,7 @@ export default function EventFacts() {
                 </span>
               </div>
               <span className="text-[10px] font-semibold text-[#e8e337] tracking-wider uppercase bg-[#e8e337]/10 border border-[#e8e337]/20 px-2.5 py-0.5 rounded-full">
-                6 Dec 2026
+                24 Jan 2027
               </span>
             </div>
 

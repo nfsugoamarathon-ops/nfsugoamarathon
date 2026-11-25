@@ -17,7 +17,7 @@ All active `"Register"` / `"Register Now"` CTAs now route through a shared `open
     name: 'Adamya Dhāvanam',
     ...
     website: 'nfsugoamarathon.in',
-    date: '6 December 2026',
+    date: '24 January 2027',
     ...
   };
   ```
@@ -30,7 +30,7 @@ All active `"Register"` / `"Register Now"` CTAs now route through a shared `open
     website: 'nfsugoamarathon.in',
     // Set your Google Form URL here when live (e.g. 'https://forms.gle/...')
     googleFormUrl: '',
-    date: '6 December 2026',
+    date: '24 January 2027',
     ...
   };
 

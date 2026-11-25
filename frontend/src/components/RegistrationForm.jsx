@@ -34,10 +34,10 @@ function StepIndicator({ current }) {
             <div className={`flex items-center gap-2 ${active ? '' : done ? '' : 'opacity-40'}`}>
               <div
                 className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold transition-all ${done
-                    ? 'bg-[#1749D1] text-white'
-                    : active
-                      ? 'bg-[#191A17] text-white ring-2 ring-[#1749D1] ring-offset-2'
-                      : 'bg-[#DADBCF] text-[#686D66]'
+                  ? 'bg-[#1749D1] text-white'
+                  : active
+                    ? 'bg-[#191A17] text-white ring-2 ring-[#1749D1] ring-offset-2'
+                    : 'bg-[#DADBCF] text-[#686D66]'
                   }`}
                 aria-current={active ? 'step' : undefined}
               >
@@ -257,7 +257,7 @@ export default function RegistrationForm({ onOpenPortal }) {
             <div className="flex justify-between items-start border-b border-white/10 pb-4 mb-4">
               <div>
                 <span className="text-[10px] text-[#FFC36A] tracking-widest uppercase font-semibold block">
-                  NFSU GOA MARATHON · 6 DEC 2026
+                  NFSU GOA MARATHON · 24 Jan 2027
                 </span>
                 <span className="font-serif italic text-lg text-white font-bold block">
                   Runner Confirmation Pass
@@ -365,8 +365,8 @@ export default function RegistrationForm({ onOpenPortal }) {
                   <label
                     key={cat.id}
                     className={`flex items-start gap-4 p-5 rounded-2xl border-2 cursor-pointer transition-all ${form.categoryId === cat.id
-                        ? 'border-[#1749D1] bg-[#EEF2FF] shadow-sm'
-                        : 'border-[#DADBCF] bg-white hover:border-[#1749D1]/40'
+                      ? 'border-[#1749D1] bg-[#EEF2FF] shadow-sm'
+                      : 'border-[#DADBCF] bg-white hover:border-[#1749D1]/40'
                       }`}
                   >
                     <input

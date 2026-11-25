@@ -77,7 +77,7 @@ export default function Contact() {
               <div className="space-y-2.5 text-sm">
                 <p className="text-white/80 flex items-center gap-2">
                   <Calendar size={15} className="text-[#e8e337] shrink-0" />
-                  <span className="text-white/40">Race Date:</span> 6 December 2026
+                  <span className="text-white/40">Race Date:</span> 24 January 2027
                 </p>
                 <p className="text-white/80 flex items-center gap-2">
                   <MapPin size={15} className="text-[#e8e337] shrink-0" />

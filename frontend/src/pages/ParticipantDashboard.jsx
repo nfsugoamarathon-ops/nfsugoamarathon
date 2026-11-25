@@ -173,8 +173,8 @@ export default function ParticipantDashboard({ onBackToHome }) {
           <button
             onClick={() => setActiveTab('overview')}
             className={`px-4 py-2.5 rounded-xl font-medium text-sm transition-all flex items-center gap-2 ${activeTab === 'overview'
-                ? 'bg-[#1749D1] text-white shadow-sm'
-                : 'text-[#686D66] hover:bg-white'
+              ? 'bg-[#1749D1] text-white shadow-sm'
+              : 'text-[#686D66] hover:bg-white'
               }`}
           >
             <User size={15} />
@@ -183,8 +183,8 @@ export default function ParticipantDashboard({ onBackToHome }) {
           <button
             onClick={() => setActiveTab('edit')}
             className={`px-4 py-2.5 rounded-xl font-medium text-sm transition-all flex items-center gap-2 ${activeTab === 'edit'
-                ? 'bg-[#1749D1] text-white shadow-sm'
-                : 'text-[#686D66] hover:bg-white'
+              ? 'bg-[#1749D1] text-white shadow-sm'
+              : 'text-[#686D66] hover:bg-white'
               }`}
           >
             <Edit2 size={15} />
@@ -193,8 +193,8 @@ export default function ParticipantDashboard({ onBackToHome }) {
           <button
             onClick={() => setActiveTab('certificate')}
             className={`px-4 py-2.5 rounded-xl font-medium text-sm transition-all flex items-center gap-2 ${activeTab === 'certificate'
-                ? 'bg-[#1749D1] text-white shadow-sm'
-                : 'text-[#686D66] hover:bg-white'
+              ? 'bg-[#1749D1] text-white shadow-sm'
+              : 'text-[#686D66] hover:bg-white'
               }`}
           >
             <Award size={15} />
@@ -276,7 +276,7 @@ export default function ParticipantDashboard({ onBackToHome }) {
                     </div>
                   </div>
                   <span className="text-xs bg-[#FFC36A] text-[#111A17] font-bold px-2.5 py-0.5 rounded-full">
-                    6 DEC 2026
+                    24 Jan 2027
                   </span>
                 </div>
 

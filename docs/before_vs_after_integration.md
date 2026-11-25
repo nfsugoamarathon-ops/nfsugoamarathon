@@ -31,7 +31,7 @@ This document details the complete end-to-end implementation of the **ADAMYA DH�
 
 ### The Fix:
 - **Luminous Obsidian Ribbon:** Placed inside a dedicated bar with `bg-[#0E1714]/95`, double golden borders (`border-y-2 border-[#e8e337]/50`), and soft glow shadow (`shadow-[0_0_20px_rgba(255,195,106,0.15)]`).
-- **High-Contrast Text Hierarchy:** Bold Devanagari crest `अदम्यधावनम्`, crisp white `ADAMYA DHĀVANAM 2026`, vivid marigold gold stars (`✦`), royal blue badge `6 DECEMBER 2026`, and emerald green `BIB PICKUP: 4 & 5 DEC` badge.
+- **High-Contrast Text Hierarchy:** Bold Devanagari crest `अदम्यधावनम्`, crisp white `ADAMYA DHĀVANAM 2026`, vivid marigold gold stars (`✦`), royal blue badge `24 January 2027`, and emerald green `BIB PICKUP: 4 & 5 DEC` badge.
 - **Fixed Sticky Indicator:** Added an animated live ticker pulse (`● RACE TICKER`) on desktop displays.
 - **Collision-Proof Layout:** Positioned cleanly with `relative z-30` at the top of the footer and added top padding to the center content container (`pt-4 pb-6`), ensuring zero text overlapping regardless of viewport height.
 - **Quadruple Infinite Scroll:** Repeated the item 4 times (`HighVisibilityMarqueeItem` x 4) with `hover:[animation-play-state:paused]`.

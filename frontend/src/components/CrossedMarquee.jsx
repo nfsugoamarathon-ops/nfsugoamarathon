@@ -8,7 +8,7 @@ export default function CrossedMarquee() {
     'PODIUM TROPHY',
     'RECOVERY',
     'BREAKFAST',
-    'RACE DAY · 6 DEC 2026',
+    'RACE DAY · 24 Jan 2027',
   ];
 
   const darkItems = [
@@ -17,7 +17,7 @@ export default function CrossedMarquee() {
     'NFSU GOA CAMPUS',
     'EVERY STEP. EVERY CLUE. EVERY TRUTH.',
     'PwD FREE',
-    '6 DECEMBER 2026',
+    '24 January 2027',
   ];
 
   return (

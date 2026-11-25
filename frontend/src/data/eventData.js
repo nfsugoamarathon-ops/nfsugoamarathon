@@ -14,8 +14,8 @@ export const EVENT = {
   // Official Google My Maps course route
   routeMapEmbedUrl: 'https://www.google.com/maps/d/embed?mid=1UtoKyhS5wSvuqg4CB5enqR6n07ZapQA',
   routeMapViewerUrl: 'https://www.google.com/maps/d/viewer?mid=1UtoKyhS5wSvuqg4CB5enqR6n07ZapQA&usp=sharing',
-  date: '6 December 2026',
-  dateISO: '2026-12-06',
+  date: '24 January 2027',
+  dateISO: '2027-01-24',
   reportingTime: '5:00 – 5:30 AM',
   warmupTime: '6:00 AM',
   venue: 'NFSU Goa Campus',
@@ -32,7 +32,7 @@ export const EVENT = {
     twitter: 'https://x.com/nfsu_official',
   },
   bibCollection: {
-    dates: '4th & 5th December 2026',
+    dates: 'To be Announced Soon!',
     time: '4:00 PM – 8:00 PM',
     venue: 'NFSU Goa Campus, Canteen Area',
   },
@@ -335,7 +335,7 @@ export const PROMINENT_PARTICIPANTS = [
     image: '/ppd/dharma_gaonkar.jpg',
     objectPosition: 'center 20%',
     // description:
-      //'Round Forest Officer with the Department of Forest, Government of Goa (Ponda), dedicated to forest conservation, environmental stewardship, and community wellness.',
+    //'Round Forest Officer with the Department of Forest, Government of Goa (Ponda), dedicated to forest conservation, environmental stewardship, and community wellness.',
   },
 ];
 

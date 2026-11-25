@@ -17,7 +17,7 @@ export default function EventFacts() {
     <section className="bg-[#FFFCEB] border-y border-[#DADBCF]" aria-label="Event facts at a glance">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-2 md:grid-cols-5 divide-x divide-[#DADBCF] overflow-x-auto">
-          <Fact icon={Calendar} label="Date" value="6 December 2026" />
+          <Fact icon={Calendar} label="Date" value="24 January 2027" />
           ...
         </div>
       </div>
